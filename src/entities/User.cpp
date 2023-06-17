@@ -3,11 +3,11 @@
 User::User(){
 }
 
-User::User(int id, string name, string email, string password){
+User::User(int id, string email, string password, string name){
     this->id = id;
-    this->name = name;
     this->email = email;
     this->password = password;
+    this->name = name;
 }
 
 User::~User(){

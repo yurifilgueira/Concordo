@@ -36,6 +36,8 @@ User System::searchUserById(int id){
             return *users[half];
         }
     }
+
+    return User();
 }
 
 bool System::emailAlredyUsed(string email){

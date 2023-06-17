@@ -9,4 +9,5 @@ add_executable( program
                 src/entities/Channel.cpp 
                 src/entities/Message.cpp
                 src/entities/Server.cpp
-                src/entities/User.cpp)
+                src/entities/User.cpp
+                src/entities/System.cpp)

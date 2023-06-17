@@ -9,9 +9,9 @@ class User
 {
 private:
     int id;
-    string name;
     string email;
     string password;
+    string name;
 public:
     User();
     User(int id, string name, string email, string password);
