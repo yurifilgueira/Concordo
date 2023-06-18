@@ -1,4 +1,7 @@
+#include <iostream>
 #include <System.h>
+
+using namespace std;
 
 System::System(){
 }
@@ -40,14 +43,14 @@ User System::searchUserById(int id){
     return User();
 }
 
-bool System::emailAlredyUsed(string email){
+int System::emailAlredyUsed(string email){
     for (int i = 0; i < users.size(); i++){
         if (users[i]->getEmail() == email){
-            return true;
+            return users[i]->getId();
         }
     }
 
-    return false;
+    return 0;
 }
 
 int System::generateId(){
@@ -95,4 +98,23 @@ vector<Server *> System::getServers(){
 
 void System::addUser(User *user){
     users.push_back(user);
+}
+
+bool System::login(string email, string password){
+    
+    int id = emailAlredyUsed(email);
+
+    if (id != 0){
+        if (searchUserById(id).getPassword() == password){
+
+            setCurrentLoggedInUser(searchUserById(id));
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    else {
+        return false;
+    }
 }

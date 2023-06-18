@@ -25,7 +25,7 @@ public:
     System(User CurrentLoggedInUser, Server currentServer, Channel currentChannel);
     ~System();
     User searchUserById(int id);
-    bool emailAlredyUsed(string email);
+    int emailAlredyUsed(string email);
     int generateId();
     User getCurrentLoggedInUser();
     void setCurrentLoggedInUser(User currentLoggedInUser);
@@ -36,5 +36,6 @@ public:
     vector<User *> getUsers();
     vector<Server *> getServers();
     void addUser(User *user);
+    bool login(string email, string password);
 };
 #endif
