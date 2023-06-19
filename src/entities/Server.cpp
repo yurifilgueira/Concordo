@@ -3,6 +3,11 @@
 Server::Server(){
 }
 
+Server::Server(int ownerUserId, string name){
+    this->ownerUserId = ownerUserId;
+    this->name = name;
+}
+
 Server::Server(int ownerUserId, string name, string description, string invitationCode){
     this->ownerUserId = ownerUserId;
     this->name = name;

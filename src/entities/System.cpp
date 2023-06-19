@@ -1,7 +1,4 @@
-#include <iostream>
 #include <System.h>
-
-using namespace std;
 
 System::System(){
 }
@@ -100,6 +97,10 @@ void System::addUser(User *user){
     users.push_back(user);
 }
 
+void System::addServer(Server *server){
+    servers.push_back(server);
+}
+
 bool System::login(string email, string password){
     
     int id = emailAlredyUsed(email);
@@ -118,3 +119,8 @@ bool System::login(string email, string password){
         return false;
     }
 }
+
+void System::disconnectUser(){
+    setCurrentLoggedInUser(User());
+}
+

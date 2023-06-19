@@ -54,7 +54,9 @@ int main()
                 else {
                     password = commandLine[2];
                     name = commandLine[3];
-                    name.append(" " + commandLine[4]);
+                    for (int i = 4; i < commandLine.size(); i++){
+                        name.append(" " + commandLine[i]);
+                    }
 
                     system.addUser(new User(system.generateId(), email, password, name));
 
@@ -66,14 +68,18 @@ int main()
             commandLine.clear();
         }
         else if (commandLine[0] == "login"){
-            if (commandLine.size() != 3){
+
+            if (system.getCurrentLoggedInUser().getName() != ""){
+                cout << "Desconecte-se para realizar outro login, basta digitar o comando 'disconnect', para se desconectar." << endl;
+            }
+            else if (commandLine.size() != 3){
                 cout << "Comando inválido!, você deve inserir o comando 'login' seguido do email e senha, separados por espaço." << endl;
             }
             else {
                 email = commandLine[1];
 
                 password = commandLine[2];
-                
+
                 if (system.login(email, password)){
                     cout << "Logado como " << email << endl;
                 }
@@ -81,6 +87,34 @@ int main()
                     cout << "Senha ou usuário inválidos." << endl;
                 }
             }
+
+            commandLine.clear();
+        }
+        else if (commandLine[0] == "create-server"){
+            if (commandLine.size() < 2){
+                cout << "Para criar um servidor você deve inserir o comando 'create-server' seguido do nome do servidor" << endl;
+            }
+            else {
+                for (int i = 1; i < commandLine.size(); i++){
+                    if (i == 1){
+                        name = commandLine[i];
+                    }
+                    else {
+                        name.append(" " + commandLine[i]);
+                    }
+                }
+
+                system.addServer(new Server(system.getCurrentLoggedInUser().getId(), name));
+
+                cout << "O servidor " << name << " criado com sucesso!" << endl;
+            }
+
+            commandLine.clear();
+        }
+        else if (commandLine[0] == "disconnect"){
+            system.disconnectUser();
+
+            cout << "Usuário desconectado com sucesso!" << endl;
 
             commandLine.clear();
         }

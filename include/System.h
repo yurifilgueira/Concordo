@@ -36,6 +36,8 @@ public:
     vector<User *> getUsers();
     vector<Server *> getServers();
     void addUser(User *user);
+    void addServer(Server *server);
     bool login(string email, string password);
+    void disconnectUser();
 };
 #endif

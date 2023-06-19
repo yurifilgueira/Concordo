@@ -21,6 +21,7 @@ private:
 
 public:
     Server();
+    Server(int ownerUserId, string name);
     Server(int ownerUserId, string name, string description, string invitationCode);
     ~Server();
     int getOwnerUserId();
