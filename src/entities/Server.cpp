@@ -16,6 +16,11 @@ Server::Server(int ownerUserId, string name, string description, string invitati
 }
 
 Server::~Server(){
+
+    for (Channel *channel : channels){
+        delete channel;
+    }
+
 }
 
 int Server::getOwnerUserId(){

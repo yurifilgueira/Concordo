@@ -17,8 +17,8 @@ private:
     Server currentServer;
     Channel currentChannel;
 
-    vector<User *> users;
-    vector<Server *> servers;
+    vector<User> users;
+    vector<Server> servers;
 
 public:
     System();
@@ -33,11 +33,15 @@ public:
     void setCurrentServer(Server currentServer);
     Channel getCurrentChannel();
     void setCurrentChannel(Channel currentChannel);
-    vector<User *> getUsers();
-    vector<Server *> getServers();
-    void addUser(User *user);
-    void addServer(Server *server);
+    vector<User> getUsers();
+    vector<Server> getServers();
+    void addUser(User user);
+    Server searchServer(string name);
+    bool createServer(int ownerUserId, string name);
+    void addServer(Server server);
+    void removeServer(string name);
     bool login(string email, string password);
+    void printServers();
     void disconnectUser();
 };
 #endif

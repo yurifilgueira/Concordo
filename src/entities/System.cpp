@@ -1,4 +1,8 @@
+#include <iostream>
 #include <System.h>
+
+using std::cout;
+using std::endl;
 
 System::System(){
 }
@@ -10,12 +14,6 @@ System::System(User currentLoggedInUser, Server currentServer, Channel currentCh
 }
 
 System::~System(){
-    for (int i = 0; i < this->users.size(); i++){
-        delete this->users[i];
-    }
-    for (int i = 0; i < this->servers.size(); i++){
-        delete this->servers[i];
-    }
 }
 
 User System::searchUserById(int id){
@@ -26,14 +24,14 @@ User System::searchUserById(int id){
     {
         int half = (high + low) / 2;
 
-        if (id < users[half]->getId()){
+        if (id < users[half].getId()){
             high = half - 1;
         }
-        else if (id > users[half]->getId()){
+        else if (id > users[half].getId()){
             low = half + 1;
         }
         else{
-            return *users[half];
+            return users[half];
         }
     }
 
@@ -42,8 +40,8 @@ User System::searchUserById(int id){
 
 int System::emailAlredyUsed(string email){
     for (int i = 0; i < users.size(); i++){
-        if (users[i]->getEmail() == email){
-            return users[i]->getId();
+        if (users[i].getEmail() == email){
+            return users[i].getId();
         }
     }
 
@@ -55,7 +53,7 @@ int System::generateId(){
     int id = 1;
 
     if (!users.empty()){
-        id = users[users.size() - 1]->getId() + 1;
+        id = users[users.size() - 1].getId() + 1;
     }
 
     return id;
@@ -85,20 +83,55 @@ void System::setCurrentChannel(Channel currentChannel){
     this->currentChannel = currentChannel;
 }
 
-vector<User *> System::getUsers(){
+vector<User> System::getUsers(){
     return this->users;
 }
 
-vector<Server *> System::getServers(){
+vector<Server> System::getServers(){
     return this->servers;
 }
 
-void System::addUser(User *user){
+void System::addUser(User user){
     users.push_back(user);
 }
 
-void System::addServer(Server *server){
+Server System::searchServer(string name){
+
+    for (int i = 0; i < servers.size(); i++){
+        if (servers[i].getName() == name){
+            return servers[i];
+        }
+    }
+
+    return Server();
+}
+
+bool System::createServer(int ownerUserId, string name){
+    if (searchServer(name).getName() == name) {
+        return false;
+    }
+    else {
+        addServer(Server(ownerUserId, name));
+
+        return true;
+    }
+}
+
+void System::addServer(Server server){
     servers.push_back(server);
+}
+
+void System::removeServer(string name){
+    
+    int idx = 0;
+
+    for (int i = 0; i < servers.size(); i++){
+        if (servers[i].getName() == name){
+            idx = i;
+        }
+    }
+
+    servers.erase(servers.begin() + idx);
 }
 
 bool System::login(string email, string password){
@@ -117,6 +150,17 @@ bool System::login(string email, string password){
     }
     else {
         return false;
+    }
+}
+
+void System::printServers(){
+    if (servers.size() > 0){
+        for (Server server : servers){
+            cout << server.getName() << endl;
+        }
+    }
+    else {
+        cout << "Não há servidores cadastrados." << endl;
     }
 }
 
