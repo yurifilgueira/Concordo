@@ -373,6 +373,8 @@ int main(int argc, char* argv[])
         }
         else if (sys.getCurrentLoggedInUser().getId() == 0){
             cout << "Você só pode usar este comando, se estiver logado." << endl;
+
+            commandLine.clear();
         }
         else if (command != "quit"){
     

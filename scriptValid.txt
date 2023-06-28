@@ -1,0 +1,127 @@
+create-user yuri@example.com 12ab34cd YuYu
+create-user john@example.com password123 John Doe
+create-user literalmenteeu@example.com p@ssw0rd Literalmente Eu
+create-user ryangosling@example.com secretword Ryan Gosling
+create-user emily@example.com mypassword Emily Brown
+create-user jane@example.com password456 Jane Smith
+create-user mark@example.com 7890mark Mark Johnson
+create-user lisa@example.com mypassword123 Lisa Anderson
+create-user sarah@example.com 987sarah Sarah Johnson
+create-user sam@example.com pass123 Sam Wilson
+login yuri@example.com 12ab34cd
+disconnect
+login john@example.com password123
+disconnect
+login literalmenteeu@example.com p@ssw0rd
+disconnect
+login ryangosling@example.com secretword
+disconnect
+login emily@example.com mypassword
+disconnect
+login jane@example.com password456
+disconnect
+login mark@example.com 7890mark
+disconnect
+login lisa@example.com mypassword123
+disconnect
+login sarah@example.com 987sarah
+disconnect
+login sam@example.com pass123
+disconnect
+login yuri@example.com 12ab34cd
+create-server Trio-House
+set-server-desc Trio-House "Descrição do servidor."
+set-server-invite-code Trio-House holaamigos123
+disconnect
+login john@example.com password123
+create-server House-Trio
+set-server-desc House-Trio "Descrição do servidor."
+set-server-invite-code House-Trio olamigos123
+disconnect
+login yuri@example.com 12ab34cd
+create-server My-Server
+set-server-desc My-Server "My Server Description"
+set-server-invite-code My-Server hello123
+disconnect
+login yuri@example.com 12ab34cd
+enter-server Trio-House holaamigos123
+leave-server
+disconnect
+login john@example.com password123
+enter-server Trio-House holaamigos123
+leave-server
+disconnect
+login yuri@example.com 12ab34cd
+enter-server House-Trio olamigos123
+leave-server
+disconnect
+login john@example.com password123
+enter-server House-Trio olamigos123
+leave-server
+disconnect
+login emily@example.com mypassword
+enter-server House-Trio olamigos123
+leave-server
+disconnect
+login ryangosling@example.com secretword
+enter-server House-Trio olamigos123
+leave-server
+disconnect
+login lisa@example.com mypassword123
+enter-server House-Trio olamigos123
+leave-server
+disconnect
+login john@example.com password123
+enter-server My-Server hello123
+leave-server
+disconnect
+login lisa@example.com mypassword123
+enter-server My-Server hello123
+leave-server
+disconnect
+login jane@example.com password456
+enter-server My-Server hello123
+leave-server
+disconnect
+login yuri@example.com 12ab34cd
+enter-server Trio-House holaamigos123
+list-server
+list-participants
+disconnect
+login john@example.com password123
+enter-server Trio-House holaamigos123
+list-participants
+disconnect
+login yuri@example.com 12ab34cd
+enter-server House-Trio olamigos123
+list-participants
+disconnect
+login john@example.com password123
+enter-server House-Trio olamigos123
+list-participants
+disconnect
+login emily@example.com mypassword
+enter-server House-Trio olamigos123
+list-participants
+disconnect
+login ryangosling@example.com secretword
+enter-server House-Trio olamigos123
+list-participants
+disconnect
+login lisa@example.com mypassword123
+enter-server House-Trio olamigos123
+list-participants
+disconnect
+login john@example.com password123
+enter-server My-Server hello123
+list-participants
+disconnect
+login lisa@example.com mypassword123
+enter-server My-Server hello123
+list-participants
+disconnect
+login jane@example.com password456
+enter-server My-Server hello123
+list-participants
+disconnect
+quit

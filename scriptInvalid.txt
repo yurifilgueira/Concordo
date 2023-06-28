@@ -1,0 +1,49 @@
+create-user yuri@example.com 12ab34cd YuYu
+login yuri@example.com 12ab34cd
+create-server Trio-House
+set-server-desc Trio-House "Descrição do servidor."
+set-server-invite-code Trio-House holaamigos123
+enter-server Trio-House holaamigos123
+disconnect
+create-user john@example.com
+login
+enter-server
+set-server-desc ""
+set-server-invite-code House-Trio
+leave-server
+disconnect
+create-user
+login jane@example.com password456 Jane Smith
+enter-server House-Trio
+set-server-desc House-Trio "Descrição inválida"
+set-server-invite-code House-Trio olamigos123
+enter-server House-Trio olamigos123
+leave-server
+disconnect
+create-user mark@example.com 7890mark Mark Johnson
+login mark@example.com 7890mark
+enter-server House-Trio olamigos123
+leave-server
+disconnect
+enter-server House-Trio olamigos123
+create-user lisa@example.com mypassword123 Lisa Anderson
+login lisa@example.com mypassword123
+enter-server House-Trio olamigos123
+leave-server
+disconnect
+login ryangosling@example.com secretword
+enter-server House-Trio olamigos123
+list-participants
+disconnect
+create-user sarah@example.com 987sarah Sarah Johnson
+login sarah@example.com 987sarah
+enter-server My-Server hello123
+leave-server
+disconnect
+login jane@example.com password456
+enter-server My-Server hello123
+list-participants
+login yuri@example.com wrongpassword
+enter-server My-Server hello123
+disconnect
+quit
