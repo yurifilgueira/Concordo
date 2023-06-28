@@ -22,7 +22,11 @@ Certifique-se de ter o g++ e o CMake instalados em seu sistema antes de prossegu
     1.1. Caso a sua versão seja diferente da do arquivo `CMakeLists.txt`, presente nesse projeto, não tem problema. Basta acessar o arquivo citado, e alterar a versão que está no arquivo para a versão que está no seu dispositivo.
 
 2. Em seguida, execute o comando `make` para compilar o programa.
-3. Após a compilação bem-sucedida, execute o programa digitando `./program`.
+3. Após a compilação bem-sucedida, execute o programa digitando `./program` no terminal.
+    
+    3.1. Caso você possua um script — um arquivo `.txt` — com os comandos do Concordo, basta inserir `./program nomeDoArquivo.txt` no terminal.
+    
+    3.2. Caso o script não contenha o comando `quit` — comando que será explicado em breve — o Concordo continurá rodando normalmente, e você poderá inserir os comandos que desejar.
 
 ## Guia de uso
 
@@ -36,13 +40,13 @@ Segue abaixo a lista de comandos possíveis:
 
     `create-user <email> <senha_sem_espaços> <nome com espaços>`
 
-    `create-user julio.melo@imd.ufrn.br 12ab34cd Julio Melo`
+    `create-user ryangosling@example.com 12ab34cd Ryan Gosling`
 
 2. **login**: Realiza o login no Concordo. Veja o exemplo:
 
     `login <nome> <senha>`
 
-    `login julio.melo@imd.ufrn.br 12ab34cd`
+    `login ryangosling@example.com 12ab34cd`
 
 3. **quit**: Encerra o programa, pode ser usado a qualquer momento. Veja o exemplo:
 
