@@ -16,7 +16,7 @@ System::System(User currentLoggedInUser, Server currentServer, Channel currentCh
 System::~System(){
 }
 
-User System::searchUserById(int id){
+User System::searchUserById(int &id){
     int low = 0;
     int high = users.size();
 
@@ -83,11 +83,11 @@ void System::setCurrentChannel(Channel currentChannel){
     this->currentChannel = currentChannel;
 }
 
-vector<User> System::getUsers(){
+vector<User > System::getUsers(){
     return this->users;
 }
 
-vector<Server> System::getServers(){
+vector<Server > System::getServers(){
     return this->servers;
 }
 
@@ -95,23 +95,37 @@ void System::addUser(User user){
     users.push_back(user);
 }
 
-Server System::searchServer(string name){
+Server *System::searchServer(string name){
 
     for (int i = 0; i < servers.size(); i++){
         if (servers[i].getName() == name){
-            return servers[i];
+            return &servers[i];
         }
     }
 
-    return Server();
+    return nullptr;
+}
+
+bool System::serverAlredyExists(string name){
+
+    for (int i = 0; i < servers.size(); i++){
+        if (servers[i].getName() == name){
+            return true;
+        }
+    }
+
+    return false;
 }
 
 bool System::createServer(int ownerUserId, string name){
-    if (searchServer(name).getName() == name) {
+    if (serverAlredyExists(name)) {
         return false;
     }
     else {
         addServer(Server(ownerUserId, name));
+        
+        searchServer(name)->addParticipant(getCurrentLoggedInUser().getId());
+        setCurrentServer(*searchServer(name));
 
         return true;
     }
@@ -164,7 +178,121 @@ void System::printServers(){
     }
 }
 
+void System::enterServer(string name){
+
+    if (searchServer(name) != nullptr){
+        Server server = *searchServer(name);
+
+        if (server.getOwnerUserId() != getCurrentLoggedInUser().getId()){
+            if (getCurrentServer().getName() == name){
+                cout << "Você já está neste servidor" << endl;
+            }
+            else if (getCurrentServer().getName() != ""){
+                cout << "Você já está visualizando um servidor. Para trocar de servidor você deve inserir o comando 'leave-server' e" << 
+                " em seguida você deve inserir o comando 'enter-server' seguido do nome do servidor e, caso o servidor possua, do código de convite." << endl;
+            }
+            else if (getCurrentServer().getName() == name){
+                cout << "Você já está visualizando este servidor." << endl;
+            }
+            else {
+                if (server.getName() != ""){
+                    if (server.hasInvationCode()){
+                        cout << "Este servidor necessita de um código de convite. Insira o comando 'enter-server' seguido do nome do servidor e do código de convite." << endl;
+                    }
+                    else {
+                        if (!server.containsUser(getCurrentLoggedInUser().getId())){
+                            searchServer(name)->addParticipant(getCurrentLoggedInUser().getId());
+                        }
+                        setCurrentServer(*searchServer(name));
+                        cout << "Você entrou no servidor com sucesso." << endl;
+                    }
+                }
+            }
+        }
+        else {
+            if (!server.containsUser(getCurrentLoggedInUser().getId())){
+                searchServer(name)->addParticipant(getCurrentLoggedInUser().getId());
+            }
+            setCurrentServer(*searchServer(name));
+            cout << "Você entrou no servidor com sucesso." << endl;
+        }
+    }
+    else {
+        cout << "Este servidor não existe." << endl;
+    }
+}
+
+
+void System::enterServer(string name, string invitationCode){
+    
+    if (searchServer(name) != nullptr){
+        Server server = *searchServer(name);
+
+        if (server.getOwnerUserId() != getCurrentLoggedInUser().getId()){
+            if (getCurrentServer().getName() == name){
+                cout << "Você já está neste servidor" << endl;
+            }
+            else if (getCurrentServer().getName() != ""){
+                cout << "Você já está visualizando um servidor. Para trocar de servidor você deve inserir o comando 'leave-server' e" << 
+                " em seguida você deve inserir o comando 'enter-server' seguido do nome do servidor e, caso o servidor possua, do código de convite." << endl;
+            }
+            else if (getCurrentServer().getName() == name){
+                cout << "Você já está visualizando este servidor." << endl;
+            }
+            else {
+                if (!server.hasInvationCode()){
+                    cout << "Este servidor não necessita de um código de convite. Insira o comando 'enter-server' seguido do nome do servidor, para entrar no servidor." << endl;
+                }
+                else if(server.getInvitationCode() == invitationCode) {
+                    if (!server.containsUser(getCurrentLoggedInUser().getId())){
+                        searchServer(name)->addParticipant(getCurrentLoggedInUser().getId());
+                    }
+                    setCurrentServer(*searchServer(name));
+                    cout << "Você entrou no servidor com sucesso." << endl;
+                }
+                else {
+                    cout << "Não foi possível entrar no servidor. Código de convite inválido." << endl;
+                }
+            }
+        }
+        else {
+            if (!server.containsUser(getCurrentLoggedInUser().getId())){
+                searchServer(name)->addParticipant(getCurrentLoggedInUser().getId());
+            }
+            setCurrentServer(*searchServer(name));
+            cout << "Você entrou no servidor com sucesso." << endl;
+        }
+    }
+    else {
+        cout << "Este servidor não existe." << endl;
+    }
+}
+
+void System::leaveServer(){
+    if (getCurrentServer().getName() != ""){
+        
+        cout << "Saindo do servidor '" << getCurrentServer().getName() << "'" << endl;
+        
+        setCurrentServer(Server());
+    }
+    else{
+        cout << "Você não está visualizando nenhum servidor." << endl;
+    }
+}
+
 void System::disconnectUser(){
+
+    User user = User();
+
     setCurrentLoggedInUser(User());
 }
 
+bool System::containsServer(string serverName){
+    for (Server server : servers){
+        if (server.getName() == serverName){
+            return true;
+        }
+    }
+
+    return false;
+}

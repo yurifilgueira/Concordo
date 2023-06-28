@@ -3,10 +3,12 @@
 
 #include <string>
 #include <vector>
+#include <set>
 #include <Channel.h>
 
 using std::string;
 using std::vector;
+using std::set;
 
 class Server{
 
@@ -33,5 +35,8 @@ public:
     void setInvitationCode(string invitationCode);
     vector<Channel *> getChannels();
     vector<int> getParticipantsIDs();
+    bool hasInvationCode();
+    void addParticipant(int id);
+    bool containsUser(int id);
 };
 #endif

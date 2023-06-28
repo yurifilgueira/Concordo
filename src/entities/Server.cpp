@@ -1,6 +1,8 @@
 #include <Server.h>
+#include <User.h>
 
 Server::Server(){
+    this->name = "";
 }
 
 Server::Server(int ownerUserId, string name){
@@ -57,4 +59,27 @@ vector<Channel *> Server::getChannels(){
 
 vector<int> Server::getParticipantsIDs(){
     return participantsIDs;
+}
+
+bool Server::hasInvationCode(){
+    if (invitationCode.empty()){
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
+void Server::addParticipant(int id){
+    participantsIDs.push_back(id);
+}
+
+bool Server::containsUser(int userId){
+    for (int id : participantsIDs){
+        if (id == userId){
+            return true;
+        }
+    }
+
+    return false;
 }

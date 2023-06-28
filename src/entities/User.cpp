@@ -1,6 +1,7 @@
 #include <User.h>
 
 User::User(){
+    this->id = 0;
 }
 
 User::User(int id, string email, string password, string name){
