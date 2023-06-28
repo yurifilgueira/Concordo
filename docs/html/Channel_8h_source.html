@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: Código-Fonte de include/Channel.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Concordo
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Channel.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CHANNEL</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CHANNEL</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classChannel.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classChannel.html">Channel</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">   14</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">name</a>; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classChannel.html#af2b4b16288cbb2c592b1e0f6486c2430">Channel</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classChannel.html#af2b4b16288cbb2c592b1e0f6486c2430">Channel</a>(<span class="keywordtype">string</span> <a class="code" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">name</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classChannel.html#a5f15ebd302464069f1a9e3f0ded14482">~Channel</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classChannel.html#a53361b01056aea15c93053feb470b715">getName</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classChannel.html#a9af25840dd96485a05bf36d946e71011">setName</a>(<span class="keywordtype">string</span> <a class="code" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">name</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassChannel_html"><div class="ttname"><a href="classChannel.html">Channel</a></div><div class="ttdoc">Classe que representa um canal.</div><div class="ttdef"><b>Definition:</b> Channel.h:11</div></div>
+<div class="ttc" id="aclassChannel_html_af2b4b16288cbb2c592b1e0f6486c2430"><div class="ttname"><a href="classChannel.html#af2b4b16288cbb2c592b1e0f6486c2430">Channel::Channel</a></div><div class="ttdeci">Channel()</div><div class="ttdoc">Construtor padrão da classe Channel.</div><div class="ttdef"><b>Definition:</b> Channel.cpp:3</div></div>
+<div class="ttc" id="aclassChannel_html_a9af25840dd96485a05bf36d946e71011"><div class="ttname"><a href="classChannel.html#a9af25840dd96485a05bf36d946e71011">Channel::setName</a></div><div class="ttdeci">void setName(string name)</div><div class="ttdoc">Define o nome do canal.</div><div class="ttdef"><b>Definition:</b> Channel.cpp:17</div></div>
+<div class="ttc" id="aclassChannel_html_ada27be4a604630621c5de998c7f4a418"><div class="ttname"><a href="classChannel.html#ada27be4a604630621c5de998c7f4a418">Channel::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> Channel.h:14</div></div>
+<div class="ttc" id="aclassChannel_html_a53361b01056aea15c93053feb470b715"><div class="ttname"><a href="classChannel.html#a53361b01056aea15c93053feb470b715">Channel::getName</a></div><div class="ttdeci">string getName()</div><div class="ttdoc">Obtém o nome do canal.</div><div class="ttdef"><b>Definition:</b> Channel.cpp:13</div></div>
+<div class="ttc" id="aclassChannel_html_a5f15ebd302464069f1a9e3f0ded14482"><div class="ttname"><a href="classChannel.html#a5f15ebd302464069f1a9e3f0ded14482">Channel::~Channel</a></div><div class="ttdeci">~Channel()</div><div class="ttdoc">Destrutor da classe Channel.</div><div class="ttdef"><b>Definition:</b> Channel.cpp:10</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

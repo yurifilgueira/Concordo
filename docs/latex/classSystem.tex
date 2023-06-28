@@ -1,0 +1,493 @@
+\hypertarget{classSystem}{}\doxysection{Referência da Classe System}
+\label{classSystem}\index{System@{System}}
+
+
+Representa o sistema de aplicativo de chat.  
+
+
+
+
+{\ttfamily \#include $<$System.\+h$>$}
+
+
+
+Diagrama de colaboração para System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSystem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSystem_ae317936c9bcf1374d61745572e0f2f8a}\label{classSystem_ae317936c9bcf1374d61745572e0f2f8a}} 
+\mbox{\hyperlink{classSystem_ae317936c9bcf1374d61745572e0f2f8a}{System}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão para \mbox{\hyperlink{classSystem}{System}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSystem_a9e88ce1ecba5533844d2f42b806885cf}{System}} (\mbox{\hyperlink{classUser}{User}} \mbox{\hyperlink{classSystem_a7b6f5a8e48502a3f9dace2782620529a}{current\+Logged\+In\+User}}, \mbox{\hyperlink{classServer}{Server}} \mbox{\hyperlink{classSystem_a22311253fcb0f8d4eaea0a305cef2828}{current\+Server}}, \mbox{\hyperlink{classChannel}{Channel}} \mbox{\hyperlink{classSystem_a8728973c7f45da3706ffeb09564b6f41}{current\+Channel}})
+\begin{DoxyCompactList}\small\item\em Construtor para \mbox{\hyperlink{classSystem}{System}} com usuário, servidor e canal atual. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSystem_a3be70bb338e3f062f821173fd15680d0}\label{classSystem_a3be70bb338e3f062f821173fd15680d0}} 
+\mbox{\hyperlink{classSystem_a3be70bb338e3f062f821173fd15680d0}{$\sim$\+System}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor para \mbox{\hyperlink{classSystem}{System}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUser}{User}} \mbox{\hyperlink{classSystem_aa6fda4c4e4c734dda759502f9198f91c}{search\+User\+By\+Id}} (int \&id)
+\begin{DoxyCompactList}\small\item\em Procura um usuário com base em seu ID. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSystem_a4ab5dfb3127f97c71ab0169859d47a14}{email\+Already\+Used}} (string email)
+\begin{DoxyCompactList}\small\item\em Verifica se um determinado endereço de e-\/mail já está em uso por outro usuário. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSystem_af422bfe509960a2b85f466ae32a0160c}{generate\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Gera um novo ID para um usuário com base no ID do último usuário cadastrado. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUser}{User}} \mbox{\hyperlink{classSystem_a1ad43cea987268d4f35aac5db2b9b251}{get\+Current\+Logged\+In\+User}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o usuário atualmente logado no sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a73ecef267721fd071154020de63fb5db}{set\+Current\+Logged\+In\+User}} (\mbox{\hyperlink{classUser}{User}} \mbox{\hyperlink{classSystem_a7b6f5a8e48502a3f9dace2782620529a}{current\+Logged\+In\+User}})
+\begin{DoxyCompactList}\small\item\em Define o usuário atualmente logado no sistema. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServer}{Server}} \mbox{\hyperlink{classSystem_acac47c75831ae3a6835b3c6685ea687e}{get\+Current\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o servidor atualmente selecionado no sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a1ee8893ec146ae01c515c98314bcb0d6}{set\+Current\+Server}} (\mbox{\hyperlink{classServer}{Server}} \mbox{\hyperlink{classSystem_a22311253fcb0f8d4eaea0a305cef2828}{current\+Server}})
+\begin{DoxyCompactList}\small\item\em Define o servidor atualmente selecionado no sistema. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classChannel}{Channel}} \mbox{\hyperlink{classSystem_a99cc3d6c233ccd08ffd32463798cb288}{get\+Current\+Channel}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o canal atualmente selecionado no sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a34a024771edd679d35e8c5fbe374b532}{set\+Current\+Channel}} (\mbox{\hyperlink{classChannel}{Channel}} \mbox{\hyperlink{classSystem_a8728973c7f45da3706ffeb09564b6f41}{current\+Channel}})
+\begin{DoxyCompactList}\small\item\em Define o canal atualmente selecionado no sistema. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classUser}{User}} $>$ \mbox{\hyperlink{classSystem_ac3d98d101c0bc590264f447a88cf8814}{get\+Users}} ()
+\begin{DoxyCompactList}\small\item\em Obtém todos os usuários cadastrados no sistema. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classServer}{Server}} $>$ \mbox{\hyperlink{classSystem_a73f7448c3dccbf032bc97a9beac348ba}{get\+Servers}} ()
+\begin{DoxyCompactList}\small\item\em Obtém todos os servidores disponíveis no sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a7c040f18eec77345aa8336664110cb64}{add\+User}} (\mbox{\hyperlink{classUser}{User}} user)
+\begin{DoxyCompactList}\small\item\em Adiciona um novo usuário ao sistema. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServer}{Server}} $\ast$ \mbox{\hyperlink{classSystem_ae08615526db9b1b89428e5bc4b265452}{search\+Server}} (string name)
+\begin{DoxyCompactList}\small\item\em Procura um servidor pelo seu nome. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSystem_a38da6d97e8f941c5d27a2177858bb1b9}{server\+Already\+Exists}} (string name)
+\begin{DoxyCompactList}\small\item\em Verifica se um servidor com um determinado nome já existe no sistema. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSystem_af721524bb095e02d8432e8716f7171e5}{create\+Server}} (int owner\+User\+Id, string name)
+\begin{DoxyCompactList}\small\item\em Cria um novo servidor no sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a1ddd746a8c998c6bb14bd7302e6be854}{add\+Server}} (\mbox{\hyperlink{classServer}{Server}} server)
+\begin{DoxyCompactList}\small\item\em Adiciona um servidor ao sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a0005318dcbf77e2cbc1cadb3a5547e27}{remove\+Server}} (string name)
+\begin{DoxyCompactList}\small\item\em Remove um servidor do sistema com base em seu nome. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSystem_aac86ea7b336ed35ec8ce3a1a482943d5}{login}} (string email, string password)
+\begin{DoxyCompactList}\small\item\em Realiza o login de um usuário no sistema. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSystem_ab574840b56a27b43afb4c035ec2e30f3}\label{classSystem_ab574840b56a27b43afb4c035ec2e30f3}} 
+void \mbox{\hyperlink{classSystem_ab574840b56a27b43afb4c035ec2e30f3}{print\+Servers}} ()
+\begin{DoxyCompactList}\small\item\em Imprime os nomes de todos os servidores disponíveis no sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_a7aa5054bf6e64f5882d1f17557e69346}{enter\+Server}} (string name)
+\begin{DoxyCompactList}\small\item\em Entra em um servidor especificado pelo seu nome. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSystem_aa36aab8ce3e6a0237d8404072e79b144}{enter\+Server}} (string name, string invitation\+Code)
+\begin{DoxyCompactList}\small\item\em Entra em um servidor especificado pelo seu nome e código de convite. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSystem_a56d4ebdd0f54fc0867fb097c3398c1e0}\label{classSystem_a56d4ebdd0f54fc0867fb097c3398c1e0}} 
+void \mbox{\hyperlink{classSystem_a56d4ebdd0f54fc0867fb097c3398c1e0}{leave\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Sai do servidor atualmente visualizado no sistema. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSystem_a24f3c36b66ef0bd93a7629cf642afadb}\label{classSystem_a24f3c36b66ef0bd93a7629cf642afadb}} 
+void \mbox{\hyperlink{classSystem_a24f3c36b66ef0bd93a7629cf642afadb}{disconnect\+User}} ()
+\begin{DoxyCompactList}\small\item\em Desconecta o usuário atualmente logado do sistema. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSystem_ad90bd380df5232bb478bcf96b2de4bb9}{contains\+Server}} (string server\+Name)
+\begin{DoxyCompactList}\small\item\em Verifica se um servidor com um determinado nome está presente no sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUser}{User}} \mbox{\hyperlink{classSystem_a7b6f5a8e48502a3f9dace2782620529a}{current\+Logged\+In\+User}}
+\item 
+\mbox{\hyperlink{classServer}{Server}} \mbox{\hyperlink{classSystem_a22311253fcb0f8d4eaea0a305cef2828}{current\+Server}}
+\item 
+\mbox{\hyperlink{classChannel}{Channel}} \mbox{\hyperlink{classSystem_a8728973c7f45da3706ffeb09564b6f41}{current\+Channel}}
+\item 
+vector$<$ \mbox{\hyperlink{classUser}{User}} $>$ \mbox{\hyperlink{classSystem_abceec73ffd1fafdad75edfdb8298ca44}{users}}
+\item 
+vector$<$ \mbox{\hyperlink{classServer}{Server}} $>$ \mbox{\hyperlink{classSystem_a4ed2a2c7242c0cdf3b6cd0992c79255d}{servers}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Representa o sistema de aplicativo de chat. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classSystem_a9e88ce1ecba5533844d2f42b806885cf}\label{classSystem_a9e88ce1ecba5533844d2f42b806885cf}} 
+\index{System@{System}!System@{System}}
+\index{System@{System}!System@{System}}
+\doxysubsubsection{\texorpdfstring{System()}{System()}}
+{\footnotesize\ttfamily System\+::\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUser}{User}}}]{current\+Logged\+In\+User,  }\item[{\mbox{\hyperlink{classServer}{Server}}}]{current\+Server,  }\item[{\mbox{\hyperlink{classChannel}{Channel}}}]{current\+Channel }\end{DoxyParamCaption})}
+
+
+
+Construtor para \mbox{\hyperlink{classSystem}{System}} com usuário, servidor e canal atual. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em current\+Logged\+In\+User} & O usuário atualmente logado no sistema. \\
+\hline
+{\em current\+Server} & O servidor atualmente selecionado no sistema. \\
+\hline
+{\em current\+Channel} & O canal atualmente selecionado no sistema. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classSystem_a1ddd746a8c998c6bb14bd7302e6be854}\label{classSystem_a1ddd746a8c998c6bb14bd7302e6be854}} 
+\index{System@{System}!addServer@{addServer}}
+\index{addServer@{addServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{addServer()}{addServer()}}
+{\footnotesize\ttfamily void System\+::add\+Server (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classServer}{Server}}}]{server }\end{DoxyParamCaption})}
+
+
+
+Adiciona um servidor ao sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em server} & O servidor a ser adicionado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSystem_a7c040f18eec77345aa8336664110cb64}\label{classSystem_a7c040f18eec77345aa8336664110cb64}} 
+\index{System@{System}!addUser@{addUser}}
+\index{addUser@{addUser}!System@{System}}
+\doxysubsubsection{\texorpdfstring{addUser()}{addUser()}}
+{\footnotesize\ttfamily void System\+::add\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUser}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Adiciona um novo usuário ao sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em user} & O usuário a ser adicionado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSystem_ad90bd380df5232bb478bcf96b2de4bb9}\label{classSystem_ad90bd380df5232bb478bcf96b2de4bb9}} 
+\index{System@{System}!containsServer@{containsServer}}
+\index{containsServer@{containsServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{containsServer()}{containsServer()}}
+{\footnotesize\ttfamily bool System\+::contains\+Server (\begin{DoxyParamCaption}\item[{string}]{server\+Name }\end{DoxyParamCaption})}
+
+
+
+Verifica se um servidor com um determinado nome está presente no sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em server\+Name} & O nome do servidor a ser verificado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+True se o servidor estiver presente, caso contrário, false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_af721524bb095e02d8432e8716f7171e5}\label{classSystem_af721524bb095e02d8432e8716f7171e5}} 
+\index{System@{System}!createServer@{createServer}}
+\index{createServer@{createServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{createServer()}{createServer()}}
+{\footnotesize\ttfamily bool System\+::create\+Server (\begin{DoxyParamCaption}\item[{int}]{owner\+User\+Id,  }\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Cria um novo servidor no sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em owner\+User\+Id} & O ID do usuário que será o proprietário do servidor. \\
+\hline
+{\em name} & O nome do servidor a ser criado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+True se o servidor foi criado com sucesso, caso contrário, false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_a4ab5dfb3127f97c71ab0169859d47a14}\label{classSystem_a4ab5dfb3127f97c71ab0169859d47a14}} 
+\index{System@{System}!emailAlreadyUsed@{emailAlreadyUsed}}
+\index{emailAlreadyUsed@{emailAlreadyUsed}!System@{System}}
+\doxysubsubsection{\texorpdfstring{emailAlreadyUsed()}{emailAlreadyUsed()}}
+{\footnotesize\ttfamily int System\+::email\+Already\+Used (\begin{DoxyParamCaption}\item[{string}]{email }\end{DoxyParamCaption})}
+
+
+
+Verifica se um determinado endereço de e-\/mail já está em uso por outro usuário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em email} & O endereço de e-\/mail a ser verificado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O ID do usuário associado ao endereço de e-\/mail se já estiver em uso, ou 0 caso contrário. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_a7aa5054bf6e64f5882d1f17557e69346}\label{classSystem_a7aa5054bf6e64f5882d1f17557e69346}} 
+\index{System@{System}!enterServer@{enterServer}}
+\index{enterServer@{enterServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{enterServer()}{enterServer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void System\+::enter\+Server (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Entra em um servidor especificado pelo seu nome. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do servidor a ser acessado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSystem_aa36aab8ce3e6a0237d8404072e79b144}\label{classSystem_aa36aab8ce3e6a0237d8404072e79b144}} 
+\index{System@{System}!enterServer@{enterServer}}
+\index{enterServer@{enterServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{enterServer()}{enterServer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void System\+::enter\+Server (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{invitation\+Code }\end{DoxyParamCaption})}
+
+
+
+Entra em um servidor especificado pelo seu nome e código de convite. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do servidor a ser acessado. \\
+\hline
+{\em invitation\+Code} & O código de convite para entrar no servidor. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSystem_af422bfe509960a2b85f466ae32a0160c}\label{classSystem_af422bfe509960a2b85f466ae32a0160c}} 
+\index{System@{System}!generateId@{generateId}}
+\index{generateId@{generateId}!System@{System}}
+\doxysubsubsection{\texorpdfstring{generateId()}{generateId()}}
+{\footnotesize\ttfamily int System\+::generate\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gera um novo ID para um usuário com base no ID do último usuário cadastrado. 
+
+\begin{DoxyReturn}{Retorna}
+O novo ID gerado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_a99cc3d6c233ccd08ffd32463798cb288}\label{classSystem_a99cc3d6c233ccd08ffd32463798cb288}} 
+\index{System@{System}!getCurrentChannel@{getCurrentChannel}}
+\index{getCurrentChannel@{getCurrentChannel}!System@{System}}
+\doxysubsubsection{\texorpdfstring{getCurrentChannel()}{getCurrentChannel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classChannel}{Channel}} System\+::get\+Current\+Channel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o canal atualmente selecionado no sistema. 
+
+\begin{DoxyReturn}{Retorna}
+O canal atualmente selecionado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_a1ad43cea987268d4f35aac5db2b9b251}\label{classSystem_a1ad43cea987268d4f35aac5db2b9b251}} 
+\index{System@{System}!getCurrentLoggedInUser@{getCurrentLoggedInUser}}
+\index{getCurrentLoggedInUser@{getCurrentLoggedInUser}!System@{System}}
+\doxysubsubsection{\texorpdfstring{getCurrentLoggedInUser()}{getCurrentLoggedInUser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUser}{User}} System\+::get\+Current\+Logged\+In\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o usuário atualmente logado no sistema. 
+
+\begin{DoxyReturn}{Retorna}
+O usuário atualmente logado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_acac47c75831ae3a6835b3c6685ea687e}\label{classSystem_acac47c75831ae3a6835b3c6685ea687e}} 
+\index{System@{System}!getCurrentServer@{getCurrentServer}}
+\index{getCurrentServer@{getCurrentServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{getCurrentServer()}{getCurrentServer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classServer}{Server}} System\+::get\+Current\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o servidor atualmente selecionado no sistema. 
+
+\begin{DoxyReturn}{Retorna}
+O servidor atualmente selecionado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_a73f7448c3dccbf032bc97a9beac348ba}\label{classSystem_a73f7448c3dccbf032bc97a9beac348ba}} 
+\index{System@{System}!getServers@{getServers}}
+\index{getServers@{getServers}!System@{System}}
+\doxysubsubsection{\texorpdfstring{getServers()}{getServers()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classServer}{Server}} $>$ System\+::get\+Servers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém todos os servidores disponíveis no sistema. 
+
+\begin{DoxyReturn}{Retorna}
+Um vetor contendo todos os servidores disponíveis. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_ac3d98d101c0bc590264f447a88cf8814}\label{classSystem_ac3d98d101c0bc590264f447a88cf8814}} 
+\index{System@{System}!getUsers@{getUsers}}
+\index{getUsers@{getUsers}!System@{System}}
+\doxysubsubsection{\texorpdfstring{getUsers()}{getUsers()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classUser}{User}} $>$ System\+::get\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém todos os usuários cadastrados no sistema. 
+
+\begin{DoxyReturn}{Retorna}
+Um vetor contendo todos os usuários cadastrados. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_aac86ea7b336ed35ec8ce3a1a482943d5}\label{classSystem_aac86ea7b336ed35ec8ce3a1a482943d5}} 
+\index{System@{System}!login@{login}}
+\index{login@{login}!System@{System}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily bool System\+::login (\begin{DoxyParamCaption}\item[{string}]{email,  }\item[{string}]{password }\end{DoxyParamCaption})}
+
+
+
+Realiza o login de um usuário no sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em email} & O endereço de e-\/mail do usuário. \\
+\hline
+{\em password} & A senha do usuário. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+True se o login for bem-\/sucedido, caso contrário, false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_a0005318dcbf77e2cbc1cadb3a5547e27}\label{classSystem_a0005318dcbf77e2cbc1cadb3a5547e27}} 
+\index{System@{System}!removeServer@{removeServer}}
+\index{removeServer@{removeServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{removeServer()}{removeServer()}}
+{\footnotesize\ttfamily void System\+::remove\+Server (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Remove um servidor do sistema com base em seu nome. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do servidor a ser removido. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSystem_ae08615526db9b1b89428e5bc4b265452}\label{classSystem_ae08615526db9b1b89428e5bc4b265452}} 
+\index{System@{System}!searchServer@{searchServer}}
+\index{searchServer@{searchServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{searchServer()}{searchServer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classServer}{Server}} $\ast$ System\+::search\+Server (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Procura um servidor pelo seu nome. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do servidor a ser procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um ponteiro para o servidor encontrado ou nullptr se não for encontrado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_aa6fda4c4e4c734dda759502f9198f91c}\label{classSystem_aa6fda4c4e4c734dda759502f9198f91c}} 
+\index{System@{System}!searchUserById@{searchUserById}}
+\index{searchUserById@{searchUserById}!System@{System}}
+\doxysubsubsection{\texorpdfstring{searchUserById()}{searchUserById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUser}{User}} System\+::search\+User\+By\+Id (\begin{DoxyParamCaption}\item[{int \&}]{id }\end{DoxyParamCaption})}
+
+
+
+Procura um usuário com base em seu ID. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & O ID do usuário a ser pesquisado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O usuário correspondente ao ID fornecido. Retorna um objeto \mbox{\hyperlink{classUser}{User}} vazio se não for encontrado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_a38da6d97e8f941c5d27a2177858bb1b9}\label{classSystem_a38da6d97e8f941c5d27a2177858bb1b9}} 
+\index{System@{System}!serverAlreadyExists@{serverAlreadyExists}}
+\index{serverAlreadyExists@{serverAlreadyExists}!System@{System}}
+\doxysubsubsection{\texorpdfstring{serverAlreadyExists()}{serverAlreadyExists()}}
+{\footnotesize\ttfamily bool System\+::server\+Already\+Exists (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Verifica se um servidor com um determinado nome já existe no sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do servidor a ser verificado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+True se o servidor já existe, caso contrário, false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSystem_a34a024771edd679d35e8c5fbe374b532}\label{classSystem_a34a024771edd679d35e8c5fbe374b532}} 
+\index{System@{System}!setCurrentChannel@{setCurrentChannel}}
+\index{setCurrentChannel@{setCurrentChannel}!System@{System}}
+\doxysubsubsection{\texorpdfstring{setCurrentChannel()}{setCurrentChannel()}}
+{\footnotesize\ttfamily void System\+::set\+Current\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classChannel}{Channel}}}]{current\+Channel }\end{DoxyParamCaption})}
+
+
+
+Define o canal atualmente selecionado no sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em current\+Channel} & O canal a ser definido como canal atualmente selecionado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSystem_a73ecef267721fd071154020de63fb5db}\label{classSystem_a73ecef267721fd071154020de63fb5db}} 
+\index{System@{System}!setCurrentLoggedInUser@{setCurrentLoggedInUser}}
+\index{setCurrentLoggedInUser@{setCurrentLoggedInUser}!System@{System}}
+\doxysubsubsection{\texorpdfstring{setCurrentLoggedInUser()}{setCurrentLoggedInUser()}}
+{\footnotesize\ttfamily void System\+::set\+Current\+Logged\+In\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUser}{User}}}]{current\+Logged\+In\+User }\end{DoxyParamCaption})}
+
+
+
+Define o usuário atualmente logado no sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em current\+Logged\+In\+User} & O usuário a ser definido como usuário atualmente logado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSystem_a1ee8893ec146ae01c515c98314bcb0d6}\label{classSystem_a1ee8893ec146ae01c515c98314bcb0d6}} 
+\index{System@{System}!setCurrentServer@{setCurrentServer}}
+\index{setCurrentServer@{setCurrentServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{setCurrentServer()}{setCurrentServer()}}
+{\footnotesize\ttfamily void System\+::set\+Current\+Server (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classServer}{Server}}}]{current\+Server }\end{DoxyParamCaption})}
+
+
+
+Define o servidor atualmente selecionado no sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em current\+Server} & O servidor a ser definido como servidor atualmente selecionado. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classSystem_a8728973c7f45da3706ffeb09564b6f41}\label{classSystem_a8728973c7f45da3706ffeb09564b6f41}} 
+\index{System@{System}!currentChannel@{currentChannel}}
+\index{currentChannel@{currentChannel}!System@{System}}
+\doxysubsubsection{\texorpdfstring{currentChannel}{currentChannel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classChannel}{Channel}} System\+::current\+Channel\hspace{0.3cm}{\ttfamily [private]}}
+
+O canal atualmente selecionado no sistema. \mbox{\Hypertarget{classSystem_a7b6f5a8e48502a3f9dace2782620529a}\label{classSystem_a7b6f5a8e48502a3f9dace2782620529a}} 
+\index{System@{System}!currentLoggedInUser@{currentLoggedInUser}}
+\index{currentLoggedInUser@{currentLoggedInUser}!System@{System}}
+\doxysubsubsection{\texorpdfstring{currentLoggedInUser}{currentLoggedInUser}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUser}{User}} System\+::current\+Logged\+In\+User\hspace{0.3cm}{\ttfamily [private]}}
+
+O usuário atualmente logado no sistema. \mbox{\Hypertarget{classSystem_a22311253fcb0f8d4eaea0a305cef2828}\label{classSystem_a22311253fcb0f8d4eaea0a305cef2828}} 
+\index{System@{System}!currentServer@{currentServer}}
+\index{currentServer@{currentServer}!System@{System}}
+\doxysubsubsection{\texorpdfstring{currentServer}{currentServer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classServer}{Server}} System\+::current\+Server\hspace{0.3cm}{\ttfamily [private]}}
+
+O servidor atualmente selecionado no sistema. \mbox{\Hypertarget{classSystem_a4ed2a2c7242c0cdf3b6cd0992c79255d}\label{classSystem_a4ed2a2c7242c0cdf3b6cd0992c79255d}} 
+\index{System@{System}!servers@{servers}}
+\index{servers@{servers}!System@{System}}
+\doxysubsubsection{\texorpdfstring{servers}{servers}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classServer}{Server}}$>$ System\+::servers\hspace{0.3cm}{\ttfamily [private]}}
+
+Os servidores disponíveis no sistema. \mbox{\Hypertarget{classSystem_abceec73ffd1fafdad75edfdb8298ca44}\label{classSystem_abceec73ffd1fafdad75edfdb8298ca44}} 
+\index{System@{System}!users@{users}}
+\index{users@{users}!System@{System}}
+\doxysubsubsection{\texorpdfstring{users}{users}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classUser}{User}}$>$ System\+::users\hspace{0.3cm}{\ttfamily [private]}}
+
+Os usuários cadastrados no sistema. 
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/System.\+h\item 
+src/entities/System.\+cpp\end{DoxyCompactItemize}

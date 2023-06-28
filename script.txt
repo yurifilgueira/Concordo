@@ -88,3 +88,4 @@ list-participants
 login yuri@example.com wrongpassword
 enter-server My-Server hello123
 disconnect
+quit

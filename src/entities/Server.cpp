@@ -61,7 +61,7 @@ vector<int> Server::getParticipantsIDs(){
     return participantsIDs;
 }
 
-bool Server::hasInvationCode(){
+bool Server::hasInvitationCode(){
     if (invitationCode.empty()){
         return false;
     }

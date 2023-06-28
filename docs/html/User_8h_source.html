@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: Código-Fonte de include/User.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Concordo
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">User.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef USER</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define USER</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classUser.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classUser.html">User</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classUser.html#aa7e6e39b43020bbe9c3a196b3689b0f7">   15</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classUser.html#aa7e6e39b43020bbe9c3a196b3689b0f7">id</a>; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classUser.html#a2d678acd22b533660b4b7d8404961f14">   16</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classUser.html#a2d678acd22b533660b4b7d8404961f14">email</a>; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classUser.html#ab537b9a55bc7d7fcafcdf8e53d085e67">   17</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classUser.html#ab537b9a55bc7d7fcafcdf8e53d085e67">password</a>; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classUser.html#a643f85779a4693855c171c396f49e515">   18</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classUser.html#a643f85779a4693855c171c396f49e515">name</a>; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classUser.html#a4a0137053e591fbb79d9057dd7d2283d">User</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classUser.html#a4a0137053e591fbb79d9057dd7d2283d">User</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> <a class="code" href="classUser.html#a643f85779a4693855c171c396f49e515">name</a>, <span class="keywordtype">string</span> <a class="code" href="classUser.html#a2d678acd22b533660b4b7d8404961f14">email</a>, <span class="keywordtype">string</span> <a class="code" href="classUser.html#ab537b9a55bc7d7fcafcdf8e53d085e67">password</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classUser.html#ac00b72ad64eb4149f7b21b9f5468c2b2">~User</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classUser.html#a1e393732cd9838ab29445d9153333046">getId</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classUser.html#adb316ac38d5f62a967686e7b736a0469">getName</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUser.html#acabf7e5a40909656de5bc631abe5588c">setName</a>(<span class="keywordtype">string</span> <a class="code" href="classUser.html#a643f85779a4693855c171c396f49e515">name</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classUser.html#a851bfaab8e406de66700edb326c58e38">getEmail</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUser.html#a9d38dd7a9f5ca79cf17ecf572d42c647">setEmail</a>(<span class="keywordtype">string</span> <a class="code" href="classUser.html#a2d678acd22b533660b4b7d8404961f14">email</a>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classUser.html#a090eb9ee354cc25b2e8240b714b39d64">getPassword</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classUser.html#ab9645a2f4dc87343f9e9aeb408be41ad">setPassword</a>(<span class="keywordtype">string</span> <a class="code" href="classUser.html#ab537b9a55bc7d7fcafcdf8e53d085e67">password</a>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassUser_html_a9d38dd7a9f5ca79cf17ecf572d42c647"><div class="ttname"><a href="classUser.html#a9d38dd7a9f5ca79cf17ecf572d42c647">User::setEmail</a></div><div class="ttdeci">void setEmail(string email)</div><div class="ttdoc">Define o endereço de e-mail do usuário.</div><div class="ttdef"><b>Definition:</b> User.cpp:33</div></div>
+<div class="ttc" id="aclassUser_html_ab537b9a55bc7d7fcafcdf8e53d085e67"><div class="ttname"><a href="classUser.html#ab537b9a55bc7d7fcafcdf8e53d085e67">User::password</a></div><div class="ttdeci">string password</div><div class="ttdef"><b>Definition:</b> User.h:17</div></div>
+<div class="ttc" id="aclassUser_html_acabf7e5a40909656de5bc631abe5588c"><div class="ttname"><a href="classUser.html#acabf7e5a40909656de5bc631abe5588c">User::setName</a></div><div class="ttdeci">void setName(string name)</div><div class="ttdoc">Define o nome do usuário.</div><div class="ttdef"><b>Definition:</b> User.cpp:25</div></div>
+<div class="ttc" id="aclassUser_html_a090eb9ee354cc25b2e8240b714b39d64"><div class="ttname"><a href="classUser.html#a090eb9ee354cc25b2e8240b714b39d64">User::getPassword</a></div><div class="ttdeci">string getPassword()</div><div class="ttdoc">Obtém a senha do usuário.</div><div class="ttdef"><b>Definition:</b> User.cpp:37</div></div>
+<div class="ttc" id="aclassUser_html_a1e393732cd9838ab29445d9153333046"><div class="ttname"><a href="classUser.html#a1e393732cd9838ab29445d9153333046">User::getId</a></div><div class="ttdeci">int getId()</div><div class="ttdoc">Obtém o ID do usuário.</div><div class="ttdef"><b>Definition:</b> User.cpp:17</div></div>
+<div class="ttc" id="aclassUser_html_adb316ac38d5f62a967686e7b736a0469"><div class="ttname"><a href="classUser.html#adb316ac38d5f62a967686e7b736a0469">User::getName</a></div><div class="ttdeci">string getName()</div><div class="ttdoc">Obtém o nome do usuário.</div><div class="ttdef"><b>Definition:</b> User.cpp:21</div></div>
+<div class="ttc" id="aclassUser_html_ac00b72ad64eb4149f7b21b9f5468c2b2"><div class="ttname"><a href="classUser.html#ac00b72ad64eb4149f7b21b9f5468c2b2">User::~User</a></div><div class="ttdeci">~User()</div><div class="ttdoc">Destrutor para User.</div><div class="ttdef"><b>Definition:</b> User.cpp:14</div></div>
+<div class="ttc" id="aclassUser_html_aa7e6e39b43020bbe9c3a196b3689b0f7"><div class="ttname"><a href="classUser.html#aa7e6e39b43020bbe9c3a196b3689b0f7">User::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> User.h:15</div></div>
+<div class="ttc" id="aclassUser_html_a643f85779a4693855c171c396f49e515"><div class="ttname"><a href="classUser.html#a643f85779a4693855c171c396f49e515">User::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> User.h:18</div></div>
+<div class="ttc" id="aclassUser_html_ab9645a2f4dc87343f9e9aeb408be41ad"><div class="ttname"><a href="classUser.html#ab9645a2f4dc87343f9e9aeb408be41ad">User::setPassword</a></div><div class="ttdeci">void setPassword(string password)</div><div class="ttdoc">Define a senha do usuário.</div><div class="ttdef"><b>Definition:</b> User.cpp:41</div></div>
+<div class="ttc" id="aclassUser_html_a2d678acd22b533660b4b7d8404961f14"><div class="ttname"><a href="classUser.html#a2d678acd22b533660b4b7d8404961f14">User::email</a></div><div class="ttdeci">string email</div><div class="ttdef"><b>Definition:</b> User.h:16</div></div>
+<div class="ttc" id="aclassUser_html_a851bfaab8e406de66700edb326c58e38"><div class="ttname"><a href="classUser.html#a851bfaab8e406de66700edb326c58e38">User::getEmail</a></div><div class="ttdeci">string getEmail()</div><div class="ttdoc">Obtém o endereço de e-mail do usuário.</div><div class="ttdef"><b>Definition:</b> User.cpp:29</div></div>
+<div class="ttc" id="aclassUser_html"><div class="ttname"><a href="classUser.html">User</a></div><div class="ttdoc">Representa um usuário no sistema de chat.</div><div class="ttdef"><b>Definition:</b> User.h:12</div></div>
+<div class="ttc" id="aclassUser_html_a4a0137053e591fbb79d9057dd7d2283d"><div class="ttname"><a href="classUser.html#a4a0137053e591fbb79d9057dd7d2283d">User::User</a></div><div class="ttdeci">User()</div><div class="ttdoc">Construtor padrão para User.</div><div class="ttdef"><b>Definition:</b> User.cpp:3</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

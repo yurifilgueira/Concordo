@@ -14,6 +14,11 @@ using std::istringstream;
 
 vector<string> commandLine;
 
+/**
+ * Função para dividir uma string em substrings usando um separador específico.
+ * @param str A string a ser dividida.
+ * @param separator O caractere separador.
+ */
 void split(string str, char separator)
 {
     size_t idx = str.find_first_of(separator);
@@ -31,6 +36,11 @@ void split(string str, char separator)
     commandLine.push_back(arg);
 }
 
+/**
+ * Função para gerar o nome do servidor a partir da linha de comando.
+ * @param commandLine A linha de comando dividida em tokens.
+ * @return O nome do servidor.
+ */
 string generateServerName(vector<string> commandLine){
     
     string name;
@@ -50,6 +60,12 @@ string generateServerName(vector<string> commandLine){
     return name;
 }
 
+/**
+ * Função para gerar o nome do usuário a partir da linha de comando.
+ * @param commandLine A linha de comando dividida em tokens.
+ * @return O nome do usuário.
+ */
+
 string generateUserName(vector<string> commandLine){
     
     string name;
@@ -66,6 +82,11 @@ string generateUserName(vector<string> commandLine){
     return name;
 }
 
+/**
+ * Função para obter a descrição de um comando.
+ * @param command O comando contendo a descrição entre aspas.
+ * @return A descrição.
+ */
 string getDesc(string command){
     int idxFirst = command.find_first_of("\"");
     int idxLast = command.find_last_of("\"");
@@ -126,7 +147,7 @@ int main(int argc, char* argv[])
             else {
                 email = commandLine[1];
 
-                if (sys.emailAlredyUsed(email) != 0){
+                if (sys.emailAlreadyUsed(email) != 0){
                     cout << "Desculpe, já existe um usuário com esse email." << endl;
                     cout << "Caso você seja o dono da conta, basta digitar o comando 'login' seguido do email e senha para acessá-la." << endl;
                 }
@@ -207,7 +228,7 @@ int main(int argc, char* argv[])
 
                     string desc = getDesc(command);
 
-                    if (sys.searchServer(name)->getName() != ""){
+                    if (sys.searchServer(name) != nullptr){
                         if (sys.getCurrentLoggedInUser().getId() == sys.searchServer(name)->getOwnerUserId()){
                             
                             sys.getCurrentServer().setDescription(desc);
@@ -235,7 +256,7 @@ int main(int argc, char* argv[])
 
                     name = commandLine[1];
 
-                    if (sys.searchServer(name)->getName() != ""){
+                    if (sys.searchServer(name) != nullptr){
                         if (sys.getCurrentLoggedInUser().getId() == sys.searchServer(name)->getOwnerUserId()){
                             
                             string invitationCode = commandLine[2];

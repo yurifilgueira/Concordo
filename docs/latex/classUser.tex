@@ -1,0 +1,216 @@
+\hypertarget{classUser}{}\doxysection{Referência da Classe User}
+\label{classUser}\index{User@{User}}
+
+
+Representa um usuário no sistema de chat.  
+
+
+
+
+{\ttfamily \#include $<$User.\+h$>$}
+
+
+
+Diagrama de colaboração para User\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classUser__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUser_a4a0137053e591fbb79d9057dd7d2283d}\label{classUser_a4a0137053e591fbb79d9057dd7d2283d}} 
+\mbox{\hyperlink{classUser_a4a0137053e591fbb79d9057dd7d2283d}{User}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão para \mbox{\hyperlink{classUser}{User}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUser_a5bbbae6ad141f07f9b20780a1423d7a5}{User}} (int \mbox{\hyperlink{classUser_aa7e6e39b43020bbe9c3a196b3689b0f7}{id}}, string \mbox{\hyperlink{classUser_a643f85779a4693855c171c396f49e515}{name}}, string \mbox{\hyperlink{classUser_a2d678acd22b533660b4b7d8404961f14}{email}}, string \mbox{\hyperlink{classUser_ab537b9a55bc7d7fcafcdf8e53d085e67}{password}})
+\begin{DoxyCompactList}\small\item\em Construtor para \mbox{\hyperlink{classUser}{User}} com ID, nome, e-\/mail e senha. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUser_ac00b72ad64eb4149f7b21b9f5468c2b2}\label{classUser_ac00b72ad64eb4149f7b21b9f5468c2b2}} 
+\mbox{\hyperlink{classUser_ac00b72ad64eb4149f7b21b9f5468c2b2}{$\sim$\+User}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor para \mbox{\hyperlink{classUser}{User}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUser_a1e393732cd9838ab29445d9153333046}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o ID do usuário. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classUser_adb316ac38d5f62a967686e7b736a0469}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome do usuário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_acabf7e5a40909656de5bc631abe5588c}{set\+Name}} (string \mbox{\hyperlink{classUser_a643f85779a4693855c171c396f49e515}{name}})
+\begin{DoxyCompactList}\small\item\em Define o nome do usuário. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classUser_a851bfaab8e406de66700edb326c58e38}{get\+Email}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o endereço de e-\/mail do usuário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_a9d38dd7a9f5ca79cf17ecf572d42c647}{set\+Email}} (string \mbox{\hyperlink{classUser_a2d678acd22b533660b4b7d8404961f14}{email}})
+\begin{DoxyCompactList}\small\item\em Define o endereço de e-\/mail do usuário. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classUser_a090eb9ee354cc25b2e8240b714b39d64}{get\+Password}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a senha do usuário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_ab9645a2f4dc87343f9e9aeb408be41ad}{set\+Password}} (string \mbox{\hyperlink{classUser_ab537b9a55bc7d7fcafcdf8e53d085e67}{password}})
+\begin{DoxyCompactList}\small\item\em Define a senha do usuário. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classUser_aa7e6e39b43020bbe9c3a196b3689b0f7}{id}}
+\item 
+string \mbox{\hyperlink{classUser_a2d678acd22b533660b4b7d8404961f14}{email}}
+\item 
+string \mbox{\hyperlink{classUser_ab537b9a55bc7d7fcafcdf8e53d085e67}{password}}
+\item 
+string \mbox{\hyperlink{classUser_a643f85779a4693855c171c396f49e515}{name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Representa um usuário no sistema de chat. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classUser_a5bbbae6ad141f07f9b20780a1423d7a5}\label{classUser_a5bbbae6ad141f07f9b20780a1423d7a5}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{string}]{name,  }\item[{string}]{email,  }\item[{string}]{password }\end{DoxyParamCaption})}
+
+
+
+Construtor para \mbox{\hyperlink{classUser}{User}} com ID, nome, e-\/mail e senha. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & O ID do usuário. \\
+\hline
+{\em name} & O nome do usuário. \\
+\hline
+{\em email} & O endereço de e-\/mail do usuário. \\
+\hline
+{\em password} & A senha do usuário. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classUser_a851bfaab8e406de66700edb326c58e38}\label{classUser_a851bfaab8e406de66700edb326c58e38}} 
+\index{User@{User}!getEmail@{getEmail}}
+\index{getEmail@{getEmail}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getEmail()}{getEmail()}}
+{\footnotesize\ttfamily string User\+::get\+Email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o endereço de e-\/mail do usuário. 
+
+\begin{DoxyReturn}{Retorna}
+O endereço de e-\/mail do usuário. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUser_a1e393732cd9838ab29445d9153333046}\label{classUser_a1e393732cd9838ab29445d9153333046}} 
+\index{User@{User}!getId@{getId}}
+\index{getId@{getId}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int User\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o ID do usuário. 
+
+\begin{DoxyReturn}{Retorna}
+O ID do usuário. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUser_adb316ac38d5f62a967686e7b736a0469}\label{classUser_adb316ac38d5f62a967686e7b736a0469}} 
+\index{User@{User}!getName@{getName}}
+\index{getName@{getName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string User\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o nome do usuário. 
+
+\begin{DoxyReturn}{Retorna}
+O nome do usuário. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUser_a090eb9ee354cc25b2e8240b714b39d64}\label{classUser_a090eb9ee354cc25b2e8240b714b39d64}} 
+\index{User@{User}!getPassword@{getPassword}}
+\index{getPassword@{getPassword}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getPassword()}{getPassword()}}
+{\footnotesize\ttfamily string User\+::get\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém a senha do usuário. 
+
+\begin{DoxyReturn}{Retorna}
+A senha do usuário. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUser_a9d38dd7a9f5ca79cf17ecf572d42c647}\label{classUser_a9d38dd7a9f5ca79cf17ecf572d42c647}} 
+\index{User@{User}!setEmail@{setEmail}}
+\index{setEmail@{setEmail}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setEmail()}{setEmail()}}
+{\footnotesize\ttfamily void User\+::set\+Email (\begin{DoxyParamCaption}\item[{string}]{email }\end{DoxyParamCaption})}
+
+
+
+Define o endereço de e-\/mail do usuário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em email} & O endereço de e-\/mail a ser definido para o usuário. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUser_acabf7e5a40909656de5bc631abe5588c}\label{classUser_acabf7e5a40909656de5bc631abe5588c}} 
+\index{User@{User}!setName@{setName}}
+\index{setName@{setName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void User\+::set\+Name (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Define o nome do usuário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome a ser definido para o usuário. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUser_ab9645a2f4dc87343f9e9aeb408be41ad}\label{classUser_ab9645a2f4dc87343f9e9aeb408be41ad}} 
+\index{User@{User}!setPassword@{setPassword}}
+\index{setPassword@{setPassword}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setPassword()}{setPassword()}}
+{\footnotesize\ttfamily void User\+::set\+Password (\begin{DoxyParamCaption}\item[{string}]{password }\end{DoxyParamCaption})}
+
+
+
+Define a senha do usuário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em password} & A senha a ser definida para o usuário. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classUser_a2d678acd22b533660b4b7d8404961f14}\label{classUser_a2d678acd22b533660b4b7d8404961f14}} 
+\index{User@{User}!email@{email}}
+\index{email@{email}!User@{User}}
+\doxysubsubsection{\texorpdfstring{email}{email}}
+{\footnotesize\ttfamily string User\+::email\hspace{0.3cm}{\ttfamily [private]}}
+
+O endereço de e-\/mail do usuário. \mbox{\Hypertarget{classUser_aa7e6e39b43020bbe9c3a196b3689b0f7}\label{classUser_aa7e6e39b43020bbe9c3a196b3689b0f7}} 
+\index{User@{User}!id@{id}}
+\index{id@{id}!User@{User}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int User\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+O ID do usuário. \mbox{\Hypertarget{classUser_a643f85779a4693855c171c396f49e515}\label{classUser_a643f85779a4693855c171c396f49e515}} 
+\index{User@{User}!name@{name}}
+\index{name@{name}!User@{User}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string User\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+O nome do usuário. \mbox{\Hypertarget{classUser_ab537b9a55bc7d7fcafcdf8e53d085e67}\label{classUser_ab537b9a55bc7d7fcafcdf8e53d085e67}} 
+\index{User@{User}!password@{password}}
+\index{password@{password}!User@{User}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily string User\+::password\hspace{0.3cm}{\ttfamily [private]}}
+
+A senha do usuário. 
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/User.\+h\item 
+src/entities/User.\+cpp\end{DoxyCompactItemize}

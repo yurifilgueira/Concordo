@@ -1,0 +1,11 @@
+<map id="System" name="System">
+<area shape="rect" id="node1" title="Representa o sistema de aplicativo de chat." alt="" coords="310,213,381,240"/>
+<area shape="rect" id="node2" href="$classServer.html" title="Representa um servidor em um aplicativo de chat." alt="" coords="313,124,377,151"/>
+<area shape="rect" id="node3" title=" " alt="" coords="92,5,151,32"/>
+<area shape="rect" id="node7" href="$classUser.html" title="Representa um usuário no sistema de chat." alt="" coords="127,124,179,151"/>
+<area shape="rect" id="node9" href="$classChannel.html" title="Classe que representa um canal." alt="" coords="5,124,80,151"/>
+<area shape="rect" id="node4" title=" " alt="" coords="290,5,401,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="425,5,583,32"/>
+<area shape="rect" id="node6" title=" " alt="" coords="408,124,531,151"/>
+<area shape="rect" id="node8" title=" " alt="" coords="555,124,690,151"/>
+</map>

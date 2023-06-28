@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: Código-Fonte de include/System.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Concordo
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">System.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SYSTEM</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SYSTEM</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;User.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;Server.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;Channel.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classSystem.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSystem.html">System</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classSystem.html#a7b6f5a8e48502a3f9dace2782620529a">   20</a></span>&#160;    <a class="code" href="classUser.html">User</a> <a class="code" href="classSystem.html#a7b6f5a8e48502a3f9dace2782620529a">currentLoggedInUser</a>; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classSystem.html#a22311253fcb0f8d4eaea0a305cef2828">   21</a></span>&#160;    <a class="code" href="classServer.html">Server</a> <a class="code" href="classSystem.html#a22311253fcb0f8d4eaea0a305cef2828">currentServer</a>; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classSystem.html#a8728973c7f45da3706ffeb09564b6f41">   22</a></span>&#160;    <a class="code" href="classChannel.html">Channel</a> <a class="code" href="classSystem.html#a8728973c7f45da3706ffeb09564b6f41">currentChannel</a>; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classSystem.html#abceec73ffd1fafdad75edfdb8298ca44">   24</a></span>&#160;    vector&lt;User&gt; <a class="code" href="classSystem.html#abceec73ffd1fafdad75edfdb8298ca44">users</a>; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classSystem.html#a4ed2a2c7242c0cdf3b6cd0992c79255d">   25</a></span>&#160;    vector&lt;Server&gt; <a class="code" href="classSystem.html#a4ed2a2c7242c0cdf3b6cd0992c79255d">servers</a>; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classSystem.html#ae317936c9bcf1374d61745572e0f2f8a">System</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classSystem.html#ae317936c9bcf1374d61745572e0f2f8a">System</a>(<a class="code" href="classUser.html">User</a> <a class="code" href="classSystem.html#a7b6f5a8e48502a3f9dace2782620529a">currentLoggedInUser</a>, <a class="code" href="classServer.html">Server</a> <a class="code" href="classSystem.html#a22311253fcb0f8d4eaea0a305cef2828">currentServer</a>, <a class="code" href="classChannel.html">Channel</a> <a class="code" href="classSystem.html#a8728973c7f45da3706ffeb09564b6f41">currentChannel</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classSystem.html#a3be70bb338e3f062f821173fd15680d0">~System</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classUser.html">User</a> <a class="code" href="classSystem.html#aa6fda4c4e4c734dda759502f9198f91c">searchUserById</a>(<span class="keywordtype">int</span> &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSystem.html#a4ab5dfb3127f97c71ab0169859d47a14">emailAlreadyUsed</a>(<span class="keywordtype">string</span> email);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSystem.html#af422bfe509960a2b85f466ae32a0160c">generateId</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classUser.html">User</a> <a class="code" href="classSystem.html#a1ad43cea987268d4f35aac5db2b9b251">getCurrentLoggedInUser</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSystem.html#a73ecef267721fd071154020de63fb5db">setCurrentLoggedInUser</a>(<a class="code" href="classUser.html">User</a> <a class="code" href="classSystem.html#a7b6f5a8e48502a3f9dace2782620529a">currentLoggedInUser</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classServer.html">Server</a> <a class="code" href="classSystem.html#acac47c75831ae3a6835b3c6685ea687e">getCurrentServer</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSystem.html#a1ee8893ec146ae01c515c98314bcb0d6">setCurrentServer</a>(<a class="code" href="classServer.html">Server</a> <a class="code" href="classSystem.html#a22311253fcb0f8d4eaea0a305cef2828">currentServer</a>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="classChannel.html">Channel</a> <a class="code" href="classSystem.html#a99cc3d6c233ccd08ffd32463798cb288">getCurrentChannel</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSystem.html#a34a024771edd679d35e8c5fbe374b532">setCurrentChannel</a>(<a class="code" href="classChannel.html">Channel</a> <a class="code" href="classSystem.html#a8728973c7f45da3706ffeb09564b6f41">currentChannel</a>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    vector&lt;User&gt; <a class="code" href="classSystem.html#ac3d98d101c0bc590264f447a88cf8814">getUsers</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    vector&lt;Server&gt; <a class="code" href="classSystem.html#a73f7448c3dccbf032bc97a9beac348ba">getServers</a>();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSystem.html#a7c040f18eec77345aa8336664110cb64">addUser</a>(<a class="code" href="classUser.html">User</a> user);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="classServer.html">Server</a>* <a class="code" href="classSystem.html#ae08615526db9b1b89428e5bc4b265452">searchServer</a>(<span class="keywordtype">string</span> name);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSystem.html#a38da6d97e8f941c5d27a2177858bb1b9">serverAlreadyExists</a>(<span class="keywordtype">string</span> name);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSystem.html#af721524bb095e02d8432e8716f7171e5">createServer</a>(<span class="keywordtype">int</span> ownerUserId, <span class="keywordtype">string</span> name);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSystem.html#a1ddd746a8c998c6bb14bd7302e6be854">addServer</a>(<a class="code" href="classServer.html">Server</a> server);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSystem.html#a0005318dcbf77e2cbc1cadb3a5547e27">removeServer</a>(<span class="keywordtype">string</span> name);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSystem.html#aac86ea7b336ed35ec8ce3a1a482943d5">login</a>(<span class="keywordtype">string</span> email, <span class="keywordtype">string</span> password);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSystem.html#ab574840b56a27b43afb4c035ec2e30f3">printServers</a>();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSystem.html#a7aa5054bf6e64f5882d1f17557e69346">enterServer</a>(<span class="keywordtype">string</span> name);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSystem.html#a7aa5054bf6e64f5882d1f17557e69346">enterServer</a>(<span class="keywordtype">string</span> name, <span class="keywordtype">string</span> invitationCode);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSystem.html#a56d4ebdd0f54fc0867fb097c3398c1e0">leaveServer</a>();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSystem.html#a24f3c36b66ef0bd93a7629cf642afadb">disconnectUser</a>();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSystem.html#ad90bd380df5232bb478bcf96b2de4bb9">containsServer</a>(<span class="keywordtype">string</span> serverName);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;};</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassChannel_html"><div class="ttname"><a href="classChannel.html">Channel</a></div><div class="ttdoc">Classe que representa um canal.</div><div class="ttdef"><b>Definition:</b> Channel.h:11</div></div>
+<div class="ttc" id="aclassSystem_html_a73ecef267721fd071154020de63fb5db"><div class="ttname"><a href="classSystem.html#a73ecef267721fd071154020de63fb5db">System::setCurrentLoggedInUser</a></div><div class="ttdeci">void setCurrentLoggedInUser(User currentLoggedInUser)</div><div class="ttdoc">Define o usuário atualmente logado no sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:66</div></div>
+<div class="ttc" id="aclassSystem_html_a7aa5054bf6e64f5882d1f17557e69346"><div class="ttname"><a href="classSystem.html#a7aa5054bf6e64f5882d1f17557e69346">System::enterServer</a></div><div class="ttdeci">void enterServer(string name)</div><div class="ttdoc">Entra em um servidor especificado pelo seu nome.</div><div class="ttdef"><b>Definition:</b> System.cpp:184</div></div>
+<div class="ttc" id="aclassSystem_html_a1ad43cea987268d4f35aac5db2b9b251"><div class="ttname"><a href="classSystem.html#a1ad43cea987268d4f35aac5db2b9b251">System::getCurrentLoggedInUser</a></div><div class="ttdeci">User getCurrentLoggedInUser()</div><div class="ttdoc">Obtém o usuário atualmente logado no sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:62</div></div>
+<div class="ttc" id="aclassSystem_html_ae08615526db9b1b89428e5bc4b265452"><div class="ttname"><a href="classSystem.html#ae08615526db9b1b89428e5bc4b265452">System::searchServer</a></div><div class="ttdeci">Server * searchServer(string name)</div><div class="ttdoc">Procura um servidor pelo seu nome.</div><div class="ttdef"><b>Definition:</b> System.cpp:98</div></div>
+<div class="ttc" id="aclassSystem_html_ac3d98d101c0bc590264f447a88cf8814"><div class="ttname"><a href="classSystem.html#ac3d98d101c0bc590264f447a88cf8814">System::getUsers</a></div><div class="ttdeci">vector&lt; User &gt; getUsers()</div><div class="ttdoc">Obtém todos os usuários cadastrados no sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:86</div></div>
+<div class="ttc" id="aclassSystem_html_a56d4ebdd0f54fc0867fb097c3398c1e0"><div class="ttname"><a href="classSystem.html#a56d4ebdd0f54fc0867fb097c3398c1e0">System::leaveServer</a></div><div class="ttdeci">void leaveServer()</div><div class="ttdoc">Sai do servidor atualmente visualizado no sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:268</div></div>
+<div class="ttc" id="aclassSystem_html_a1ee8893ec146ae01c515c98314bcb0d6"><div class="ttname"><a href="classSystem.html#a1ee8893ec146ae01c515c98314bcb0d6">System::setCurrentServer</a></div><div class="ttdeci">void setCurrentServer(Server currentServer)</div><div class="ttdoc">Define o servidor atualmente selecionado no sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:74</div></div>
+<div class="ttc" id="aclassSystem_html_a1ddd746a8c998c6bb14bd7302e6be854"><div class="ttname"><a href="classSystem.html#a1ddd746a8c998c6bb14bd7302e6be854">System::addServer</a></div><div class="ttdeci">void addServer(Server server)</div><div class="ttdoc">Adiciona um servidor ao sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:134</div></div>
+<div class="ttc" id="aclassSystem_html_a22311253fcb0f8d4eaea0a305cef2828"><div class="ttname"><a href="classSystem.html#a22311253fcb0f8d4eaea0a305cef2828">System::currentServer</a></div><div class="ttdeci">Server currentServer</div><div class="ttdef"><b>Definition:</b> System.h:21</div></div>
+<div class="ttc" id="aclassSystem_html_a73f7448c3dccbf032bc97a9beac348ba"><div class="ttname"><a href="classSystem.html#a73f7448c3dccbf032bc97a9beac348ba">System::getServers</a></div><div class="ttdeci">vector&lt; Server &gt; getServers()</div><div class="ttdoc">Obtém todos os servidores disponíveis no sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:90</div></div>
+<div class="ttc" id="aclassSystem_html_a7b6f5a8e48502a3f9dace2782620529a"><div class="ttname"><a href="classSystem.html#a7b6f5a8e48502a3f9dace2782620529a">System::currentLoggedInUser</a></div><div class="ttdeci">User currentLoggedInUser</div><div class="ttdef"><b>Definition:</b> System.h:20</div></div>
+<div class="ttc" id="aclassSystem_html_a99cc3d6c233ccd08ffd32463798cb288"><div class="ttname"><a href="classSystem.html#a99cc3d6c233ccd08ffd32463798cb288">System::getCurrentChannel</a></div><div class="ttdeci">Channel getCurrentChannel()</div><div class="ttdoc">Obtém o canal atualmente selecionado no sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:78</div></div>
+<div class="ttc" id="aclassSystem_html_a0005318dcbf77e2cbc1cadb3a5547e27"><div class="ttname"><a href="classSystem.html#a0005318dcbf77e2cbc1cadb3a5547e27">System::removeServer</a></div><div class="ttdeci">void removeServer(string name)</div><div class="ttdoc">Remove um servidor do sistema com base em seu nome.</div><div class="ttdef"><b>Definition:</b> System.cpp:138</div></div>
+<div class="ttc" id="aclassSystem_html_ab574840b56a27b43afb4c035ec2e30f3"><div class="ttname"><a href="classSystem.html#ab574840b56a27b43afb4c035ec2e30f3">System::printServers</a></div><div class="ttdeci">void printServers()</div><div class="ttdoc">Imprime os nomes de todos os servidores disponíveis no sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:173</div></div>
+<div class="ttc" id="aclassSystem_html_a24f3c36b66ef0bd93a7629cf642afadb"><div class="ttname"><a href="classSystem.html#a24f3c36b66ef0bd93a7629cf642afadb">System::disconnectUser</a></div><div class="ttdeci">void disconnectUser()</div><div class="ttdoc">Desconecta o usuário atualmente logado do sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:280</div></div>
+<div class="ttc" id="aclassSystem_html"><div class="ttname"><a href="classSystem.html">System</a></div><div class="ttdoc">Representa o sistema de aplicativo de chat.</div><div class="ttdef"><b>Definition:</b> System.h:17</div></div>
+<div class="ttc" id="aclassSystem_html_a4ed2a2c7242c0cdf3b6cd0992c79255d"><div class="ttname"><a href="classSystem.html#a4ed2a2c7242c0cdf3b6cd0992c79255d">System::servers</a></div><div class="ttdeci">vector&lt; Server &gt; servers</div><div class="ttdef"><b>Definition:</b> System.h:25</div></div>
+<div class="ttc" id="aclassSystem_html_a3be70bb338e3f062f821173fd15680d0"><div class="ttname"><a href="classSystem.html#a3be70bb338e3f062f821173fd15680d0">System::~System</a></div><div class="ttdeci">~System()</div><div class="ttdoc">Destrutor para System.</div><div class="ttdef"><b>Definition:</b> System.cpp:16</div></div>
+<div class="ttc" id="aclassSystem_html_ad90bd380df5232bb478bcf96b2de4bb9"><div class="ttname"><a href="classSystem.html#ad90bd380df5232bb478bcf96b2de4bb9">System::containsServer</a></div><div class="ttdeci">bool containsServer(string serverName)</div><div class="ttdoc">Verifica se um servidor com um determinado nome está presente no sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:287</div></div>
+<div class="ttc" id="aclassSystem_html_a38da6d97e8f941c5d27a2177858bb1b9"><div class="ttname"><a href="classSystem.html#a38da6d97e8f941c5d27a2177858bb1b9">System::serverAlreadyExists</a></div><div class="ttdeci">bool serverAlreadyExists(string name)</div><div class="ttdoc">Verifica se um servidor com um determinado nome já existe no sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:109</div></div>
+<div class="ttc" id="aclassSystem_html_acac47c75831ae3a6835b3c6685ea687e"><div class="ttname"><a href="classSystem.html#acac47c75831ae3a6835b3c6685ea687e">System::getCurrentServer</a></div><div class="ttdeci">Server getCurrentServer()</div><div class="ttdoc">Obtém o servidor atualmente selecionado no sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:70</div></div>
+<div class="ttc" id="aclassSystem_html_abceec73ffd1fafdad75edfdb8298ca44"><div class="ttname"><a href="classSystem.html#abceec73ffd1fafdad75edfdb8298ca44">System::users</a></div><div class="ttdeci">vector&lt; User &gt; users</div><div class="ttdef"><b>Definition:</b> System.h:24</div></div>
+<div class="ttc" id="aclassSystem_html_a4ab5dfb3127f97c71ab0169859d47a14"><div class="ttname"><a href="classSystem.html#a4ab5dfb3127f97c71ab0169859d47a14">System::emailAlreadyUsed</a></div><div class="ttdeci">int emailAlreadyUsed(string email)</div><div class="ttdoc">Verifica se um determinado endereço de e-mail já está em uso por outro usuário.</div><div class="ttdef"><b>Definition:</b> System.cpp:41</div></div>
+<div class="ttc" id="aclassSystem_html_a8728973c7f45da3706ffeb09564b6f41"><div class="ttname"><a href="classSystem.html#a8728973c7f45da3706ffeb09564b6f41">System::currentChannel</a></div><div class="ttdeci">Channel currentChannel</div><div class="ttdef"><b>Definition:</b> System.h:22</div></div>
+<div class="ttc" id="aclassSystem_html_a7c040f18eec77345aa8336664110cb64"><div class="ttname"><a href="classSystem.html#a7c040f18eec77345aa8336664110cb64">System::addUser</a></div><div class="ttdeci">void addUser(User user)</div><div class="ttdoc">Adiciona um novo usuário ao sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:94</div></div>
+<div class="ttc" id="aclassSystem_html_aac86ea7b336ed35ec8ce3a1a482943d5"><div class="ttname"><a href="classSystem.html#aac86ea7b336ed35ec8ce3a1a482943d5">System::login</a></div><div class="ttdeci">bool login(string email, string password)</div><div class="ttdoc">Realiza o login de um usuário no sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:154</div></div>
+<div class="ttc" id="aclassSystem_html_af422bfe509960a2b85f466ae32a0160c"><div class="ttname"><a href="classSystem.html#af422bfe509960a2b85f466ae32a0160c">System::generateId</a></div><div class="ttdeci">int generateId()</div><div class="ttdoc">Gera um novo ID para um usuário com base no ID do último usuário cadastrado.</div><div class="ttdef"><b>Definition:</b> System.cpp:51</div></div>
+<div class="ttc" id="aclassSystem_html_ae317936c9bcf1374d61745572e0f2f8a"><div class="ttname"><a href="classSystem.html#ae317936c9bcf1374d61745572e0f2f8a">System::System</a></div><div class="ttdeci">System()</div><div class="ttdoc">Construtor padrão para System.</div><div class="ttdef"><b>Definition:</b> System.cpp:7</div></div>
+<div class="ttc" id="aclassServer_html"><div class="ttname"><a href="classServer.html">Server</a></div><div class="ttdoc">Representa um servidor em um aplicativo de chat.</div><div class="ttdef"><b>Definition:</b> Server.h:17</div></div>
+<div class="ttc" id="aclassUser_html"><div class="ttname"><a href="classUser.html">User</a></div><div class="ttdoc">Representa um usuário no sistema de chat.</div><div class="ttdef"><b>Definition:</b> User.h:12</div></div>
+<div class="ttc" id="aclassSystem_html_aa6fda4c4e4c734dda759502f9198f91c"><div class="ttname"><a href="classSystem.html#aa6fda4c4e4c734dda759502f9198f91c">System::searchUserById</a></div><div class="ttdeci">User searchUserById(int &amp;id)</div><div class="ttdoc">Procura um usuário com base em seu ID.</div><div class="ttdef"><b>Definition:</b> System.cpp:19</div></div>
+<div class="ttc" id="aclassSystem_html_a34a024771edd679d35e8c5fbe374b532"><div class="ttname"><a href="classSystem.html#a34a024771edd679d35e8c5fbe374b532">System::setCurrentChannel</a></div><div class="ttdeci">void setCurrentChannel(Channel currentChannel)</div><div class="ttdoc">Define o canal atualmente selecionado no sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:82</div></div>
+<div class="ttc" id="aclassSystem_html_af721524bb095e02d8432e8716f7171e5"><div class="ttname"><a href="classSystem.html#af721524bb095e02d8432e8716f7171e5">System::createServer</a></div><div class="ttdeci">bool createServer(int ownerUserId, string name)</div><div class="ttdoc">Cria um novo servidor no sistema.</div><div class="ttdef"><b>Definition:</b> System.cpp:120</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

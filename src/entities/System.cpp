@@ -38,7 +38,7 @@ User System::searchUserById(int &id){
     return User();
 }
 
-int System::emailAlredyUsed(string email){
+int System::emailAlreadyUsed(string email){
     for (int i = 0; i < users.size(); i++){
         if (users[i].getEmail() == email){
             return users[i].getId();
@@ -106,7 +106,7 @@ Server *System::searchServer(string name){
     return nullptr;
 }
 
-bool System::serverAlredyExists(string name){
+bool System::serverAlreadyExists(string name){
 
     for (int i = 0; i < servers.size(); i++){
         if (servers[i].getName() == name){
@@ -118,7 +118,7 @@ bool System::serverAlredyExists(string name){
 }
 
 bool System::createServer(int ownerUserId, string name){
-    if (serverAlredyExists(name)) {
+    if (serverAlreadyExists(name)) {
         return false;
     }
     else {
@@ -139,6 +139,9 @@ void System::removeServer(string name){
     
     int idx = 0;
 
+    Server server;
+    setCurrentServer(server);
+
     for (int i = 0; i < servers.size(); i++){
         if (servers[i].getName() == name){
             idx = i;
@@ -150,7 +153,7 @@ void System::removeServer(string name){
 
 bool System::login(string email, string password){
     
-    int id = emailAlredyUsed(email);
+    int id = emailAlreadyUsed(email);
 
     if (id != 0){
         if (searchUserById(id).getPassword() == password){
@@ -193,7 +196,7 @@ void System::enterServer(string name){
             }
             else {
                 if (server.getName() != ""){
-                    if (server.hasInvationCode()){
+                    if (server.hasInvitationCode()){
                         cout << "Este servidor necessita de um código de convite. Insira o comando 'enter-server' seguido do nome do servidor e do código de convite." << endl;
                     }
                     else {
@@ -234,7 +237,7 @@ void System::enterServer(string name, string invitationCode){
                 " em seguida você deve inserir o comando 'enter-server' seguido do nome do servidor e, caso o servidor possua, do código de convite." << endl;
             }
             else {
-                if (!server.hasInvationCode()){
+                if (!server.hasInvitationCode()){
                     cout << "Este servidor não necessita de um código de convite. Insira o comando 'enter-server' seguido do nome do servidor, para entrar no servidor." << endl;
                 }
                 else if(server.getInvitationCode() == invitationCode) {

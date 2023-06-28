@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: Código-Fonte de include/Message.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Concordo
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Message.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MESSAGE</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MESSAGE</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classMessage.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMessage.html">Message</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classMessage.html#a8c49bf04b4f69a4acbd1d2859c5fe1d6">   13</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classMessage.html#a8c49bf04b4f69a4acbd1d2859c5fe1d6">dataHora</a>; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classMessage.html#a78eee52753c515f2a47a0d8cdcf762be">   14</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classMessage.html#a78eee52753c515f2a47a0d8cdcf762be">sentyBy</a>; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classMessage.html#ae76b55231c78a6819eff3b98d4684dd8">   15</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classMessage.html#ae76b55231c78a6819eff3b98d4684dd8">content</a>; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classMessage.html#a4fc4f717b634e66070366cb7722d7761">Message</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classMessage.html#a4fc4f717b634e66070366cb7722d7761">Message</a>(<span class="keywordtype">string</span> <a class="code" href="classMessage.html#a8c49bf04b4f69a4acbd1d2859c5fe1d6">dataHora</a>, <span class="keywordtype">string</span> <a class="code" href="classMessage.html#a78eee52753c515f2a47a0d8cdcf762be">sentyBy</a>, <span class="keywordtype">string</span> <a class="code" href="classMessage.html#ae76b55231c78a6819eff3b98d4684dd8">content</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classMessage.html#a3f7275462831f787a861271687bcad67">~Message</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classMessage.html#a2e3107de2dd536e86f42f610548830ef">getdataHora</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMessage.html#a56e6035dea31f4500aff4eb3d235bea4">setdataHora</a>(<span class="keywordtype">string</span> <a class="code" href="classMessage.html#a8c49bf04b4f69a4acbd1d2859c5fe1d6">dataHora</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classMessage.html#ae446d52c04b87164410400eef1770340">getsentyBy</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMessage.html#a9f5a55fa63bd6a8d26863dbe1f7bca08">setsentyBy</a>(<span class="keywordtype">string</span> <a class="code" href="classMessage.html#a78eee52753c515f2a47a0d8cdcf762be">sentyBy</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classMessage.html#a5834d60476a1a7369be57e2db98274ca">getcontent</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMessage.html#abe754c890e87d649c8b8197891bd9749">setcontent</a>(<span class="keywordtype">string</span> <a class="code" href="classMessage.html#ae76b55231c78a6819eff3b98d4684dd8">content</a>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassMessage_html_a56e6035dea31f4500aff4eb3d235bea4"><div class="ttname"><a href="classMessage.html#a56e6035dea31f4500aff4eb3d235bea4">Message::setdataHora</a></div><div class="ttdeci">void setdataHora(string dataHora)</div><div class="ttdoc">Define a data e hora da mensagem.</div><div class="ttdef"><b>Definition:</b> Message.cpp:20</div></div>
+<div class="ttc" id="aclassMessage_html_a9f5a55fa63bd6a8d26863dbe1f7bca08"><div class="ttname"><a href="classMessage.html#a9f5a55fa63bd6a8d26863dbe1f7bca08">Message::setsentyBy</a></div><div class="ttdeci">void setsentyBy(string sentyBy)</div><div class="ttdoc">Define o remetente da mensagem.</div><div class="ttdef"><b>Definition:</b> Message.cpp:28</div></div>
+<div class="ttc" id="aclassMessage_html_ae446d52c04b87164410400eef1770340"><div class="ttname"><a href="classMessage.html#ae446d52c04b87164410400eef1770340">Message::getsentyBy</a></div><div class="ttdeci">string getsentyBy()</div><div class="ttdoc">Obtém o remetente da mensagem.</div><div class="ttdef"><b>Definition:</b> Message.cpp:24</div></div>
+<div class="ttc" id="aclassMessage_html_a2e3107de2dd536e86f42f610548830ef"><div class="ttname"><a href="classMessage.html#a2e3107de2dd536e86f42f610548830ef">Message::getdataHora</a></div><div class="ttdeci">string getdataHora()</div><div class="ttdoc">Obtém a data e hora da mensagem.</div><div class="ttdef"><b>Definition:</b> Message.cpp:16</div></div>
+<div class="ttc" id="aclassMessage_html_ae76b55231c78a6819eff3b98d4684dd8"><div class="ttname"><a href="classMessage.html#ae76b55231c78a6819eff3b98d4684dd8">Message::content</a></div><div class="ttdeci">string content</div><div class="ttdef"><b>Definition:</b> Message.h:15</div></div>
+<div class="ttc" id="aclassMessage_html_a78eee52753c515f2a47a0d8cdcf762be"><div class="ttname"><a href="classMessage.html#a78eee52753c515f2a47a0d8cdcf762be">Message::sentyBy</a></div><div class="ttdeci">string sentyBy</div><div class="ttdef"><b>Definition:</b> Message.h:14</div></div>
+<div class="ttc" id="aclassMessage_html_a4fc4f717b634e66070366cb7722d7761"><div class="ttname"><a href="classMessage.html#a4fc4f717b634e66070366cb7722d7761">Message::Message</a></div><div class="ttdeci">Message()</div><div class="ttdoc">Construtor padrão da classe Message.</div><div class="ttdef"><b>Definition:</b> Message.cpp:3</div></div>
+<div class="ttc" id="aclassMessage_html"><div class="ttname"><a href="classMessage.html">Message</a></div><div class="ttdoc">Classe que representa uma mensagem.</div><div class="ttdef"><b>Definition:</b> Message.h:11</div></div>
+<div class="ttc" id="aclassMessage_html_a5834d60476a1a7369be57e2db98274ca"><div class="ttname"><a href="classMessage.html#a5834d60476a1a7369be57e2db98274ca">Message::getcontent</a></div><div class="ttdeci">string getcontent()</div><div class="ttdoc">Obtém o conteúdo da mensagem.</div><div class="ttdef"><b>Definition:</b> Message.cpp:32</div></div>
+<div class="ttc" id="aclassMessage_html_a3f7275462831f787a861271687bcad67"><div class="ttname"><a href="classMessage.html#a3f7275462831f787a861271687bcad67">Message::~Message</a></div><div class="ttdeci">~Message()</div><div class="ttdoc">Destrutor da classe Message.</div><div class="ttdef"><b>Definition:</b> Message.cpp:12</div></div>
+<div class="ttc" id="aclassMessage_html_abe754c890e87d649c8b8197891bd9749"><div class="ttname"><a href="classMessage.html#abe754c890e87d649c8b8197891bd9749">Message::setcontent</a></div><div class="ttdeci">void setcontent(string content)</div><div class="ttdoc">Define o conteúdo da mensagem.</div><div class="ttdef"><b>Definition:</b> Message.cpp:36</div></div>
+<div class="ttc" id="aclassMessage_html_a8c49bf04b4f69a4acbd1d2859c5fe1d6"><div class="ttname"><a href="classMessage.html#a8c49bf04b4f69a4acbd1d2859c5fe1d6">Message::dataHora</a></div><div class="ttdeci">string dataHora</div><div class="ttdef"><b>Definition:</b> Message.h:13</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

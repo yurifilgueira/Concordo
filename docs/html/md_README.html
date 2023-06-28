@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: Concordo</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Concordo
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Concordo </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2><a class="anchor" id="autotoc_md1"></a>
+Clone do Discord, para humanos mais civilizados</h2>
+<p>Este é um sistema chamado <code>Concordo</code> com recursos similares ao <code>Discord</code>, porém funciona somente em modo texto e sem recursos de rede.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Identificação</h1>
+<p>NOME: Yuri Filgueira Tavares de Medeiros</p>
+<p>MATRÍCULA: 20220034872</p>
+<p>TURMA: 02</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Como executar o Concordo</h1>
+<p>Certifique-se de ter o g++ e o CMake instalados em seu sistema antes de prosseguir.</p>
+<ol type="1">
+<li><p class="startli">No terminal, execute o comando <code>cmake .</code> para gerar os arquivos de configuração do CMake.</p>
+<p class="startli">1.1. Caso a sua versão seja diferente da do arquivo <code>CMakeLists.txt</code>, presente nesse projeto, não tem problema. Basta acessar o arquivo citado, e alterar a versão que está no arquivo para a versão que está no seu dispositivo.</p>
+</li>
+<li>Em seguida, execute o comando <code>make</code> para compilar o programa.</li>
+<li><p class="startli">Após a compilação bem-sucedida, execute o programa digitando <code>./program</code> no terminal.</p>
+<p class="startli">3.1. Caso você possua um script — um arquivo <code>.txt</code> — com os comandos do Concordo, basta inserir <code>./program nomeDoArquivo.txt</code> no terminal.</p>
+<p class="startli">3.2. Caso o script não contenha o comando <code>quit</code> — comando que será explicado em breve — o Concordo continurá rodando normalmente, e você poderá inserir os comandos que desejar.</p>
+</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Guia de uso</h1>
+<p>O <code>Concordo</code> funciona através de comandos inseridos no terminal. Portanto, aqui estão os comandos possíveis de se fazer e como fazer.</p>
+<p>Ao iniciar o <code>Concordo</code> — sem estar logado —, você só poderá executar os três primeiros comandos. Caso tente executar algum comando além desses três — sem estar logado —, o programa acusará um erro.</p>
+<p>Segue abaixo a lista de comandos possíveis:</p>
+<ol type="1">
+<li><p class="startli"><b>create-user</b>: Cria um usuário. Veja o exemplo:</p>
+<p class="startli"><code>create-user &lt;email&gt; &lt;senha_sem_espaços&gt; &lt;nome com espaços&gt;</code></p>
+<p class="startli"><code>create-user ryangosling@example.com 12ab34cd Ryan Gosling</code></p>
+</li>
+<li><p class="startli"><b>login</b>: Realiza o login no Concordo. Veja o exemplo:</p>
+<p class="startli"><code>login &lt;nome&gt; &lt;senha&gt;</code></p>
+<p class="startli"><code>login ryangosling@example.com 12ab34cd</code></p>
+</li>
+<li><p class="startli"><b>quit</b>: Encerra o programa, pode ser usado a qualquer momento. Veja o exemplo:</p>
+<p class="startli"><code>quit</code></p>
+</li>
+<li><p class="startli"><b>disconnect</b>: Desconecta o usuário que está atualmente logado. Veja o exemplo:</p>
+<p class="startli"><code>disconnect</code></p>
+</li>
+<li><p class="startli"><b>create-server</b>: Cria um servidor. Veja o exemplo:</p>
+<p class="startli"><code>create-server &lt;nome&gt;</code></p>
+<p class="startli"><code>create-server Javeiros-com-amor</code></p>
+</li>
+<li><p class="startli"><b>set-server-desc</b>: Permite definir ou alterar uma descrição para o servidor. Caso você não seja o dono do servidor, não poderá alterar ou definir a descrição do servidor. Veja o exemplo:</p>
+<p class="startli"><code>set-server-desc &lt;nome-do-servidor&gt; &lt;descrição&gt;</code></p>
+<p class="startli"><code>set-server-desc Javeiros-com-amor Seja bem-vindo ao servidor da melhor linguagem do mundo.</code></p>
+</li>
+<li><p class="startli"><b>set-server-invite-code</b>: Permite definir ou alterar um código de convite para o servidor. Somente pessoas com acesso a este código poderão entrar no servidor. Caso você não seja o dono do servidor, não poderá alterar ou definir o código de convite do servidor. Veja o exemplo:</p>
+<p class="startli"><code>set-server-invite-code &lt;nome-do-servidor&gt; &lt;código-de-convite&gt;</code></p>
+<p class="startli"><code>set-server-invite-code Javeiros-com-amor j1a2v3a4</code></p>
+</li>
+<li><p class="startli"><b>list-servers</b>: Lista os servidores presentes no Concordo. Veja o exemplo:</p>
+<p class="startli"><code>list-servers</code></p>
+</li>
+<li><p class="startli"><b>remove-server</b>: Ao usar este comando, você, caso seja o dono, deletará o servidor. Veja o exemplo:</p>
+<p class="startli"><code>remove-server &lt;nome-do-servidor&gt;</code></p>
+<p class="startli"><code>remove-server Javeiros-com-amor</code></p>
+</li>
+<li><p class="startli"><b>enter-server</b>: Permite entrar em um servidor. Entretanto, há dois tipos de servidores, os que possuem código de convite e os que não possuem. Veja o exemplo:</p>
+<p class="startli"><b>Com código de convite:</b></p>
+<p class="startli"><code>enter-server &lt;nome&gt; &lt;código-de-convite&gt;</code></p>
+<p class="startli"><code>enter-server Javeiros-com-amor j1a2v3a4</code></p>
+<p class="startli"><b>Sem código de convite:</b></p>
+<p class="startli"><code>enter-server &lt;nome&gt;</code></p>
+<p class="startli"><code>enter-server Javeiros-com-amor</code></p>
+<p class="startli"><em>É importante ressaltar que, ao entrar em um servidor, você entrará para a lista de participantes e ao mesmo tempo, estará visualizando o servidor.</em></p>
+</li>
+</ol>
+<ul>
+<li><p class="startli"><b>leave-server</b>: Você deixará de visualizar o servidor que estava visualizando antes. Mas ainda estará na lista de participantes do servidor que parou de visualizar. Veja o exemplo:</p>
+<p class="startli"><code>leave-server</code></p>
+</li>
+</ul>
+<pre class="fragment">*Uma observação muito importante é que, ao sair de um servidor, mesmo ainda permanecendo na lista de participantes dele, você terá que inserir o código de convite, para entrar novamente. Isso é válido somente para servidores que necessitam de código de convite.*
+</pre><ul>
+<li><p class="startli"><b>list-participants</b>: Lista os participantes do servidor que você está visualizando. Veja o exemplo:</p>
+<p class="startli"><code>list-participants</code> </p>
+</li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
