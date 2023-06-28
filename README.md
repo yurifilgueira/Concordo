@@ -28,6 +28,8 @@ Certifique-se de ter o g++ e o CMake instalados em seu sistema antes de prossegu
     
     3.2. Caso o script não contenha o comando `quit` — comando que será explicado em breve — o Concordo continurá rodando normalmente, e você poderá inserir os comandos que desejar.
 
+    3.3. Neste projeto, você encontrará 2 scripts, o `scriptValid.txt` — que executa os comandos de maneira válida — e o `scriptInvalid.txt` — que executa os comandos de maneira errada, e faz com que o programa mostre as mensagens de erro para o usuário, sem crash no programa —, basta seguir o passo 3.2 para executá-los. Só um por vez.
+
 ## Guia de uso
 
 O `Concordo` funciona através de comandos inseridos no terminal. Portanto, aqui estão os comandos possíveis de se fazer e como fazer.
