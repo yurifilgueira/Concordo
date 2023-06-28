@@ -185,14 +185,11 @@ void System::enterServer(string name){
 
         if (server.getOwnerUserId() != getCurrentLoggedInUser().getId()){
             if (getCurrentServer().getName() == name){
-                cout << "Você já está neste servidor" << endl;
+                cout << "Você já está visualizando este servidor." << endl;
             }
             else if (getCurrentServer().getName() != ""){
                 cout << "Você já está visualizando um servidor. Para trocar de servidor você deve inserir o comando 'leave-server' e" << 
                 " em seguida você deve inserir o comando 'enter-server' seguido do nome do servidor e, caso o servidor possua, do código de convite." << endl;
-            }
-            else if (getCurrentServer().getName() == name){
-                cout << "Você já está visualizando este servidor." << endl;
             }
             else {
                 if (server.getName() != ""){
@@ -230,14 +227,11 @@ void System::enterServer(string name, string invitationCode){
 
         if (server.getOwnerUserId() != getCurrentLoggedInUser().getId()){
             if (getCurrentServer().getName() == name){
-                cout << "Você já está neste servidor" << endl;
+                cout << "Você já está visualizando este servidor." << endl;
             }
             else if (getCurrentServer().getName() != ""){
                 cout << "Você já está visualizando um servidor. Para trocar de servidor você deve inserir o comando 'leave-server' e" << 
                 " em seguida você deve inserir o comando 'enter-server' seguido do nome do servidor e, caso o servidor possua, do código de convite." << endl;
-            }
-            else if (getCurrentServer().getName() == name){
-                cout << "Você já está visualizando este servidor." << endl;
             }
             else {
                 if (!server.hasInvationCode()){

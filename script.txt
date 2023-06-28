@@ -52,6 +52,7 @@ disconnect
 login emily@example.com mypassword
 enter-server House-Trio olamigos123
 list-participants
+disconnect
 create-user lisa@example.com mypassword123 Lisa Anderson
 login lisa@example.com mypassword123
 enter-server House-Trio olamigos123
@@ -87,4 +88,3 @@ list-participants
 login yuri@example.com wrongpassword
 enter-server My-Server hello123
 disconnect
-quit

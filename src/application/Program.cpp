@@ -118,8 +118,9 @@ int main(int argc, char* argv[])
         if (commandLine[0] == "create-user")
         {
             if (sys.getCurrentLoggedInUser().getId() != 0){
-                cout << "Desconecte-se para criar outro usuário." << endl;
-            if (commandLine.size() != 4 && commandLine.size() != 5){
+                cout << "Desconecte-se do Concordo para poder criar outro usuário." << endl;
+            }
+            else if (commandLine.size() != 4 && commandLine.size() != 5){
                 cout << "Comando inválido!, você deve inserir o comando 'create-user' seguido do email, senha e nome de usuário, separados por espaço." << endl;
             }
             else {
@@ -140,12 +141,11 @@ int main(int argc, char* argv[])
                 }
             }
 
-            
             commandLine.clear();
         }
 
         else if (commandLine[0] == "login"){
-
+            
             if (sys.getCurrentLoggedInUser().getName() != ""){
                 cout << "Desconecte-se para realizar outro login, basta digitar o comando 'disconnect', para se desconectar." << endl;
             }
@@ -156,6 +156,8 @@ int main(int argc, char* argv[])
                 email = commandLine[1];
 
                 password = commandLine[2];
+
+                cout << email << "-" << password <<endl;
 
                 if (sys.login(email, password)){
                     cout << "Logado como " << email << endl;
