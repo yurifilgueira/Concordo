@@ -3,9 +3,9 @@
 Message::Message(){
 }
 
-Message::Message(string dataHora, string sentyBy, string content){
-    this->dataHora = dataHora;
-    this->sentyBy = sentyBy;
+Message::Message(string dateHour, int sentBy, string content){
+    this->dateHour = dateHour;
+    this->sentBy = sentBy;
     this->content = content;
 }
 
@@ -13,26 +13,26 @@ Message::~Message(){
 }
 
 
-string Message::getdataHora(){
-    return dataHora;
+string Message::getDateHour(){
+    return dateHour;
 }
 
-void Message::setdataHora(string dataHora){
-    this->dataHora = dataHora; 
+void Message::setDateHour(string dateHour){
+    this->dateHour = dateHour; 
 }
 
-string Message::getsentyBy(){
-    return sentyBy;
+int Message::getSentBy(){
+    return sentBy;
 }
 
-void Message::setsentyBy(string sentyBy){
-    this->sentyBy = sentyBy;
+void Message::setSentBy(int sentBy){
+    this->sentBy = sentBy;
 }
 
-string Message::getcontent(){
+string Message::getContent(){
     return content;
 }
 
-void Message::setcontent(string content){
+void Message::setContent(string content){
     this->content = content;
 }

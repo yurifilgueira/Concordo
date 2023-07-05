@@ -54,7 +54,16 @@ bool \mbox{\hyperlink{classServer_aa05ccb80ddc1cc2632509e2a33006fb0}{has\+Invita
 void \mbox{\hyperlink{classServer_a615ef07489f702bff6bc08df3ab55581}{add\+Participant}} (int id)
 \begin{DoxyCompactList}\small\item\em Adiciona um participante ao servidor. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classServer_a16043f2c702b9c9ecc9005bb1ed98af1}{contains\+User}} (int id)
-\begin{DoxyCompactList}\small\item\em Verifica se um usuário com o ID fornecido é um participante no servidor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Verifica se um usuário com o ID fornecido é um participante no servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_a89952e9c109b5a823372eec983081101}{add\+Channel}} (\mbox{\hyperlink{classChannel}{Channel}} $\ast$channel)
+\begin{DoxyCompactList}\small\item\em Adiciona um canal ao servidor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classChannel}{Channel}} $\ast$ \mbox{\hyperlink{classServer_afa6a3bcb080e7565ebf3167c709629eb}{search\+Channel}} (string \mbox{\hyperlink{classServer_abaf7319e177fd32b0ac69308de016b41}{name}})
+\begin{DoxyCompactList}\small\item\em Procura um canal pelo nome no servidor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServer_aba4a136c912f68b9ca2305c85a629db2}\label{classServer_aba4a136c912f68b9ca2305c85a629db2}} 
+void \mbox{\hyperlink{classServer_aba4a136c912f68b9ca2305c85a629db2}{print\+Channels}} ()
+\begin{DoxyCompactList}\small\item\em Imprime os canais do servidor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Base , typename T $>$ }\\bool \mbox{\hyperlink{classServer_a213760ef271ef1074ad14bc5194c6364}{instanceof}} (const T $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Verifica se um objeto é uma instância de uma classe base. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -117,6 +126,21 @@ Construtor para \mbox{\hyperlink{classServer}{Server}} com proprietário, nome, 
 
 
 \doxysubsection{Funções membros}
+\mbox{\Hypertarget{classServer_a89952e9c109b5a823372eec983081101}\label{classServer_a89952e9c109b5a823372eec983081101}} 
+\index{Server@{Server}!addChannel@{addChannel}}
+\index{addChannel@{addChannel}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{addChannel()}{addChannel()}}
+{\footnotesize\ttfamily void Server\+::add\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classChannel}{Channel}} $\ast$}]{channel }\end{DoxyParamCaption})}
+
+
+
+Adiciona um canal ao servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em channel} & Um ponteiro para o objeto \mbox{\hyperlink{classChannel}{Channel}} a ser adicionado. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classServer_a615ef07489f702bff6bc08df3ab55581}\label{classServer_a615ef07489f702bff6bc08df3ab55581}} 
 \index{Server@{Server}!addParticipant@{addParticipant}}
 \index{addParticipant@{addParticipant}!Server@{Server}}
@@ -240,6 +264,50 @@ Verifica se o servidor possui um código de convite.
 
 \begin{DoxyReturn}{Retorna}
 True se o servidor possuir um código de convite, false caso contrário. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_a213760ef271ef1074ad14bc5194c6364}\label{classServer_a213760ef271ef1074ad14bc5194c6364}} 
+\index{Server@{Server}!instanceof@{instanceof}}
+\index{instanceof@{instanceof}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{instanceof()}{instanceof()}}
+{\footnotesize\ttfamily template$<$typename Base , typename T $>$ \\
+bool Server\+::instanceof (\begin{DoxyParamCaption}\item[{const T $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica se um objeto é uma instância de uma classe base. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em Base} & A classe base. \\
+\hline
+{\em T} & O tipo do objeto a ser verificado. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parâmetros}
+{\em ptr} & O ponteiro para o objeto a ser verificado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+True se o objeto for uma instância da classe base, false caso contrário. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_afa6a3bcb080e7565ebf3167c709629eb}\label{classServer_afa6a3bcb080e7565ebf3167c709629eb}} 
+\index{Server@{Server}!searchChannel@{searchChannel}}
+\index{searchChannel@{searchChannel}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{searchChannel()}{searchChannel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classChannel}{Channel}} $\ast$ Server\+::search\+Channel (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Procura um canal pelo nome no servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & O nome do canal a ser procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um ponteiro para o objeto \mbox{\hyperlink{classChannel}{Channel}} se encontrado, nullptr caso contrário. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classServer_a8eae5802a0dc035b2c9be078919b7fca}\label{classServer_a8eae5802a0dc035b2c9be078919b7fca}} 
 \index{Server@{Server}!setDescription@{setDescription}}

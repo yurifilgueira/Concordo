@@ -1,5 +1,7 @@
 #include <Channel.h>
 
+#include <iostream>
+
 Channel::Channel(){
 }
 
@@ -16,4 +18,7 @@ string Channel::getName(){
 
 void Channel::setName(string name){
     this->name = name;
+}
+
+void Channel::addMessage(Message message){
 }

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['owneruserid_44',['ownerUserId',['../classServer.html#a64b5305c3bd6de45d0ab346197e08512',1,'Server']]]
+  ['name_53',['name',['../classChannel.html#ada27be4a604630621c5de998c7f4a418',1,'Channel::name()'],['../classServer.html#abaf7319e177fd32b0ac69308de016b41',1,'Server::name()'],['../classUser.html#a643f85779a4693855c171c396f49e515',1,'User::name()']]]
 ];

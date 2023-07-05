@@ -4,6 +4,9 @@
 #include <sstream>
 #include <System.h>
 #include <fstream>
+#include <VoiceChannel.h>
+#include <TextChannel.h>
+#include <ctime>
 
 using std::cout;
 using std::cin;
@@ -100,11 +103,13 @@ string getDesc(string command){
 int main(int argc, char* argv[])
 {
 
+    
+
     string linha;
     string command, email, password, name;
     System sys;
 
-     system("clear");
+    system("clear");
 
     cout << "---Bem vindo ao Concordo!---" << endl;
 
@@ -119,9 +124,10 @@ int main(int argc, char* argv[])
         }
     }
 
-    while (command != "quit") {
+    while (true) {
 
         command.clear();
+        commandLine.clear();
         if (argc == 2){
             if (std::getline(file, linha)){
                 command = linha;
@@ -135,6 +141,10 @@ int main(int argc, char* argv[])
         }
 
         split(command, ' ');
+
+        if (commandLine[0] == "quit"){
+            break;
+        }
 
         if (commandLine[0] == "create-user")
         {
@@ -161,8 +171,6 @@ int main(int argc, char* argv[])
                     cout << "O usuário " << sys.getUsers()[sys.getUsers().size() - 1].getName() << " foi criado com sucesso!" << endl;
                 }
             }
-
-            commandLine.clear();
         }
 
         else if (commandLine[0] == "login"){
@@ -178,8 +186,6 @@ int main(int argc, char* argv[])
 
                 password = commandLine[2];
 
-                cout << email << "-" << password <<endl;
-
                 if (sys.login(email, password)){
                     cout << "Logado como " << email << endl;
                 }
@@ -187,9 +193,6 @@ int main(int argc, char* argv[])
                     cout << "Senha ou usuário inválidos." << endl;
                 }
             }
-
-            
-            commandLine.clear();
         }
         else if (sys.getCurrentLoggedInUser().getId() > 0){
             if (commandLine[0] == "create-server"){
@@ -214,9 +217,6 @@ int main(int argc, char* argv[])
                     }
 
                 }
-
-                
-                commandLine.clear();
             }
             else if (commandLine[0] == "set-server-desc"){
                 if (commandLine.size() < 3){
@@ -231,7 +231,7 @@ int main(int argc, char* argv[])
                     if (sys.searchServer(name) != nullptr){
                         if (sys.getCurrentLoggedInUser().getId() == sys.searchServer(name)->getOwnerUserId()){
                             
-                            sys.getCurrentServer().setDescription(desc);
+                            sys.getCurrentServer()->setDescription(desc);
 
                             cout << "A descrição do servidor " << sys.searchServer(name)->getName() << " foi alterada com sucesso." << endl;
                         }
@@ -244,9 +244,6 @@ int main(int argc, char* argv[])
                     }
 
                 }
-
-                
-                commandLine.clear();
             }
             else if (commandLine[0] == "set-server-invite-code"){
                 if (commandLine.size() < 3){
@@ -280,23 +277,16 @@ int main(int argc, char* argv[])
                     }
 
                 }
-
-                commandLine.clear();
             }
             else if (commandLine[0] == "list-servers"){
 
                 sys.printServers();
-
-                
-                commandLine.clear();
             }
             else if (commandLine[0] == "list-participants"){
 
-                for (int id : sys.getCurrentServer().getParticipantsIDs()){
+                for (int id : sys.getCurrentServer()->getParticipantsIDs()){
                     cout << sys.searchUserById(id).getName() << endl;
                 }
-
-                commandLine.clear();
             }
             else if (commandLine[0] == "remove-server"){
 
@@ -315,14 +305,11 @@ int main(int argc, char* argv[])
                 else{
                     cout << "Este servidor não existe." << endl;
                 }
-
-                
-                commandLine.clear();
             }
             else if (commandLine[0] == "enter-server"){
 
                 if (commandLine[0].size() < 2){
-                    cout << "Para definir o código de convite de um servidor você deve inserir o comando 'enter-server' seguido do nome do servidor e,"
+                    cout << "Para entrar em um servidor você deve inserir o comando 'enter-server' seguido do nome do servidor e,"
                                     << " caso o servidor possua, do código de convite." << endl;
                 }
                 else {
@@ -341,15 +328,9 @@ int main(int argc, char* argv[])
                         sys.enterServer(name);
                     }
                 }
-
-                
-                commandLine.clear();
             }
             else if (commandLine[0] == "leave-server"){
                 sys.leaveServer();
-
-                
-                commandLine.clear();
             }
             else if (commandLine[0] == "disconnect"){
 
@@ -357,7 +338,7 @@ int main(int argc, char* argv[])
 
                     sys.disconnectUser();
 
-                    if (sys.getCurrentServer().getName() != ""){
+                    if (sys.getCurrentServer() != nullptr){
                         sys.leaveServer();
                     }
 
@@ -366,25 +347,106 @@ int main(int argc, char* argv[])
                 else {
                     cout << "Não há ninguém logado no sistema" << endl;
                 }
+            }
+            else if (sys.getCurrentServer() != nullptr){
+                if (commandLine[0] == "create-channel"){
+                    if (commandLine.size() < 2){
+                        cout << "Para criar um canal você deve inserir o comando 'create-channel' seguido do nome e do tipo de canal." << endl;
+                    }
+                    else {
+                        name = commandLine[1];
+                        if (sys.getCurrentServer()->searchChannel(name) == nullptr){ 
+                            string type = commandLine[2];
 
-                
-                commandLine.clear();
+                            if (type == "text"){
+                                sys.getCurrentServer()->addChannel(new TextChannel(name));
+
+                                cout << "Canal de texto '"  << name << "'" << "criado." << endl;
+                            }
+                            else if (type == "voice"){
+                                sys.getCurrentServer()->addChannel(new VoiceChannel(name));
+
+                                cout << "Canal de voz '" << name << "' criado." << endl;
+                            }
+                        }
+                        else {
+                            cout << "Já existe um servidor com este nome." << endl;
+                        }
+                    }
+                }
+                else if (commandLine[0] == "enter-channel"){
+                    
+                    if (commandLine.size() < 2){
+                        cout << "Para entrar em um canal, você deve inserir o comando 'enter-channel' seguido do nome do canal." << endl;
+                    }
+                        else {
+                        name = commandLine[1];
+
+                        if (sys.getCurrentChannel() != nullptr && name == sys.getCurrentChannel()->getName()){
+                            cout << "Você já está visualizando este canal." << endl;
+                        }
+                        else if (sys.getCurrentChannel() != nullptr){
+                            cout << "Você já está visualizando um canal." << endl;
+                        }
+                        else if (sys.enterChannel(name)){
+                            cout << "Entrou no canal '" << sys.getCurrentChannel()->getName() << "'." << endl;
+                        }
+                        else {
+                            cout << "Canal '" << name << "' não existe." << endl; 
+                        }
+                    }
+                }
+                else if (commandLine[0] == "list-channels"){
+                    sys.getCurrentServer()->printChannels();
+                }
+                else if (commandLine[0] == "leave-channel"){
+
+                    cout << "Saindo do canal..." << endl;
+
+                    sys.leaveChannel();
+                }
+                else if (commandLine[0] == "send-message"){
+
+                    char date[80];
+                    struct tm *p;
+                    time_t seconds;
+
+                    time(&seconds);
+                    p = localtime(&seconds);
+                    strftime(date, 80, "<%d/%m/%Y - %X>", p);
+
+                    string content = commandLine[1];
+                    for (int i = 2; i < commandLine.size(); i++){
+                        content.append(" " + commandLine[i]);
+                    }
+                    
+                    sys.getCurrentChannel()->addMessage(Message(date, sys.getCurrentLoggedInUser().getId(), content));
+                }   
+                else if (commandLine[0] == "list-messages"){
+                    sys.printMessages();
+                }
+                else {
+                    cout << "Comando inválido." << endl;
+                }
+            }
+            else if (sys.getCurrentChannel()->getName() == ""){
+                cout << "Você só pode usar este quando estiver visualizando um servidor." << endl;
+            }
+            else {
+                cout << "Comando inválido." << endl;
             }
         }
         else if (sys.getCurrentLoggedInUser().getId() == 0){
             cout << "Você só pode usar este comando, se estiver logado." << endl;
-
-            commandLine.clear();
         }
-        else if (command != "quit"){
-    
+        else{
             cout << "Comando inválido." << endl;
-            
-            commandLine.clear();
         }
     }
 
     cout << "Saindo do concordo, até mais!" << endl;
+
+    sys.free();
 
     return 0;
 }

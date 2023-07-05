@@ -1,16 +1,20 @@
 #include <iostream>
 #include <System.h>
+#include <TextChannel.h>
+#include <VoiceChannel.h>
 
 using std::cout;
 using std::endl;
 
 System::System(){
+    currentServer = nullptr;
+    currentChannel = nullptr;
 }
 
 System::System(User currentLoggedInUser, Server currentServer, Channel currentChannel){
     this->currentLoggedInUser = currentLoggedInUser;
-    this->currentServer = currentServer;
-    this->currentChannel = currentChannel;
+    this->currentServer = &currentServer;
+    this->currentChannel = &currentChannel;
 }
 
 System::~System(){
@@ -67,20 +71,20 @@ void System::setCurrentLoggedInUser(User currentLoggedInUser){
     this->currentLoggedInUser = currentLoggedInUser;
 }
 
-Server System::getCurrentServer(){
+Server *System::getCurrentServer(){
     return this->currentServer;
 }
 
-void System::setCurrentServer(Server currentServer){
-    this->currentServer = currentServer;
+void System::setCurrentServer(Server &currentServer){
+    this->currentServer = &currentServer;
 }
 
-Channel System::getCurrentChannel(){
+Channel *System::getCurrentChannel(){
     return this->currentChannel;
 }
 
-void System::setCurrentChannel(Channel currentChannel){
-    this->currentChannel = currentChannel;
+void System::setCurrentChannel(Channel &currentChannel){
+    this->currentChannel = &currentChannel;
 }
 
 vector<User > System::getUsers(){
@@ -187,12 +191,12 @@ void System::enterServer(string name){
         Server server = *searchServer(name);
 
         if (server.getOwnerUserId() != getCurrentLoggedInUser().getId()){
-            if (getCurrentServer().getName() == name){
-                cout << "Você já está visualizando este servidor." << endl;
-            }
-            else if (getCurrentServer().getName() != ""){
+            if (getCurrentServer() != nullptr){
                 cout << "Você já está visualizando um servidor. Para trocar de servidor você deve inserir o comando 'leave-server' e" << 
                 " em seguida você deve inserir o comando 'enter-server' seguido do nome do servidor e, caso o servidor possua, do código de convite." << endl;
+            }
+            else if (getCurrentServer() != nullptr && getCurrentServer()->getName() == name){
+                cout << "Você já está visualizando este servidor." << endl;
             }
             else {
                 if (server.getName() != ""){
@@ -203,7 +207,7 @@ void System::enterServer(string name){
                         if (!server.containsUser(getCurrentLoggedInUser().getId())){
                             searchServer(name)->addParticipant(getCurrentLoggedInUser().getId());
                         }
-                        setCurrentServer(*searchServer(name));
+                        currentServer = searchServer(name);
                         cout << "Você entrou no servidor com sucesso." << endl;
                     }
                 }
@@ -213,7 +217,7 @@ void System::enterServer(string name){
             if (!server.containsUser(getCurrentLoggedInUser().getId())){
                 searchServer(name)->addParticipant(getCurrentLoggedInUser().getId());
             }
-            setCurrentServer(*searchServer(name));
+            currentServer = searchServer(name);
             cout << "Você entrou no servidor com sucesso." << endl;
         }
     }
@@ -229,12 +233,12 @@ void System::enterServer(string name, string invitationCode){
         Server server = *searchServer(name);
 
         if (server.getOwnerUserId() != getCurrentLoggedInUser().getId()){
-            if (getCurrentServer().getName() == name){
-                cout << "Você já está visualizando este servidor." << endl;
-            }
-            else if (getCurrentServer().getName() != ""){
+            if (getCurrentServer() != nullptr){
                 cout << "Você já está visualizando um servidor. Para trocar de servidor você deve inserir o comando 'leave-server' e" << 
                 " em seguida você deve inserir o comando 'enter-server' seguido do nome do servidor e, caso o servidor possua, do código de convite." << endl;
+            }
+            else if (getCurrentServer() != nullptr && getCurrentServer()->getName() == name){
+                cout << "Você já está visualizando este servidor." << endl;
             }
             else {
                 if (!server.hasInvitationCode()){
@@ -266,11 +270,12 @@ void System::enterServer(string name, string invitationCode){
 }
 
 void System::leaveServer(){
-    if (getCurrentServer().getName() != ""){
+    if (getCurrentServer() != nullptr){
         
-        cout << "Saindo do servidor '" << getCurrentServer().getName() << "'" << endl;
+        cout << "Saindo do servidor '" << getCurrentServer()->getName() << "'" << endl;
         
-        setCurrentServer(Server());
+        currentChannel = nullptr;
+        currentServer = nullptr;
     }
     else{
         cout << "Você não está visualizando nenhum servidor." << endl;
@@ -292,4 +297,62 @@ bool System::containsServer(string serverName){
     }
 
     return false;
+}
+
+bool System::enterChannel(string name){
+    
+    if (getCurrentChannel() == nullptr){
+        currentChannel = getCurrentServer()->searchChannel(name);
+
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+void System::free(){
+    for (Server server : getServers()){
+        if (server.getChannels().size() > 0){
+            for (Channel *ch : server.getChannels()){
+                delete ch;
+            }
+        }
+    }
+}
+
+void System::leaveChannel(){
+    currentChannel = nullptr;
+}
+
+void System::printMessages(){
+
+    if (instanceof<TextChannel>(currentChannel)){
+        if (dynamic_cast<TextChannel*>(currentChannel)->getMessages().size() == 0){
+            cout << "Ainda não há mensagens neste canal." << endl;
+        }
+        else {
+            for (Message mes : dynamic_cast<TextChannel*>(currentChannel)->getMessages()){
+                
+                int userId = mes.getSentBy();
+                cout << searchUserById(userId).getName() << mes.getDateHour() << ": " << mes.getContent() <<endl;
+            }
+        }
+    }
+    else {
+        Message mes = dynamic_cast<VoiceChannel*>(currentChannel)->getLastMessage();
+
+        int userId = mes.getSentBy();
+        if (mes.getContent().empty()){
+            cout << "Ainda não há uma mensagem neste canal." << endl;
+        }
+        else {
+            cout << searchUserById(userId).getName() << mes.getDateHour() << ": " << mes.getContent() << endl;
+        }
+    }
+}
+
+template<typename Base, typename T>
+inline bool System::instanceof(const T *ptr) {
+   return dynamic_cast<const Base*>(ptr) != nullptr;
 }

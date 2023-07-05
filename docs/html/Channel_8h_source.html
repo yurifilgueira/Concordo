@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Concordo
-   &#160;<span id="projectnumber">1</span>
+   &#160;<span id="projectnumber">2</span>
    </div>
   </td>
  </tr>
@@ -74,33 +74,38 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CHANNEL</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> std::string;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classChannel.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classChannel.html">Channel</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">   14</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">name</a>; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classChannel.html#af2b4b16288cbb2c592b1e0f6486c2430">Channel</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classChannel.html#af2b4b16288cbb2c592b1e0f6486c2430">Channel</a>(<span class="keywordtype">string</span> <a class="code" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">name</a>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classChannel.html#a5f15ebd302464069f1a9e3f0ded14482">~Channel</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classChannel.html#a53361b01056aea15c93053feb470b715">getName</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classChannel.html#a9af25840dd96485a05bf36d946e71011">setName</a>(<span class="keywordtype">string</span> <a class="code" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">name</a>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;Message.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classChannel.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classChannel.html">Channel</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">   15</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">name</a>; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classChannel.html#af2b4b16288cbb2c592b1e0f6486c2430">Channel</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classChannel.html#af2b4b16288cbb2c592b1e0f6486c2430">Channel</a>(<span class="keywordtype">string</span> <a class="code" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">name</a>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classChannel.html#a5f15ebd302464069f1a9e3f0ded14482">~Channel</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classChannel.html#a53361b01056aea15c93053feb470b715">getName</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classChannel.html#a9af25840dd96485a05bf36d946e71011">setName</a>(<span class="keywordtype">string</span> <a class="code" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">name</a>);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classChannel.html#a3fe9093fa47d35bc072740590df5f014">addMessage</a>(<a class="code" href="classMessage.html">Message</a> message);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassChannel_html"><div class="ttname"><a href="classChannel.html">Channel</a></div><div class="ttdoc">Classe que representa um canal.</div><div class="ttdef"><b>Definition:</b> Channel.h:11</div></div>
-<div class="ttc" id="aclassChannel_html_af2b4b16288cbb2c592b1e0f6486c2430"><div class="ttname"><a href="classChannel.html#af2b4b16288cbb2c592b1e0f6486c2430">Channel::Channel</a></div><div class="ttdeci">Channel()</div><div class="ttdoc">Construtor padrão da classe Channel.</div><div class="ttdef"><b>Definition:</b> Channel.cpp:3</div></div>
-<div class="ttc" id="aclassChannel_html_a9af25840dd96485a05bf36d946e71011"><div class="ttname"><a href="classChannel.html#a9af25840dd96485a05bf36d946e71011">Channel::setName</a></div><div class="ttdeci">void setName(string name)</div><div class="ttdoc">Define o nome do canal.</div><div class="ttdef"><b>Definition:</b> Channel.cpp:17</div></div>
-<div class="ttc" id="aclassChannel_html_ada27be4a604630621c5de998c7f4a418"><div class="ttname"><a href="classChannel.html#ada27be4a604630621c5de998c7f4a418">Channel::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> Channel.h:14</div></div>
-<div class="ttc" id="aclassChannel_html_a53361b01056aea15c93053feb470b715"><div class="ttname"><a href="classChannel.html#a53361b01056aea15c93053feb470b715">Channel::getName</a></div><div class="ttdeci">string getName()</div><div class="ttdoc">Obtém o nome do canal.</div><div class="ttdef"><b>Definition:</b> Channel.cpp:13</div></div>
-<div class="ttc" id="aclassChannel_html_a5f15ebd302464069f1a9e3f0ded14482"><div class="ttname"><a href="classChannel.html#a5f15ebd302464069f1a9e3f0ded14482">Channel::~Channel</a></div><div class="ttdeci">~Channel()</div><div class="ttdoc">Destrutor da classe Channel.</div><div class="ttdef"><b>Definition:</b> Channel.cpp:10</div></div>
+<div class="ttc" id="aclassChannel_html"><div class="ttname"><a href="classChannel.html">Channel</a></div><div class="ttdoc">Classe que representa um canal.</div><div class="ttdef"><b>Definition:</b> Channel.h:12</div></div>
+<div class="ttc" id="aclassChannel_html_af2b4b16288cbb2c592b1e0f6486c2430"><div class="ttname"><a href="classChannel.html#af2b4b16288cbb2c592b1e0f6486c2430">Channel::Channel</a></div><div class="ttdeci">Channel()</div><div class="ttdoc">Construtor padrão da classe Channel.</div><div class="ttdef"><b>Definition:</b> Channel.cpp:5</div></div>
+<div class="ttc" id="aclassChannel_html_a9af25840dd96485a05bf36d946e71011"><div class="ttname"><a href="classChannel.html#a9af25840dd96485a05bf36d946e71011">Channel::setName</a></div><div class="ttdeci">void setName(string name)</div><div class="ttdoc">Define o nome do canal.</div><div class="ttdef"><b>Definition:</b> Channel.cpp:19</div></div>
+<div class="ttc" id="aclassChannel_html_ada27be4a604630621c5de998c7f4a418"><div class="ttname"><a href="classChannel.html#ada27be4a604630621c5de998c7f4a418">Channel::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> Channel.h:15</div></div>
+<div class="ttc" id="aclassChannel_html_a53361b01056aea15c93053feb470b715"><div class="ttname"><a href="classChannel.html#a53361b01056aea15c93053feb470b715">Channel::getName</a></div><div class="ttdeci">string getName()</div><div class="ttdoc">Obtém o nome do canal.</div><div class="ttdef"><b>Definition:</b> Channel.cpp:15</div></div>
+<div class="ttc" id="aclassChannel_html_a5f15ebd302464069f1a9e3f0ded14482"><div class="ttname"><a href="classChannel.html#a5f15ebd302464069f1a9e3f0ded14482">Channel::~Channel</a></div><div class="ttdeci">virtual ~Channel()</div><div class="ttdoc">Destrutor da classe Channel.</div><div class="ttdef"><b>Definition:</b> Channel.cpp:12</div></div>
+<div class="ttc" id="aclassChannel_html_a3fe9093fa47d35bc072740590df5f014"><div class="ttname"><a href="classChannel.html#a3fe9093fa47d35bc072740590df5f014">Channel::addMessage</a></div><div class="ttdeci">virtual void addMessage(Message message)</div><div class="ttdoc">Adiciona uma mensagem ao canal.</div><div class="ttdef"><b>Definition:</b> Channel.cpp:23</div></div>
+<div class="ttc" id="aclassMessage_html"><div class="ttname"><a href="classMessage.html">Message</a></div><div class="ttdoc">Classe que representa uma mensagem.</div><div class="ttdef"><b>Definition:</b> Message.h:11</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Gerado por &#160;<a href="http://www.doxygen.org/index.html">

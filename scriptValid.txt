@@ -124,4 +124,48 @@ login jane@example.com password456
 enter-server My-Server hello123
 list-participants
 disconnect
+login yuri@example.com 12ab34cd
+enter-server Trio-House
+create-channel Harry-Potter voice
+create-channel Harry-Potter text
+create-channel Lalaland text
+create-channel Avengers text
+create-channel Avengers text
+create-channel
+list-channels
+enter-channel Harry-Potter
+leave-channel
+leave-server
+disconnect
+login ryangosling@example.com secretword
+enter-server Trio-House holaamigos123
+enter-channel Harry-Potter
+list-messages
+enter-channel Harry-Potter
+enter-channel Lalaland
+list-messages
+leave-channel
+enter-channel
+enter-channel Lalaland
+
+list-messages
+send-message Eu sou literalmente eu.
+send-message I drive.
+list-messages
+leave-server
+disconnect
+create-user christianbale@example.com imbatman123 Bruce Wayne
+login christianbale@example.com imbatman123
+enter-server Trio-House holaamigos123
+enter-channel Lalaland
+list-messages
+leave-channel
+create-channel Gotham-City voice
+enter-channel Gotham-City
+send-message I'm Batman.
+list-messages
+send-message I'm vengeance.
+list-messages
+list-channel
+disconnect
 quit

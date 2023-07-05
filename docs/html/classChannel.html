@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Concordo
-   &#160;<span id="projectnumber">1</span>
+   &#160;<span id="projectnumber">2</span>
    </div>
   </td>
  </tr>
@@ -64,7 +64,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Membros Públicos</a> &#124;
-<a href="#pri-attribs">Atributos Privados</a> &#124;
+<a href="#pro-attribs">Atributos Protegidos</a> &#124;
 <a href="classChannel-members.html">Lista de todos os Membros</a>  </div>
   <div class="headertitle">
 <div class="title">Referência da Classe Channel</div>  </div>
@@ -75,6 +75,16 @@ $(function() {
  <a href="classChannel.html#details">Mais...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Channel_8h_source.html">Channel.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de hierarquia para Channel:</div>
+<div class="dyncontent">
+<div class="center"><img src="classChannel__inherit__graph.png" border="0" usemap="#Channel_inherit__map" alt="Inheritance graph"/></div>
+<map name="Channel_inherit__map" id="Channel_inherit__map">
+<area shape="rect" title="Classe que representa um canal." alt="" coords="85,5,159,32"/>
+<area shape="rect" href="classTextChannel.html" title="Classe que representa um canal de texto." alt="" coords="5,80,108,107"/>
+<area shape="rect" href="classVoiceChannel.html" title="Classe que representa um canal de voz." alt="" coords="132,80,243,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
 <div class="dynheader">
 Diagrama de colaboração para Channel:</div>
 <div class="dyncontent">
@@ -95,7 +105,7 @@ Membros Públicos</h2></td></tr>
 <tr class="memdesc:abad8f1499819efbe1d3578aaf777ef99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="classChannel.html" title="Classe que representa um canal.">Channel</a> que recebe o nome do canal como parâmetro.  <a href="classChannel.html#abad8f1499819efbe1d3578aaf777ef99">Mais...</a><br /></td></tr>
 <tr class="separator:abad8f1499819efbe1d3578aaf777ef99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f15ebd302464069f1a9e3f0ded14482"><td class="memItemLeft" align="right" valign="top"><a id="a5f15ebd302464069f1a9e3f0ded14482"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChannel.html#a5f15ebd302464069f1a9e3f0ded14482">~Channel</a> ()</td></tr>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChannel.html#a5f15ebd302464069f1a9e3f0ded14482">~Channel</a> ()</td></tr>
 <tr class="memdesc:a5f15ebd302464069f1a9e3f0ded14482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da classe <a class="el" href="classChannel.html" title="Classe que representa um canal.">Channel</a>. <br /></td></tr>
 <tr class="separator:a5f15ebd302464069f1a9e3f0ded14482"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53361b01056aea15c93053feb470b715"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChannel.html#a53361b01056aea15c93053feb470b715">getName</a> ()</td></tr>
@@ -104,9 +114,12 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a9af25840dd96485a05bf36d946e71011"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChannel.html#a9af25840dd96485a05bf36d946e71011">setName</a> (string <a class="el" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">name</a>)</td></tr>
 <tr class="memdesc:a9af25840dd96485a05bf36d946e71011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o nome do canal.  <a href="classChannel.html#a9af25840dd96485a05bf36d946e71011">Mais...</a><br /></td></tr>
 <tr class="separator:a9af25840dd96485a05bf36d946e71011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fe9093fa47d35bc072740590df5f014"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChannel.html#a3fe9093fa47d35bc072740590df5f014">addMessage</a> (<a class="el" href="classMessage.html">Message</a> message)</td></tr>
+<tr class="memdesc:a3fe9093fa47d35bc072740590df5f014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona uma mensagem ao canal.  <a href="classChannel.html#a3fe9093fa47d35bc072740590df5f014">Mais...</a><br /></td></tr>
+<tr class="separator:a3fe9093fa47d35bc072740590df5f014"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Atributos Privados</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Atributos Protegidos</h2></td></tr>
 <tr class="memitem:ada27be4a604630621c5de998c7f4a418"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">name</a></td></tr>
 <tr class="separator:ada27be4a604630621c5de998c7f4a418"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -140,6 +153,42 @@ Atributos Privados</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Funções membros</h2>
+<a id="a3fe9093fa47d35bc072740590df5f014"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fe9093fa47d35bc072740590df5f014">&#9670;&nbsp;</a></span>addMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Channel::addMessage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMessage.html">Message</a>&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adiciona uma mensagem ao canal. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Mensagem a ser adicionada. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplementado por <a class="el" href="classTextChannel.html#a5ace016709a9abc98a88000a1e147296">TextChannel</a> e <a class="el" href="classVoiceChannel.html#a3fa4acd773a0a34f87f70bf415f8cc9d">VoiceChannel</a>.</p>
+
+</div>
+</div>
 <a id="a53361b01056aea15c93053feb470b715"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a53361b01056aea15c93053feb470b715">&#9670;&nbsp;</a></span>getName()</h2>
 
@@ -202,7 +251,7 @@ Atributos Privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

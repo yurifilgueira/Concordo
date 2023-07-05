@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: Código-Fonte de include/TextChannel.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Concordo
+   &#160;<span id="projectnumber">2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TextChannel.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TEXTCHANNEL</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TEXTCHANNEL</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;Channel.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;Message.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classTextChannel.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTextChannel.html">TextChannel</a> : <span class="keyword">public</span> <a class="code" href="classChannel.html">Channel</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classTextChannel.html#a56c856d4e536417b82f1fabaa0ddfaa1">   15</a></span>&#160;    vector&lt;Message&gt; <a class="code" href="classTextChannel.html#a56c856d4e536417b82f1fabaa0ddfaa1">messages</a>; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classTextChannel.html#a27dc7247d18c236392b503fc8c57ad55">TextChannel</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classTextChannel.html#a27dc7247d18c236392b503fc8c57ad55">TextChannel</a>(<span class="keywordtype">string</span> <a class="code" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">name</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classTextChannel.html#a395e05505b430315e729075454772c82">~TextChannel</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    vector&lt;Message&gt; <a class="code" href="classTextChannel.html#aca55edb32f00fcbabdfe04601b53d0a0">getMessages</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTextChannel.html#a5ace016709a9abc98a88000a1e147296">addMessage</a>(<a class="code" href="classMessage.html">Message</a> message);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTextChannel.html#a1474a8847a86e5f36e15f193f928436b">printMessages</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassChannel_html"><div class="ttname"><a href="classChannel.html">Channel</a></div><div class="ttdoc">Classe que representa um canal.</div><div class="ttdef"><b>Definition:</b> Channel.h:12</div></div>
+<div class="ttc" id="aclassTextChannel_html_a1474a8847a86e5f36e15f193f928436b"><div class="ttname"><a href="classTextChannel.html#a1474a8847a86e5f36e15f193f928436b">TextChannel::printMessages</a></div><div class="ttdeci">void printMessages()</div><div class="ttdoc">Imprime as mensagens do canal de texto.</div></div>
+<div class="ttc" id="aclassTextChannel_html_a27dc7247d18c236392b503fc8c57ad55"><div class="ttname"><a href="classTextChannel.html#a27dc7247d18c236392b503fc8c57ad55">TextChannel::TextChannel</a></div><div class="ttdeci">TextChannel()</div><div class="ttdoc">Construtor padrão da classe TextChannel.</div><div class="ttdef"><b>Definition:</b> TextChannel.cpp:7</div></div>
+<div class="ttc" id="aclassChannel_html_ada27be4a604630621c5de998c7f4a418"><div class="ttname"><a href="classChannel.html#ada27be4a604630621c5de998c7f4a418">Channel::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> Channel.h:15</div></div>
+<div class="ttc" id="aclassTextChannel_html"><div class="ttname"><a href="classTextChannel.html">TextChannel</a></div><div class="ttdoc">Classe que representa um canal de texto.</div><div class="ttdef"><b>Definition:</b> TextChannel.h:13</div></div>
+<div class="ttc" id="aclassTextChannel_html_a395e05505b430315e729075454772c82"><div class="ttname"><a href="classTextChannel.html#a395e05505b430315e729075454772c82">TextChannel::~TextChannel</a></div><div class="ttdeci">~TextChannel()</div><div class="ttdoc">Destrutor da classe TextChannel.</div><div class="ttdef"><b>Definition:</b> TextChannel.cpp:14</div></div>
+<div class="ttc" id="aclassTextChannel_html_a5ace016709a9abc98a88000a1e147296"><div class="ttname"><a href="classTextChannel.html#a5ace016709a9abc98a88000a1e147296">TextChannel::addMessage</a></div><div class="ttdeci">void addMessage(Message message)</div><div class="ttdoc">Adiciona uma mensagem à lista de mensagens do canal de texto.</div><div class="ttdef"><b>Definition:</b> TextChannel.cpp:21</div></div>
+<div class="ttc" id="aclassMessage_html"><div class="ttname"><a href="classMessage.html">Message</a></div><div class="ttdoc">Classe que representa uma mensagem.</div><div class="ttdef"><b>Definition:</b> Message.h:11</div></div>
+<div class="ttc" id="aclassTextChannel_html_a56c856d4e536417b82f1fabaa0ddfaa1"><div class="ttname"><a href="classTextChannel.html#a56c856d4e536417b82f1fabaa0ddfaa1">TextChannel::messages</a></div><div class="ttdeci">vector&lt; Message &gt; messages</div><div class="ttdoc">Lista de mensagens no canal de texto.</div><div class="ttdef"><b>Definition:</b> TextChannel.h:15</div></div>
+<div class="ttc" id="aclassTextChannel_html_aca55edb32f00fcbabdfe04601b53d0a0"><div class="ttname"><a href="classTextChannel.html#aca55edb32f00fcbabdfe04601b53d0a0">TextChannel::getMessages</a></div><div class="ttdeci">vector&lt; Message &gt; getMessages()</div><div class="ttdoc">Obtém a lista de mensagens no canal de texto.</div><div class="ttdef"><b>Definition:</b> TextChannel.cpp:17</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,5 +1,11 @@
+#include <iostream>
 #include <Server.h>
 #include <User.h>
+#include <VoiceChannel.h>
+#include <TextChannel.h>
+
+using std::cout;
+using std::endl;
 
 Server::Server(){
     this->name = "";
@@ -18,11 +24,6 @@ Server::Server(int ownerUserId, string name, string description, string invitati
 }
 
 Server::~Server(){
-
-    for (Channel *channel : channels){
-        delete channel;
-    }
-
 }
 
 int Server::getOwnerUserId(){
@@ -82,4 +83,40 @@ bool Server::containsUser(int userId){
     }
 
     return false;
+}
+
+void Server::addChannel(Channel *channel){
+    channels.push_back(channel);
+}
+
+Channel *Server::searchChannel(string name){
+    for (Channel *ch : channels){
+        if (name == ch->getName()){
+            return ch;
+        }
+    }
+
+    return nullptr;
+}
+
+void Server::printChannels(){
+    
+    cout << "#Canais de texto" << endl;
+    for (Channel *ch : channels){
+        if (instanceof<TextChannel>(ch)){
+            cout << ch->getName() << endl;
+        }
+    }
+
+    cout << "#Canais de voz" << endl;
+    for (Channel *ch : channels){
+        if (instanceof<VoiceChannel>(ch)){
+            cout << ch->getName() << endl;
+        }
+    }
+}
+
+template<typename Base, typename T>
+inline bool Server::instanceof(const T *ptr) {
+   return dynamic_cast<const Base*>(ptr) != nullptr;
 }

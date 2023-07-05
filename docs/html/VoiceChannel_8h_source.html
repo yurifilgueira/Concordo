@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: Código-Fonte de include/VoiceChannel.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Concordo
+   &#160;<span id="projectnumber">2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">VoiceChannel.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef VOICECHANNEL</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define VOICECHANNEL</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;Channel.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classVoiceChannel.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVoiceChannel.html">VoiceChannel</a> : <span class="keyword">public</span> <a class="code" href="classChannel.html">Channel</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classVoiceChannel.html#a8440aa4535d80dd09ef2e015adda7743">   11</a></span>&#160;    <a class="code" href="classMessage.html">Message</a> <a class="code" href="classVoiceChannel.html#a8440aa4535d80dd09ef2e015adda7743">lastMessage</a>; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classVoiceChannel.html#abd67aa3b820f2feeca0148e9ffec5564">VoiceChannel</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classVoiceChannel.html#abd67aa3b820f2feeca0148e9ffec5564">VoiceChannel</a>(<span class="keywordtype">string</span> <a class="code" href="classChannel.html#ada27be4a604630621c5de998c7f4a418">name</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classVoiceChannel.html#a8531c20a134d40b8c04226598af6b9db">~VoiceChannel</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classMessage.html">Message</a> <a class="code" href="classVoiceChannel.html#a4a73fc9d98e0c578a862a3f01f1de3d4">getLastMessage</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classVoiceChannel.html#a3fa4acd773a0a34f87f70bf415f8cc9d">addMessage</a>(<a class="code" href="classMessage.html">Message</a> <a class="code" href="classVoiceChannel.html#a8440aa4535d80dd09ef2e015adda7743">lastMessage</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassVoiceChannel_html_a8440aa4535d80dd09ef2e015adda7743"><div class="ttname"><a href="classVoiceChannel.html#a8440aa4535d80dd09ef2e015adda7743">VoiceChannel::lastMessage</a></div><div class="ttdeci">Message lastMessage</div><div class="ttdoc">Última mensagem do canal de voz.</div><div class="ttdef"><b>Definition:</b> VoiceChannel.h:11</div></div>
+<div class="ttc" id="aclassChannel_html"><div class="ttname"><a href="classChannel.html">Channel</a></div><div class="ttdoc">Classe que representa um canal.</div><div class="ttdef"><b>Definition:</b> Channel.h:12</div></div>
+<div class="ttc" id="aclassVoiceChannel_html_a8531c20a134d40b8c04226598af6b9db"><div class="ttname"><a href="classVoiceChannel.html#a8531c20a134d40b8c04226598af6b9db">VoiceChannel::~VoiceChannel</a></div><div class="ttdeci">~VoiceChannel()</div><div class="ttdoc">Destrutor da classe VoiceChannel.</div><div class="ttdef"><b>Definition:</b> VoiceChannel.cpp:10</div></div>
+<div class="ttc" id="aclassVoiceChannel_html_a4a73fc9d98e0c578a862a3f01f1de3d4"><div class="ttname"><a href="classVoiceChannel.html#a4a73fc9d98e0c578a862a3f01f1de3d4">VoiceChannel::getLastMessage</a></div><div class="ttdeci">Message getLastMessage()</div><div class="ttdoc">Obtém a última mensagem do canal de voz.</div><div class="ttdef"><b>Definition:</b> VoiceChannel.cpp:13</div></div>
+<div class="ttc" id="aclassVoiceChannel_html_a3fa4acd773a0a34f87f70bf415f8cc9d"><div class="ttname"><a href="classVoiceChannel.html#a3fa4acd773a0a34f87f70bf415f8cc9d">VoiceChannel::addMessage</a></div><div class="ttdeci">void addMessage(Message lastMessage)</div><div class="ttdoc">Adiciona uma mensagem como a última mensagem do canal de voz.</div><div class="ttdef"><b>Definition:</b> VoiceChannel.cpp:17</div></div>
+<div class="ttc" id="aclassChannel_html_ada27be4a604630621c5de998c7f4a418"><div class="ttname"><a href="classChannel.html#ada27be4a604630621c5de998c7f4a418">Channel::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> Channel.h:15</div></div>
+<div class="ttc" id="aclassVoiceChannel_html"><div class="ttname"><a href="classVoiceChannel.html">VoiceChannel</a></div><div class="ttdoc">Classe que representa um canal de voz.</div><div class="ttdef"><b>Definition:</b> VoiceChannel.h:9</div></div>
+<div class="ttc" id="aclassMessage_html"><div class="ttname"><a href="classMessage.html">Message</a></div><div class="ttdoc">Classe que representa uma mensagem.</div><div class="ttdef"><b>Definition:</b> Message.h:11</div></div>
+<div class="ttc" id="aclassVoiceChannel_html_abd67aa3b820f2feeca0148e9ffec5564"><div class="ttname"><a href="classVoiceChannel.html#abd67aa3b820f2feeca0148e9ffec5564">VoiceChannel::VoiceChannel</a></div><div class="ttdeci">VoiceChannel()</div><div class="ttdoc">Construtor padrão da classe VoiceChannel.</div><div class="ttdef"><b>Definition:</b> VoiceChannel.cpp:3</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

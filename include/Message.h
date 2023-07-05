@@ -10,8 +10,8 @@ using std::string;
  */
 class Message {
 private:
-    string dataHora; /**< Data e hora da mensagem. */
-    string sentyBy; /**< Remetente da mensagem. */
+    string dateHour; /**< Data e hora da mensagem. */
+    int sentBy; /**< Remetente da mensagem. */
     string content; /**< Conteúdo da mensagem. */
 
 public:
@@ -22,11 +22,11 @@ public:
 
     /**
      * @brief Construtor da classe Message que recebe a data e hora, o remetente e o conteúdo da mensagem como parâmetros.
-     * @param dataHora Data e hora da mensagem.
-     * @param sentyBy Remetente da mensagem.
+     * @param dateHour Data e hora da mensagem.
+     * @param sentBy Remetente da mensagem.
      * @param content Conteúdo da mensagem.
      */
-    Message(string dataHora, string sentyBy, string content);
+    Message(string dateHour, int sentBy, string content);
 
     /**
      * @brief Destrutor da classe Message.
@@ -37,37 +37,37 @@ public:
      * @brief Obtém a data e hora da mensagem.
      * @return Data e hora da mensagem.
      */
-    string getdataHora();
+    string getDateHour();
 
     /**
      * @brief Define a data e hora da mensagem.
-     * @param dataHora Data e hora da mensagem.
+     * @param dateHour Data e hora da mensagem.
      */
-    void setdataHora(string dataHora);
+    void setDateHour(string dateHour);
 
     /**
      * @brief Obtém o remetente da mensagem.
      * @return Remetente da mensagem.
      */
-    string getsentyBy();
+    int getSentBy();
 
     /**
      * @brief Define o remetente da mensagem.
-     * @param sentyBy Remetente da mensagem.
+     * @param sentBy Remetente da mensagem.
      */
-    void setsentyBy(string sentyBy);
+    void setSentBy(int sentBy);
 
     /**
      * @brief Obtém o conteúdo da mensagem.
      * @return Conteúdo da mensagem.
      */
-    string getcontent();
+    string getContent();
 
     /**
      * @brief Define o conteúdo da mensagem.
      * @param content Conteúdo da mensagem.
      */
-    void setcontent(string content);
+    void setContent(string content);
 };
 
 #endif

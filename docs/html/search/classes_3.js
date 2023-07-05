@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['user_78',['User',['../classUser.html',1,'']]]
+  ['textchannel_95',['TextChannel',['../classTextChannel.html',1,'']]]
 ];

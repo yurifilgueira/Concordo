@@ -2,6 +2,7 @@
 #define CHANNEL
 
 #include <string>
+#include <Message.h>
 
 using std::string;
 
@@ -10,7 +11,7 @@ using std::string;
  */
 class Channel {
 
-private:
+protected:
     string name; /**< Nome do canal. */
 
 public:
@@ -28,7 +29,7 @@ public:
     /**
      * @brief Destrutor da classe Channel.
      */
-    ~Channel();
+    virtual ~Channel();
 
     /**
      * @brief Obtém o nome do canal.
@@ -41,6 +42,12 @@ public:
      * @param name Nome do canal.
      */
     void setName(string name);
+
+    /**
+     * @brief Adiciona uma mensagem ao canal.
+     * @param message Mensagem a ser adicionada.
+     */
+    virtual void addMessage(Message message);
 };
 
 #endif

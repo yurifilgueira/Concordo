@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Concordo
-   &#160;<span id="projectnumber">1</span>
+   &#160;<span id="projectnumber">2</span>
    </div>
   </td>
  </tr>
@@ -139,6 +139,20 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a16043f2c702b9c9ecc9005bb1ed98af1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a16043f2c702b9c9ecc9005bb1ed98af1">containsUser</a> (int id)</td></tr>
 <tr class="memdesc:a16043f2c702b9c9ecc9005bb1ed98af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se um usuário com o ID fornecido é um participante no servidor.  <a href="classServer.html#a16043f2c702b9c9ecc9005bb1ed98af1">Mais...</a><br /></td></tr>
 <tr class="separator:a16043f2c702b9c9ecc9005bb1ed98af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89952e9c109b5a823372eec983081101"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a89952e9c109b5a823372eec983081101">addChannel</a> (<a class="el" href="classChannel.html">Channel</a> *channel)</td></tr>
+<tr class="memdesc:a89952e9c109b5a823372eec983081101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona um canal ao servidor.  <a href="classServer.html#a89952e9c109b5a823372eec983081101">Mais...</a><br /></td></tr>
+<tr class="separator:a89952e9c109b5a823372eec983081101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa6a3bcb080e7565ebf3167c709629eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classChannel.html">Channel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#afa6a3bcb080e7565ebf3167c709629eb">searchChannel</a> (string <a class="el" href="classServer.html#abaf7319e177fd32b0ac69308de016b41">name</a>)</td></tr>
+<tr class="memdesc:afa6a3bcb080e7565ebf3167c709629eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procura um canal pelo nome no servidor.  <a href="classServer.html#afa6a3bcb080e7565ebf3167c709629eb">Mais...</a><br /></td></tr>
+<tr class="separator:afa6a3bcb080e7565ebf3167c709629eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba4a136c912f68b9ca2305c85a629db2"><td class="memItemLeft" align="right" valign="top"><a id="aba4a136c912f68b9ca2305c85a629db2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#aba4a136c912f68b9ca2305c85a629db2">printChannels</a> ()</td></tr>
+<tr class="memdesc:aba4a136c912f68b9ca2305c85a629db2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime os canais do servidor. <br /></td></tr>
+<tr class="separator:aba4a136c912f68b9ca2305c85a629db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a213760ef271ef1074ad14bc5194c6364"><td class="memTemplParams" colspan="2">template&lt;typename Base , typename T &gt; </td></tr>
+<tr class="memitem:a213760ef271ef1074ad14bc5194c6364"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classServer.html#a213760ef271ef1074ad14bc5194c6364">instanceof</a> (const T *ptr)</td></tr>
+<tr class="memdesc:a213760ef271ef1074ad14bc5194c6364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se um objeto é uma instância de uma classe base.  <a href="classServer.html#a213760ef271ef1074ad14bc5194c6364">Mais...</a><br /></td></tr>
+<tr class="separator:a213760ef271ef1074ad14bc5194c6364"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atributos Privados</h2></td></tr>
@@ -247,6 +261,32 @@ Atributos Privados</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Funções membros</h2>
+<a id="a89952e9c109b5a823372eec983081101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89952e9c109b5a823372eec983081101">&#9670;&nbsp;</a></span>addChannel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::addChannel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classChannel.html">Channel</a> *&#160;</td>
+          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adiciona um canal ao servidor. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>Um ponteiro para o objeto <a class="el" href="classChannel.html" title="Classe que representa um canal.">Channel</a> a ser adicionado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a615ef07489f702bff6bc08df3ab55581"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a615ef07489f702bff6bc08df3ab55581">&#9670;&nbsp;</a></span>addParticipant()</h2>
 
@@ -437,6 +477,77 @@ Atributos Privados</h2></td></tr>
 
 <p>Verifica se o servidor possui um código de convite. </p>
 <dl class="section return"><dt>Retorna</dt><dd>True se o servidor possuir um código de convite, false caso contrário. </dd></dl>
+
+</div>
+</div>
+<a id="a213760ef271ef1074ad14bc5194c6364"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a213760ef271ef1074ad14bc5194c6364">&#9670;&nbsp;</a></span>instanceof()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Base , typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Server::instanceof </td>
+          <td>(</td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verifica se um objeto é uma instância de uma classe base. </p>
+<dl class="tparams"><dt>Parâmetros do <em>template</em></dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Base</td><td>A classe base. </td></tr>
+    <tr><td class="paramname">T</td><td>O tipo do objeto a ser verificado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>O ponteiro para o objeto a ser verificado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>True se o objeto for uma instância da classe base, false caso contrário. </dd></dl>
+
+</div>
+</div>
+<a id="afa6a3bcb080e7565ebf3167c709629eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa6a3bcb080e7565ebf3167c709629eb">&#9670;&nbsp;</a></span>searchChannel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classChannel.html">Channel</a> * Server::searchChannel </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procura um canal pelo nome no servidor. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>O nome do canal a ser procurado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Um ponteiro para o objeto <a class="el" href="classChannel.html" title="Classe que representa um canal.">Channel</a> se encontrado, nullptr caso contrário. </dd></dl>
 
 </div>
 </div>

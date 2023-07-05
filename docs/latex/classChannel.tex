@@ -11,8 +11,17 @@ Classe que representa um canal.
 
 
 
-Diagrama de colaboração para Channel\+:
+Diagrama de hierarquia para Channel\+:
 \nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classChannel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Channel\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,13 +37,15 @@ Diagrama de colaboração para Channel\+:
 \mbox{\hyperlink{classChannel_abad8f1499819efbe1d3578aaf777ef99}{Channel}} (string \mbox{\hyperlink{classChannel_ada27be4a604630621c5de998c7f4a418}{name}})
 \begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classChannel}{Channel}} que recebe o nome do canal como parâmetro. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classChannel_a5f15ebd302464069f1a9e3f0ded14482}\label{classChannel_a5f15ebd302464069f1a9e3f0ded14482}} 
-\mbox{\hyperlink{classChannel_a5f15ebd302464069f1a9e3f0ded14482}{$\sim$\+Channel}} ()
+virtual \mbox{\hyperlink{classChannel_a5f15ebd302464069f1a9e3f0ded14482}{$\sim$\+Channel}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{classChannel}{Channel}}. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{classChannel_a53361b01056aea15c93053feb470b715}{get\+Name}} ()
 \begin{DoxyCompactList}\small\item\em Obtém o nome do canal. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classChannel_a9af25840dd96485a05bf36d946e71011}{set\+Name}} (string \mbox{\hyperlink{classChannel_ada27be4a604630621c5de998c7f4a418}{name}})
-\begin{DoxyCompactList}\small\item\em Define o nome do canal. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactList}\small\item\em Define o nome do canal. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classChannel_a3fe9093fa47d35bc072740590df5f014}{add\+Message}} (\mbox{\hyperlink{classMessage}{Message}} message)
+\begin{DoxyCompactList}\small\item\em Adiciona uma mensagem ao canal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{classChannel_ada27be4a604630621c5de998c7f4a418}{name}}
@@ -63,6 +74,25 @@ Construtor da classe \mbox{\hyperlink{classChannel}{Channel}} que recebe o nome 
 
 
 \doxysubsection{Funções membros}
+\mbox{\Hypertarget{classChannel_a3fe9093fa47d35bc072740590df5f014}\label{classChannel_a3fe9093fa47d35bc072740590df5f014}} 
+\index{Channel@{Channel}!addMessage@{addMessage}}
+\index{addMessage@{addMessage}!Channel@{Channel}}
+\doxysubsubsection{\texorpdfstring{addMessage()}{addMessage()}}
+{\footnotesize\ttfamily void Channel\+::add\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMessage}{Message}}}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adiciona uma mensagem ao canal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em message} & Mensagem a ser adicionada. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por \mbox{\hyperlink{classTextChannel_a5ace016709a9abc98a88000a1e147296}{Text\+Channel}} e \mbox{\hyperlink{classVoiceChannel_a3fa4acd773a0a34f87f70bf415f8cc9d}{Voice\+Channel}}.
+
 \mbox{\Hypertarget{classChannel_a53361b01056aea15c93053feb470b715}\label{classChannel_a53361b01056aea15c93053feb470b715}} 
 \index{Channel@{Channel}!getName@{getName}}
 \index{getName@{getName}!Channel@{Channel}}
@@ -98,7 +128,7 @@ Define o nome do canal.
 \index{Channel@{Channel}!name@{name}}
 \index{name@{name}!Channel@{Channel}}
 \doxysubsubsection{\texorpdfstring{name}{name}}
-{\footnotesize\ttfamily string Channel\+::name\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily string Channel\+::name\hspace{0.3cm}{\ttfamily [protected]}}
 
 Nome do canal. 
 

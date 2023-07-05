@@ -1,4 +1,23 @@
 var searchData=
 [
-  ['hasinvitationcode_107',['hasInvitationCode',['../classServer.html#aa05ccb80ddc1cc2632509e2a33006fb0',1,'Server']]]
+  ['generateid_112',['generateId',['../classSystem.html#af422bfe509960a2b85f466ae32a0160c',1,'System']]],
+  ['getchannels_113',['getChannels',['../classServer.html#ae49b9fa933857ac958c3d287c897ecec',1,'Server']]],
+  ['getcontent_114',['getContent',['../classMessage.html#a3d4ceea44b0922802d6ae99063ac4e48',1,'Message']]],
+  ['getcurrentchannel_115',['getCurrentChannel',['../classSystem.html#a597c7bba970f9885496cd3cd73c82e2b',1,'System']]],
+  ['getcurrentloggedinuser_116',['getCurrentLoggedInUser',['../classSystem.html#a1ad43cea987268d4f35aac5db2b9b251',1,'System']]],
+  ['getcurrentserver_117',['getCurrentServer',['../classSystem.html#ae80fd15bad0b3de5df35c5515d097bd3',1,'System']]],
+  ['getdatehour_118',['getDateHour',['../classMessage.html#a79594082a6c2078302bdcb8317e27849',1,'Message']]],
+  ['getdescription_119',['getDescription',['../classServer.html#a784190b8a0f0ebe632f0f2691fe0ca57',1,'Server']]],
+  ['getemail_120',['getEmail',['../classUser.html#a851bfaab8e406de66700edb326c58e38',1,'User']]],
+  ['getid_121',['getId',['../classUser.html#a1e393732cd9838ab29445d9153333046',1,'User']]],
+  ['getinvitationcode_122',['getInvitationCode',['../classServer.html#a4691359ad48f450ede68d25088170c5f',1,'Server']]],
+  ['getlastmessage_123',['getLastMessage',['../classVoiceChannel.html#a4a73fc9d98e0c578a862a3f01f1de3d4',1,'VoiceChannel']]],
+  ['getmessages_124',['getMessages',['../classTextChannel.html#aca55edb32f00fcbabdfe04601b53d0a0',1,'TextChannel']]],
+  ['getname_125',['getName',['../classChannel.html#a53361b01056aea15c93053feb470b715',1,'Channel::getName()'],['../classServer.html#ab3e5ca3979006745dfd8f1ec4c06c885',1,'Server::getName()'],['../classUser.html#adb316ac38d5f62a967686e7b736a0469',1,'User::getName()']]],
+  ['getowneruserid_126',['getOwnerUserId',['../classServer.html#a63d959557a9a3935cb2869705c2b7003',1,'Server']]],
+  ['getparticipantsids_127',['getParticipantsIDs',['../classServer.html#a7e82a2ffc5ba1aea917f730207c85c7a',1,'Server']]],
+  ['getpassword_128',['getPassword',['../classUser.html#a090eb9ee354cc25b2e8240b714b39d64',1,'User']]],
+  ['getsentyby_129',['getSentyBy',['../classMessage.html#a5d576b6af6c1f1afb06e08c0a709adca',1,'Message']]],
+  ['getservers_130',['getServers',['../classSystem.html#a73f7448c3dccbf032bc97a9beac348ba',1,'System']]],
+  ['getusers_131',['getUsers',['../classSystem.html#ac3d98d101c0bc590264f447a88cf8814',1,'System']]]
 ];

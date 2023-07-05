@@ -10,4 +10,6 @@ add_executable( program
                 src/entities/Message.cpp
                 src/entities/Server.cpp
                 src/entities/User.cpp
-                src/entities/System.cpp)
+                src/entities/System.cpp
+                src/entities/VoiceChannel.cpp
+                src/entities/TextChannel.cpp)

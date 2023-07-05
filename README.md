@@ -28,7 +28,9 @@ Certifique-se de ter o g++ e o CMake instalados em seu sistema antes de prossegu
     
     3.2. Caso o script não contenha o comando `quit` — comando que será explicado em breve — o Concordo continurá rodando normalmente, e você poderá inserir os comandos que desejar.
 
-    3.3. Neste projeto, você encontrará 2 scripts, o `scriptValid.txt` — que executa os comandos de maneira válida — e o `scriptInvalid.txt` — que executa os comandos de maneira errada, e faz com que o programa mostre as mensagens de erro para o usuário, sem crash no programa —, basta seguir o passo 3.2 para executá-los. Só um por vez.
+    3.3. Neste projeto, você encontrará 2 scripts, o `scriptValid.txt` — que executa os comandos de maneira válida — e o `scriptInvalid.txt` — que executa os comandos de maneira errada, e faz com que o programa mostre as mensagens de erro para o usuário, sem crash no programa —, basta seguir o passo 3.1 para executá-los. Só um por vez.
+
+    3.4. Os comandos — executados de maneira correta e errada — das funcionalidades relacionadas aos canais, se encontram no `scriptValid.txt`.
 
 ## Guia de uso
 
@@ -103,6 +105,10 @@ Segue abaixo a lista de comandos possíveis:
 
     *É importante ressaltar que, ao entrar em um servidor, você entrará para a lista de participantes e ao mesmo tempo, estará visualizando o servidor.*
 
+---
+*Os comandos abaixo só estarão disponíveis para uso se o usuário, que deve estar logado, estiver visualizando um servidor.*
+---
+
 - **leave-server**: Você deixará de visualizar o servidor que estava visualizando antes. Mas ainda estará na lista de participantes do servidor que parou de visualizar. Veja o exemplo:
 
     `leave-server`
@@ -113,3 +119,37 @@ Segue abaixo a lista de comandos possíveis:
 - **list-participants**: Lista os participantes do servidor que você está visualizando. Veja o exemplo:
 
     `list-participants`
+
+- **create-channel**: Cria um canal dentro do servidor em que o usuário logado se encontra. Há dois tipos de canais, os canais de texto, onde todas as mensagens enviadas são armazenadas, e os canais de vox, onde apenas a última mensagem enviada é armazenada. Não pode haver mais de um servidor com o mesmo nome, independente do tipo. Veja o exemplo:
+    
+    `create-channel <nome> <tipo>`
+
+    `create-channel I-drive-java text`
+
+    `create-channel Gotham-java-city voice`
+
+- **enter-channel**: Permite entrar em um canal. Veja o exemplo:
+
+    `enter-channel <nome-do-canal>`
+
+    `enter-channel I-drive-java`
+---
+*Os comandos abaixo só estarão disponíveis para uso se o usuário, que deve estar logado, estiver visualizando um servidor e um canal.*
+---
+- **leave-channel**: Sai de um canal — para de visualizar o canal —. Veja o exemplo:
+
+    `leave-channel`
+
+- **send-message**: Envia uma mensagem no canal. Veja o exemplo:
+
+    `send-message <mensagem>`
+
+    `send-message O Ryan Gosling é literalmente eu.`
+
+- **list-messages**: Lista as mensagens presentes no canal em que o usuário logado se encontra. Veja o exemplo:
+
+    `list-messages`
+
+---
+
+Desenvolvido por Yuri Filgueira.

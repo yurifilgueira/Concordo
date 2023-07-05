@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['message_42',['Message',['../classMessage.html',1,'Message'],['../classMessage.html#a4fc4f717b634e66070366cb7722d7761',1,'Message::Message()'],['../classMessage.html#a6af519fbc6eea7ec263bffcab3db8b70',1,'Message::Message(string dataHora, string sentyBy, string content)']]]
+  ['lastmessage_47',['lastMessage',['../classVoiceChannel.html#a8440aa4535d80dd09ef2e015adda7743',1,'VoiceChannel']]],
+  ['leavechannel_48',['leaveChannel',['../classSystem.html#a982a5a70ccc9173cd4ae8e3cd1aab1ff',1,'System']]],
+  ['leaveserver_49',['leaveServer',['../classSystem.html#a56d4ebdd0f54fc0867fb097c3398c1e0',1,'System']]],
+  ['login_50',['login',['../classSystem.html#aac86ea7b336ed35ec8ce3a1a482943d5',1,'System']]]
 ];

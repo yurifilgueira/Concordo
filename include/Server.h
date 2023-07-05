@@ -125,6 +125,34 @@ public:
      * @return True se o usuário for um participante no servidor, false caso contrário.
      */
     bool containsUser(int id);
+
+    /**
+     * @brief Adiciona um canal ao servidor.
+     * @param channel Um ponteiro para o objeto Channel a ser adicionado.
+     */
+    void addChannel(Channel *channel);
+
+    /**
+     * @brief Procura um canal pelo nome no servidor.
+     * @param name O nome do canal a ser procurado.
+     * @return Um ponteiro para o objeto Channel se encontrado, nullptr caso contrário.
+     */
+    Channel *searchChannel(string name);
+
+    /**
+     * @brief Imprime os canais do servidor.
+     */
+    void printChannels();
+
+    /**
+     * @brief Verifica se um objeto é uma instância de uma classe base.
+     * @tparam Base A classe base.
+     * @tparam T O tipo do objeto a ser verificado.
+     * @param ptr O ponteiro para o objeto a ser verificado.
+     * @return True se o objeto for uma instância da classe base, false caso contrário.
+     */
+    template<typename Base, typename T>
+    inline bool instanceof(const T *ptr);
 };
 
 #endif

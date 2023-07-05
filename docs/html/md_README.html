@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Concordo
-   &#160;<span id="projectnumber">1</span>
+   &#160;<span id="projectnumber">2</span>
    </div>
   </td>
  </tr>
@@ -85,6 +85,8 @@ Como executar o Concordo</h1>
 <li><p class="startli">Após a compilação bem-sucedida, execute o programa digitando <code>./program</code> no terminal.</p>
 <p class="startli">3.1. Caso você possua um script — um arquivo <code>.txt</code> — com os comandos do Concordo, basta inserir <code>./program nomeDoArquivo.txt</code> no terminal.</p>
 <p class="startli">3.2. Caso o script não contenha o comando <code>quit</code> — comando que será explicado em breve — o Concordo continurá rodando normalmente, e você poderá inserir os comandos que desejar.</p>
+<p class="startli">3.3. Neste projeto, você encontrará 2 scripts, o <code>scriptValid.txt</code> — que executa os comandos de maneira válida — e o <code>scriptInvalid.txt</code> — que executa os comandos de maneira errada, e faz com que o programa mostre as mensagens de erro para o usuário, sem crash no programa —, basta seguir o passo 3.1 para executá-los. Só um por vez.</p>
+<p class="startli">3.4. Os comandos — executados de maneira correta e errada — das funcionalidades relacionadas aos canais, se encontram no <code>scriptValid.txt</code>.</p>
 </li>
 </ol>
 <h1><a class="anchor" id="autotoc_md4"></a>
@@ -144,9 +146,30 @@ Guia de uso</h1>
 <pre class="fragment">*Uma observação muito importante é que, ao sair de um servidor, mesmo ainda permanecendo na lista de participantes dele, você terá que inserir o código de convite, para entrar novamente. Isso é válido somente para servidores que necessitam de código de convite.*
 </pre><ul>
 <li><p class="startli"><b>list-participants</b>: Lista os participantes do servidor que você está visualizando. Veja o exemplo:</p>
-<p class="startli"><code>list-participants</code> </p>
+<p class="startli"><code>list-participants</code></p>
+</li>
+<li><p class="startli"><b>create-channel</b>: Cria um canal dentro do servidor em que o usuário logado se encontra. Há dois tipos de canais, os canais de texto, onde todas as mensagens enviadas são armazenadas, e os canais de vox, onde apenas a última mensagem enviada é armazenada. Não pode haver mais de um servidor com o mesmo nome, independente do tipo. Veja o exemplo:</p>
+<p class="startli"><code>create-channel &lt;nome&gt; &lt;tipo&gt;</code></p>
+<p class="startli"><code>create-channel I-drive-java text</code></p>
+<p class="startli"><code>create-channel Gotham-java-city voice</code></p>
+</li>
+<li><p class="startli"><b>enter-channel</b>: Permite entrar em um canal. Veja o exemplo:</p>
+<p class="startli"><code>enter-channel &lt;nome-do-canal&gt;</code></p>
+<p class="startli"><code>enter-channel I-drive-java</code></p>
+</li>
+<li><p class="startli"><b>leave-channel</b>: Sai de um canal — para de visualizar o canal —. Veja o exemplo:</p>
+<p class="startli"><code>leave-channel</code></p>
+</li>
+<li><p class="startli"><b>send-message</b>: Envia uma mensagem no canal. Veja o exemplo:</p>
+<p class="startli"><code>send-message &lt;mensagem&gt;</code></p>
+<p class="startli"><code>send-message O Ryan Gosling é literalmente eu.</code></p>
+</li>
+<li><p class="startli"><b>list-messages</b>: Lista as mensagens presentes no canal em que o usuário logado se encontra. Veja o exemplo:</p>
+<p class="startli"><code>list-messages</code></p>
 </li>
 </ul>
+<hr  />
+<p>Desenvolvido por Yuri Filgueira. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

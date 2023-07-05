@@ -1,0 +1,6 @@
+<map id="VoiceChannel" name="VoiceChannel">
+<area shape="rect" id="node1" title="Classe que representa um canal de voz." alt="" coords="37,199,147,225"/>
+<area shape="rect" id="node2" href="$classChannel.html" title="Classe que representa um canal." alt="" coords="5,109,80,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="64,5,123,32"/>
+<area shape="rect" id="node4" href="$classMessage.html" title="Classe que representa uma mensagem." alt="" coords="104,109,184,136"/>
+</map>

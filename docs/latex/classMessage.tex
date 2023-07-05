@@ -25,29 +25,29 @@ Diagrama de colaboração para Message\+:
 \mbox{\Hypertarget{classMessage_a4fc4f717b634e66070366cb7722d7761}\label{classMessage_a4fc4f717b634e66070366cb7722d7761}} 
 \mbox{\hyperlink{classMessage_a4fc4f717b634e66070366cb7722d7761}{Message}} ()
 \begin{DoxyCompactList}\small\item\em Construtor padrão da classe \mbox{\hyperlink{classMessage}{Message}}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classMessage_a6af519fbc6eea7ec263bffcab3db8b70}{Message}} (string \mbox{\hyperlink{classMessage_a8c49bf04b4f69a4acbd1d2859c5fe1d6}{data\+Hora}}, string \mbox{\hyperlink{classMessage_a78eee52753c515f2a47a0d8cdcf762be}{senty\+By}}, string \mbox{\hyperlink{classMessage_ae76b55231c78a6819eff3b98d4684dd8}{content}})
+\mbox{\hyperlink{classMessage_adf1d79888f771d37a0cee2103cd0c3c4}{Message}} (string \mbox{\hyperlink{classMessage_ae31a805fa0d66ddef69b931c29db7fc9}{date\+Hour}}, int \mbox{\hyperlink{classMessage_aacebcc7571854ef12fd1c81b3b390774}{senty\+By}}, string \mbox{\hyperlink{classMessage_ae76b55231c78a6819eff3b98d4684dd8}{content}})
 \begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classMessage}{Message}} que recebe a data e hora, o remetente e o conteúdo da mensagem como parâmetros. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMessage_a3f7275462831f787a861271687bcad67}\label{classMessage_a3f7275462831f787a861271687bcad67}} 
 \mbox{\hyperlink{classMessage_a3f7275462831f787a861271687bcad67}{$\sim$\+Message}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{classMessage}{Message}}. \end{DoxyCompactList}\item 
-string \mbox{\hyperlink{classMessage_a2e3107de2dd536e86f42f610548830ef}{getdata\+Hora}} ()
+string \mbox{\hyperlink{classMessage_a79594082a6c2078302bdcb8317e27849}{get\+Date\+Hour}} ()
 \begin{DoxyCompactList}\small\item\em Obtém a data e hora da mensagem. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classMessage_a56e6035dea31f4500aff4eb3d235bea4}{setdata\+Hora}} (string \mbox{\hyperlink{classMessage_a8c49bf04b4f69a4acbd1d2859c5fe1d6}{data\+Hora}})
+void \mbox{\hyperlink{classMessage_ac7f531ba0d42afa1bd71a0f4531a63e8}{set\+Date\+Hour}} (string \mbox{\hyperlink{classMessage_ae31a805fa0d66ddef69b931c29db7fc9}{date\+Hour}})
 \begin{DoxyCompactList}\small\item\em Define a data e hora da mensagem. \end{DoxyCompactList}\item 
-string \mbox{\hyperlink{classMessage_ae446d52c04b87164410400eef1770340}{getsenty\+By}} ()
+int \mbox{\hyperlink{classMessage_a5d576b6af6c1f1afb06e08c0a709adca}{get\+Senty\+By}} ()
 \begin{DoxyCompactList}\small\item\em Obtém o remetente da mensagem. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classMessage_a9f5a55fa63bd6a8d26863dbe1f7bca08}{setsenty\+By}} (string \mbox{\hyperlink{classMessage_a78eee52753c515f2a47a0d8cdcf762be}{senty\+By}})
+void \mbox{\hyperlink{classMessage_a5595e50102f0b91051378151ebc4f12f}{set\+Senty\+By}} (int \mbox{\hyperlink{classMessage_aacebcc7571854ef12fd1c81b3b390774}{senty\+By}})
 \begin{DoxyCompactList}\small\item\em Define o remetente da mensagem. \end{DoxyCompactList}\item 
-string \mbox{\hyperlink{classMessage_a5834d60476a1a7369be57e2db98274ca}{getcontent}} ()
+string \mbox{\hyperlink{classMessage_a3d4ceea44b0922802d6ae99063ac4e48}{get\+Content}} ()
 \begin{DoxyCompactList}\small\item\em Obtém o conteúdo da mensagem. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classMessage_abe754c890e87d649c8b8197891bd9749}{setcontent}} (string \mbox{\hyperlink{classMessage_ae76b55231c78a6819eff3b98d4684dd8}{content}})
+void \mbox{\hyperlink{classMessage_a2c5be2e7c419ddc2c429904b4d08d792}{set\+Content}} (string \mbox{\hyperlink{classMessage_ae76b55231c78a6819eff3b98d4684dd8}{content}})
 \begin{DoxyCompactList}\small\item\em Define o conteúdo da mensagem. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
-string \mbox{\hyperlink{classMessage_a8c49bf04b4f69a4acbd1d2859c5fe1d6}{data\+Hora}}
+string \mbox{\hyperlink{classMessage_ae31a805fa0d66ddef69b931c29db7fc9}{date\+Hour}}
 \item 
-string \mbox{\hyperlink{classMessage_a78eee52753c515f2a47a0d8cdcf762be}{senty\+By}}
+int \mbox{\hyperlink{classMessage_aacebcc7571854ef12fd1c81b3b390774}{senty\+By}}
 \item 
 string \mbox{\hyperlink{classMessage_ae76b55231c78a6819eff3b98d4684dd8}{content}}
 \end{DoxyCompactItemize}
@@ -57,11 +57,11 @@ string \mbox{\hyperlink{classMessage_ae76b55231c78a6819eff3b98d4684dd8}{content}
 Classe que representa uma mensagem. 
 
 \doxysubsection{Construtores e Destrutores}
-\mbox{\Hypertarget{classMessage_a6af519fbc6eea7ec263bffcab3db8b70}\label{classMessage_a6af519fbc6eea7ec263bffcab3db8b70}} 
+\mbox{\Hypertarget{classMessage_adf1d79888f771d37a0cee2103cd0c3c4}\label{classMessage_adf1d79888f771d37a0cee2103cd0c3c4}} 
 \index{Message@{Message}!Message@{Message}}
 \index{Message@{Message}!Message@{Message}}
 \doxysubsubsection{\texorpdfstring{Message()}{Message()}}
-{\footnotesize\ttfamily Message\+::\+Message (\begin{DoxyParamCaption}\item[{string}]{data\+Hora,  }\item[{string}]{senty\+By,  }\item[{string}]{content }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Message\+::\+Message (\begin{DoxyParamCaption}\item[{string}]{date\+Hour,  }\item[{int}]{senty\+By,  }\item[{string}]{content }\end{DoxyParamCaption})}
 
 
 
@@ -69,7 +69,7 @@ Construtor da classe \mbox{\hyperlink{classMessage}{Message}} que recebe a data 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em data\+Hora} & Data e hora da mensagem. \\
+{\em date\+Hour} & Data e hora da mensagem. \\
 \hline
 {\em senty\+By} & Remetente da mensagem. \\
 \hline
@@ -79,11 +79,11 @@ Construtor da classe \mbox{\hyperlink{classMessage}{Message}} que recebe a data 
 
 
 \doxysubsection{Funções membros}
-\mbox{\Hypertarget{classMessage_a5834d60476a1a7369be57e2db98274ca}\label{classMessage_a5834d60476a1a7369be57e2db98274ca}} 
-\index{Message@{Message}!getcontent@{getcontent}}
-\index{getcontent@{getcontent}!Message@{Message}}
-\doxysubsubsection{\texorpdfstring{getcontent()}{getcontent()}}
-{\footnotesize\ttfamily string Message\+::getcontent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classMessage_a3d4ceea44b0922802d6ae99063ac4e48}\label{classMessage_a3d4ceea44b0922802d6ae99063ac4e48}} 
+\index{Message@{Message}!getContent@{getContent}}
+\index{getContent@{getContent}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getContent()}{getContent()}}
+{\footnotesize\ttfamily string Message\+::get\+Content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -92,11 +92,11 @@ Obtém o conteúdo da mensagem.
 \begin{DoxyReturn}{Retorna}
 Conteúdo da mensagem. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classMessage_a2e3107de2dd536e86f42f610548830ef}\label{classMessage_a2e3107de2dd536e86f42f610548830ef}} 
-\index{Message@{Message}!getdataHora@{getdataHora}}
-\index{getdataHora@{getdataHora}!Message@{Message}}
-\doxysubsubsection{\texorpdfstring{getdataHora()}{getdataHora()}}
-{\footnotesize\ttfamily string Message\+::getdata\+Hora (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classMessage_a79594082a6c2078302bdcb8317e27849}\label{classMessage_a79594082a6c2078302bdcb8317e27849}} 
+\index{Message@{Message}!getDateHour@{getDateHour}}
+\index{getDateHour@{getDateHour}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getDateHour()}{getDateHour()}}
+{\footnotesize\ttfamily string Message\+::get\+Date\+Hour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -105,11 +105,11 @@ Obtém a data e hora da mensagem.
 \begin{DoxyReturn}{Retorna}
 Data e hora da mensagem. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classMessage_ae446d52c04b87164410400eef1770340}\label{classMessage_ae446d52c04b87164410400eef1770340}} 
-\index{Message@{Message}!getsentyBy@{getsentyBy}}
-\index{getsentyBy@{getsentyBy}!Message@{Message}}
-\doxysubsubsection{\texorpdfstring{getsentyBy()}{getsentyBy()}}
-{\footnotesize\ttfamily string Message\+::getsenty\+By (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classMessage_a5d576b6af6c1f1afb06e08c0a709adca}\label{classMessage_a5d576b6af6c1f1afb06e08c0a709adca}} 
+\index{Message@{Message}!getSentyBy@{getSentyBy}}
+\index{getSentyBy@{getSentyBy}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{getSentyBy()}{getSentyBy()}}
+{\footnotesize\ttfamily int Message\+::get\+Senty\+By (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -118,11 +118,11 @@ Obtém o remetente da mensagem.
 \begin{DoxyReturn}{Retorna}
 Remetente da mensagem. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classMessage_abe754c890e87d649c8b8197891bd9749}\label{classMessage_abe754c890e87d649c8b8197891bd9749}} 
-\index{Message@{Message}!setcontent@{setcontent}}
-\index{setcontent@{setcontent}!Message@{Message}}
-\doxysubsubsection{\texorpdfstring{setcontent()}{setcontent()}}
-{\footnotesize\ttfamily void Message\+::setcontent (\begin{DoxyParamCaption}\item[{string}]{content }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classMessage_a2c5be2e7c419ddc2c429904b4d08d792}\label{classMessage_a2c5be2e7c419ddc2c429904b4d08d792}} 
+\index{Message@{Message}!setContent@{setContent}}
+\index{setContent@{setContent}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{setContent()}{setContent()}}
+{\footnotesize\ttfamily void Message\+::set\+Content (\begin{DoxyParamCaption}\item[{string}]{content }\end{DoxyParamCaption})}
 
 
 
@@ -133,11 +133,11 @@ Define o conteúdo da mensagem.
 {\em content} & Conteúdo da mensagem. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classMessage_a56e6035dea31f4500aff4eb3d235bea4}\label{classMessage_a56e6035dea31f4500aff4eb3d235bea4}} 
-\index{Message@{Message}!setdataHora@{setdataHora}}
-\index{setdataHora@{setdataHora}!Message@{Message}}
-\doxysubsubsection{\texorpdfstring{setdataHora()}{setdataHora()}}
-{\footnotesize\ttfamily void Message\+::setdata\+Hora (\begin{DoxyParamCaption}\item[{string}]{data\+Hora }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classMessage_ac7f531ba0d42afa1bd71a0f4531a63e8}\label{classMessage_ac7f531ba0d42afa1bd71a0f4531a63e8}} 
+\index{Message@{Message}!setDateHour@{setDateHour}}
+\index{setDateHour@{setDateHour}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{setDateHour()}{setDateHour()}}
+{\footnotesize\ttfamily void Message\+::set\+Date\+Hour (\begin{DoxyParamCaption}\item[{string}]{date\+Hour }\end{DoxyParamCaption})}
 
 
 
@@ -145,14 +145,14 @@ Define a data e hora da mensagem.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em data\+Hora} & Data e hora da mensagem. \\
+{\em date\+Hour} & Data e hora da mensagem. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classMessage_a9f5a55fa63bd6a8d26863dbe1f7bca08}\label{classMessage_a9f5a55fa63bd6a8d26863dbe1f7bca08}} 
-\index{Message@{Message}!setsentyBy@{setsentyBy}}
-\index{setsentyBy@{setsentyBy}!Message@{Message}}
-\doxysubsubsection{\texorpdfstring{setsentyBy()}{setsentyBy()}}
-{\footnotesize\ttfamily void Message\+::setsenty\+By (\begin{DoxyParamCaption}\item[{string}]{senty\+By }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classMessage_a5595e50102f0b91051378151ebc4f12f}\label{classMessage_a5595e50102f0b91051378151ebc4f12f}} 
+\index{Message@{Message}!setSentyBy@{setSentyBy}}
+\index{setSentyBy@{setSentyBy}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{setSentyBy()}{setSentyBy()}}
+{\footnotesize\ttfamily void Message\+::set\+Senty\+By (\begin{DoxyParamCaption}\item[{int}]{senty\+By }\end{DoxyParamCaption})}
 
 
 
@@ -172,17 +172,17 @@ Define o remetente da mensagem.
 \doxysubsubsection{\texorpdfstring{content}{content}}
 {\footnotesize\ttfamily string Message\+::content\hspace{0.3cm}{\ttfamily [private]}}
 
-Conteúdo da mensagem. \mbox{\Hypertarget{classMessage_a8c49bf04b4f69a4acbd1d2859c5fe1d6}\label{classMessage_a8c49bf04b4f69a4acbd1d2859c5fe1d6}} 
-\index{Message@{Message}!dataHora@{dataHora}}
-\index{dataHora@{dataHora}!Message@{Message}}
-\doxysubsubsection{\texorpdfstring{dataHora}{dataHora}}
-{\footnotesize\ttfamily string Message\+::data\+Hora\hspace{0.3cm}{\ttfamily [private]}}
+Conteúdo da mensagem. \mbox{\Hypertarget{classMessage_ae31a805fa0d66ddef69b931c29db7fc9}\label{classMessage_ae31a805fa0d66ddef69b931c29db7fc9}} 
+\index{Message@{Message}!dateHour@{dateHour}}
+\index{dateHour@{dateHour}!Message@{Message}}
+\doxysubsubsection{\texorpdfstring{dateHour}{dateHour}}
+{\footnotesize\ttfamily string Message\+::date\+Hour\hspace{0.3cm}{\ttfamily [private]}}
 
-Data e hora da mensagem. \mbox{\Hypertarget{classMessage_a78eee52753c515f2a47a0d8cdcf762be}\label{classMessage_a78eee52753c515f2a47a0d8cdcf762be}} 
+Data e hora da mensagem. \mbox{\Hypertarget{classMessage_aacebcc7571854ef12fd1c81b3b390774}\label{classMessage_aacebcc7571854ef12fd1c81b3b390774}} 
 \index{Message@{Message}!sentyBy@{sentyBy}}
 \index{sentyBy@{sentyBy}!Message@{Message}}
 \doxysubsubsection{\texorpdfstring{sentyBy}{sentyBy}}
-{\footnotesize\ttfamily string Message\+::senty\+By\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily int Message\+::senty\+By\hspace{0.3cm}{\ttfamily [private]}}
 
 Remetente da mensagem. 
 

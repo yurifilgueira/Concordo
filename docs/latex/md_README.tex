@@ -18,6 +18,10 @@ Certifique-\/se de ter o g++ e o C\+Make instalados em seu sistema antes de pros
 3.\+1. Caso você possua um script — um arquivo {\ttfamily .txt} — com os comandos do Concordo, basta inserir {\ttfamily ./program nome\+Do\+Arquivo.\+txt} no terminal.
 
 3.\+2. Caso o script não contenha o comando {\ttfamily quit} — comando que será explicado em breve — o Concordo continurá rodando normalmente, e você poderá inserir os comandos que desejar.
+
+3.\+3. Neste projeto, você encontrará 2 scripts, o {\ttfamily script\+Valid.\+txt} — que executa os comandos de maneira válida — e o {\ttfamily script\+Invalid.\+txt} — que executa os comandos de maneira errada, e faz com que o programa mostre as mensagens de erro para o usuário, sem crash no programa —, basta seguir o passo 3.\+1 para executá-\/los. Só um por vez.
+
+3.\+4. Os comandos — executados de maneira correta e errada — das funcionalidades relacionadas aos canais, se encontram no {\ttfamily script\+Valid.\+txt}.
 \end{DoxyEnumerate}\hypertarget{md_README_autotoc_md4}{}\doxysection{Guia de uso}\label{md_README_autotoc_md4}
 O {\ttfamily Concordo} funciona através de comandos inseridos no terminal. Portanto, aqui estão os comandos possíveis de se fazer e como fazer.
 
@@ -96,5 +100,33 @@ Segue abaixo a lista de comandos possíveis\+:
 \begin{DoxyItemize}
 \item {\bfseries{list-\/participants}}\+: Lista os participantes do servidor que você está visualizando. Veja o exemplo\+:
 
-{\ttfamily list-\/participants} 
+{\ttfamily list-\/participants}
+\item {\bfseries{create-\/channel}}\+: Cria um canal dentro do servidor em que o usuário logado se encontra. Há dois tipos de canais, os canais de texto, onde todas as mensagens enviadas são armazenadas, e os canais de vox, onde apenas a última mensagem enviada é armazenada. Não pode haver mais de um servidor com o mesmo nome, independente do tipo. Veja o exemplo\+:
+
+{\ttfamily create-\/channel $<$nome$>$ $<$tipo$>$}
+
+{\ttfamily create-\/channel I-\/drive-\/java text}
+
+{\ttfamily create-\/channel Gotham-\/java-\/city voice}
+\item {\bfseries{enter-\/channel}}\+: Permite entrar em um canal. Veja o exemplo\+:
+
+{\ttfamily enter-\/channel $<$nome-\/do-\/canal$>$}
+
+{\ttfamily enter-\/channel I-\/drive-\/java}
+\item {\bfseries{leave-\/channel}}\+: Sai de um canal — para de visualizar o canal —. Veja o exemplo\+:
+
+{\ttfamily leave-\/channel}
+\item {\bfseries{send-\/message}}\+: Envia uma mensagem no canal. Veja o exemplo\+:
+
+{\ttfamily send-\/message $<$mensagem$>$}
+
+{\ttfamily send-\/message O Ryan Gosling é literalmente eu.}
+\item {\bfseries{list-\/messages}}\+: Lista as mensagens presentes no canal em que o usuário logado se encontra. Veja o exemplo\+:
+
+{\ttfamily list-\/messages}
 \end{DoxyItemize}
+
+\DoxyHorRuler{0}
+
+
+Desenvolvido por Yuri Filgueira. 

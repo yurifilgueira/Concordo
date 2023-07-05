@@ -18,8 +18,8 @@ class System {
 
 private:
     User currentLoggedInUser; /**< O usuário atualmente logado no sistema. */
-    Server currentServer; /**< O servidor atualmente selecionado no sistema. */
-    Channel currentChannel; /**< O canal atualmente selecionado no sistema. */
+    Server *currentServer; /**< O servidor atualmente selecionado no sistema. */
+    Channel *currentChannel; /**< O canal atualmente selecionado no sistema. */
 
     vector<User> users; /**< Os usuários cadastrados no sistema. */
     vector<Server> servers; /**< Os servidores disponíveis no sistema. */
@@ -79,25 +79,25 @@ public:
      * @brief Obtém o servidor atualmente selecionado no sistema.
      * @return O servidor atualmente selecionado.
      */
-    Server getCurrentServer();
+    Server *getCurrentServer();
 
     /**
      * @brief Define o servidor atualmente selecionado no sistema.
      * @param currentServer O servidor a ser definido como servidor atualmente selecionado.
      */
-    void setCurrentServer(Server currentServer);
+    void setCurrentServer(Server &currentServer);
 
     /**
      * @brief Obtém o canal atualmente selecionado no sistema.
      * @return O canal atualmente selecionado.
      */
-    Channel getCurrentChannel();
+    Channel *getCurrentChannel();
 
     /**
      * @brief Define o canal atualmente selecionado no sistema.
      * @param currentChannel O canal a ser definido como canal atualmente selecionado.
      */
-    void setCurrentChannel(Channel currentChannel);
+    void setCurrentChannel(Channel &currentChannel);
 
     /**
      * @brief Obtém todos os usuários cadastrados no sistema.
@@ -192,7 +192,56 @@ public:
      * @param serverName O nome do servidor a ser verificado.
      * @return True se o servidor estiver presente, caso contrário, false.
      */
+    
+    /**
+     * @brief Verifica se o sistema contém um servidor com o nome especificado.
+     *
+     * @param serverName O nome do servidor a ser verificado.
+     * @return true se o sistema contém um servidor com o nome especificado, false caso contrário.
+     */
     bool containsServer(string serverName);
+
+    /**
+     * @brief Entra no canal com o nome especificado.
+     *
+     * Define o canal atual como o canal encontrado com o nome especificado, se o canal atual estiver vazio.
+     *
+     * @param name O nome do canal a ser buscado.
+     * @return true se o canal atual foi definido com sucesso, false caso contrário.
+     */
+    bool enterChannel(string name);
+
+    /**
+     * @brief Libera a memória alocada para os canais em todos os servidores.
+     */
+    void free();
+
+    /**
+     * @brief Sai do canal atual, definindo o canal atual como nullptr.
+     */
+    void leaveChannel();
+
+
+    /**
+     * @brief Imprime as mensagens do canal atual.
+     *
+     * @return Se o canal atual for um TextChannel, imprime todas as mensagens contidas nele. 
+     * Se o canal atual for um VoiceChannel, imprime a última mensagem enviada nele.
+     * 
+     */
+    void printMessages();
+
+
+    /**
+     * Verifica se um ponteiro é uma instância de uma determinada classe ou de uma de suas subclasses.
+     *
+     * @tparam Base O tipo da classe base.
+     * @tparam T O tipo da classe a ser verificada.
+     * @param ptr O ponteiro a ser verificado.
+     * @return true se o ponteiro é uma instância de `Base` ou de uma de suas subclasses, false caso contrário.
+     */
+    template<typename Base, typename T>
+    inline bool instanceof(const T *ptr);
 };
 
 #endif
