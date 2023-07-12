@@ -41,11 +41,6 @@ disconnect
 login yuri@example.com 12ab34cd
 create-server My-Server
 set-server-desc My-Server "My Server Description"
-set-server-invite-code My-Server hello123
-disconnect
-login yuri@example.com 12ab34cd
-enter-server Trio-House holaamigos123
-leave-server
 disconnect
 login john@example.com password123
 enter-server Trio-House holaamigos123
@@ -72,15 +67,14 @@ enter-server House-Trio olamigos123
 leave-server
 disconnect
 login john@example.com password123
-enter-server My-Server hello123
+enter-server My-Server
 leave-server
 disconnect
 login lisa@example.com mypassword123
-enter-server My-Server hello123
-leave-server
+enter-server My-Server
 disconnect
 login jane@example.com password456
-enter-server My-Server hello123
+enter-server My-Server
 leave-server
 disconnect
 login yuri@example.com 12ab34cd
@@ -113,15 +107,15 @@ enter-server House-Trio olamigos123
 list-participants
 disconnect
 login john@example.com password123
-enter-server My-Server hello123
+enter-server My-Server
 list-participants
 disconnect
 login lisa@example.com mypassword123
-enter-server My-Server hello123
+enter-server My-Server
 list-participants
 disconnect
 login jane@example.com password456
-enter-server My-Server hello123
+enter-server My-Server
 list-participants
 disconnect
 login yuri@example.com 12ab34cd

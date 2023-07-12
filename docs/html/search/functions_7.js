@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['instanceof_133',['instanceof',['../classServer.html#a213760ef271ef1074ad14bc5194c6364',1,'Server::instanceof()'],['../classSystem.html#a0ce1ad3bd8c3dfb5ddf298e22d858a27',1,'System::instanceof()']]]
+  ['instanceof_136',['instanceOf',['../classSystem.html#a236301f5e020f36f2c9d1d4a9d2910ef',1,'System::instanceOf()'],['../classServer.html#a213760ef271ef1074ad14bc5194c6364',1,'Server::instanceof()']]]
 ];

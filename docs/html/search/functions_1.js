@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['channel_103',['Channel',['../classChannel.html#af2b4b16288cbb2c592b1e0f6486c2430',1,'Channel::Channel()'],['../classChannel.html#abad8f1499819efbe1d3578aaf777ef99',1,'Channel::Channel(string name)']]],
-  ['containsserver_104',['containsServer',['../classSystem.html#ad90bd380df5232bb478bcf96b2de4bb9',1,'System']]],
-  ['containsuser_105',['containsUser',['../classServer.html#a16043f2c702b9c9ecc9005bb1ed98af1',1,'Server']]],
-  ['createserver_106',['createServer',['../classSystem.html#af721524bb095e02d8432e8716f7171e5',1,'System']]]
+  ['channel_106',['Channel',['../classChannel.html#af2b4b16288cbb2c592b1e0f6486c2430',1,'Channel::Channel()'],['../classChannel.html#abad8f1499819efbe1d3578aaf777ef99',1,'Channel::Channel(string name)']]],
+  ['containsserver_107',['containsServer',['../classSystem.html#ad90bd380df5232bb478bcf96b2de4bb9',1,'System']]],
+  ['containsuser_108',['containsUser',['../classServer.html#a16043f2c702b9c9ecc9005bb1ed98af1',1,'Server']]],
+  ['createserver_109',['createServer',['../classSystem.html#af721524bb095e02d8432e8716f7171e5',1,'System']]]
 ];

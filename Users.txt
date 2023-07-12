@@ -1,0 +1,45 @@
+11
+1
+YuYu
+yuri@example.com
+12ab34cd
+2
+John Doe
+john@example.com
+password123
+3
+Literalmente Eu
+literalmenteeu@example.com
+p@ssw0rd
+4
+Ryan Gosling
+ryangosling@example.com
+secretword
+5
+Emily Brown
+emily@example.com
+mypassword
+6
+Jane Smith
+jane@example.com
+password456
+7
+Mark Johnson
+mark@example.com
+7890mark
+8
+Lisa Anderson
+lisa@example.com
+mypassword123
+9
+Sarah Johnson
+sarah@example.com
+987sarah
+10
+Sam Wilson
+sam@example.com
+pass123
+11
+Bruce Wayne
+christianbale@example.com
+imbatman123

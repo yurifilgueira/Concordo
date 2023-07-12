@@ -2,7 +2,10 @@
 #include <System.h>
 #include <TextChannel.h>
 #include <VoiceChannel.h>
+#include <fstream>
 
+using std::fstream;
+using std::ios;
 using std::cout;
 using std::endl;
 
@@ -327,7 +330,7 @@ void System::leaveChannel(){
 
 void System::printMessages(){
 
-    if (instanceof<TextChannel>(currentChannel)){
+    if (instanceOf<TextChannel>(currentChannel)){
         if (dynamic_cast<TextChannel*>(currentChannel)->getMessages().size() == 0){
             cout << "Ainda não há mensagens neste canal." << endl;
         }
@@ -353,6 +356,97 @@ void System::printMessages(){
 }
 
 template<typename Base, typename T>
-inline bool System::instanceof(const T *ptr) {
+inline bool System::instanceOf(const T *ptr) {
    return dynamic_cast<const Base*>(ptr) != nullptr;
+}
+
+void System::save(){
+    saveUsers();
+    saveServers();
+}
+
+void System::saveUsers(){
+
+    fstream file;
+
+    file.open("Users.txt", ios::out);
+
+    if (file.is_open()){
+
+        file << users.size() << endl;
+
+        if (users.size() > 0){
+            for (User u : users){
+                file << u.getId() << endl;
+                file << u.getName() << endl;
+                file << u.getEmail() << endl;
+                file << u.getPassword() << endl;
+            }
+        }
+
+        file.close();
+    }
+}
+
+void System::saveServers(){
+    
+    fstream file;
+
+    file.open("Servers.txt", ios::out);
+
+    if (file.is_open()){
+
+        file << servers.size() << endl;
+
+        if (servers.size() > 0){
+            for (Server s : servers){
+                file << s.getOwnerUserId() << endl;
+                file << s.getName() << endl;
+                file << s.getDescription() << endl;
+                if (s.hasInvitationCode()){
+                    file << s.getInvitationCode() << endl;
+                }
+                else {
+                    file << endl;
+                }
+                file << s.getParticipantsIDs().size() << endl;
+
+                for (int userId : s.getParticipantsIDs()){
+                    file << userId << endl;
+                }
+                file << s.getChannels().size() << endl;
+                for (Channel *c : s.getChannels()){
+                    file << c->getName() << endl;
+                    if (instanceOf<TextChannel>(c)){
+                        file << "TEXT" << endl;
+
+                        file << dynamic_cast<TextChannel*>(c)->getMessages().size() << endl;
+
+                        for (Message mes : dynamic_cast<TextChannel*>(c)->getMessages()){
+                            file << mes.getSentBy() << endl;
+                            file << mes.getDateHour() << endl;
+                            file << mes.getContent() << endl;
+                        }
+                    }
+                    else {
+                        file << "VOICE" << endl;
+
+                        Message mes = dynamic_cast<VoiceChannel*>(c)->getLastMessage();
+
+                        if (mes.getContent().empty()){
+                            file << 0 << endl;
+                        }
+                        else {
+                            file << 1 << endl;
+                            file << mes.getSentBy() << endl;
+                            file << mes.getDateHour() << endl;
+                            file << mes.getContent() << endl;
+                        }
+                    }
+                }
+            }
+        }
+
+        file.close();
+    }
 }

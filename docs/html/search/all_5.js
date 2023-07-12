@@ -17,7 +17,7 @@ var searchData=
   ['getowneruserid_37',['getOwnerUserId',['../classServer.html#a63d959557a9a3935cb2869705c2b7003',1,'Server']]],
   ['getparticipantsids_38',['getParticipantsIDs',['../classServer.html#a7e82a2ffc5ba1aea917f730207c85c7a',1,'Server']]],
   ['getpassword_39',['getPassword',['../classUser.html#a090eb9ee354cc25b2e8240b714b39d64',1,'User']]],
-  ['getsentyby_40',['getSentyBy',['../classMessage.html#a5d576b6af6c1f1afb06e08c0a709adca',1,'Message']]],
+  ['getsentby_40',['getSentBy',['../classMessage.html#a6cfa36accfb722f2ed116769a0f3fbe5',1,'Message']]],
   ['getservers_41',['getServers',['../classSystem.html#a73f7448c3dccbf032bc97a9beac348ba',1,'System']]],
   ['getusers_42',['getUsers',['../classSystem.html#ac3d98d101c0bc590264f447a88cf8814',1,'System']]]
 ];

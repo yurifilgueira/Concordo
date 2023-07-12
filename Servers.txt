@@ -1,0 +1,53 @@
+3
+1
+Trio-House
+Descrição do servidor.
+holaamigos123
+4
+1
+2
+4
+11
+4
+Harry-Potter
+VOICE
+0
+Lalaland
+TEXT
+2
+4
+<10/07/2023 - 17:59:59>
+Eu sou literalmente eu.
+4
+<10/07/2023 - 17:59:59>
+I drive.
+Avengers
+TEXT
+0
+Gotham-City
+VOICE
+1
+11
+<10/07/2023 - 17:59:59>
+I'm vengeance.
+2
+House-Trio
+Descrição do servidor.
+olamigos123
+5
+2
+1
+5
+4
+8
+0
+1
+My-Server
+My Server Description
+
+4
+1
+2
+8
+6
+0

@@ -90,8 +90,20 @@ void \mbox{\hyperlink{classSystem_a982a5a70ccc9173cd4ae8e3cd1aab1ff}{leave\+Chan
 \begin{DoxyCompactList}\small\item\em Sai do canal atual, definindo o canal atual como nullptr. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSystem_ad3be898dfe00394b6d4814d664f626b2}{print\+Messages}} ()
 \begin{DoxyCompactList}\small\item\em Imprime as mensagens do canal atual. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Base , typename T $>$ }\\bool \mbox{\hyperlink{classSystem_a0ce1ad3bd8c3dfb5ddf298e22d858a27}{instanceof}} (const T $\ast$ptr)
-\end{DoxyCompactItemize}
+{\footnotesize template$<$typename Base , typename T $>$ }\\bool \mbox{\hyperlink{classSystem_a236301f5e020f36f2c9d1d4a9d2910ef}{instance\+Of}} (const T $\ast$ptr)
+\item 
+\mbox{\Hypertarget{classSystem_a48b53c8a3f6c61774ad950e496d36448}\label{classSystem_a48b53c8a3f6c61774ad950e496d36448}} 
+void \mbox{\hyperlink{classSystem_a48b53c8a3f6c61774ad950e496d36448}{save}} ()
+\begin{DoxyCompactList}\small\item\em Salva o sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSystem_af4d7e87a012d8a75512f6f057ebd0266}\label{classSystem_af4d7e87a012d8a75512f6f057ebd0266}} 
+void \mbox{\hyperlink{classSystem_af4d7e87a012d8a75512f6f057ebd0266}{save\+Users}} ()
+\begin{DoxyCompactList}\small\item\em Salva os usuários. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSystem_a6f9af08b8b266d453653581dc4342dca}\label{classSystem_a6f9af08b8b266d453653581dc4342dca}} 
+void \mbox{\hyperlink{classSystem_a6f9af08b8b266d453653581dc4342dca}{save\+Servers}} ()
+\begin{DoxyCompactList}\small\item\em Salva os servidores. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -359,12 +371,12 @@ Obtém todos os usuários cadastrados no sistema.
 \begin{DoxyReturn}{Retorna}
 Um vetor contendo todos os usuários cadastrados. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classSystem_a0ce1ad3bd8c3dfb5ddf298e22d858a27}\label{classSystem_a0ce1ad3bd8c3dfb5ddf298e22d858a27}} 
-\index{System@{System}!instanceof@{instanceof}}
-\index{instanceof@{instanceof}!System@{System}}
-\doxysubsubsection{\texorpdfstring{instanceof()}{instanceof()}}
+\mbox{\Hypertarget{classSystem_a236301f5e020f36f2c9d1d4a9d2910ef}\label{classSystem_a236301f5e020f36f2c9d1d4a9d2910ef}} 
+\index{System@{System}!instanceOf@{instanceOf}}
+\index{instanceOf@{instanceOf}!System@{System}}
+\doxysubsubsection{\texorpdfstring{instanceOf()}{instanceOf()}}
 {\footnotesize\ttfamily template$<$typename Base , typename T $>$ \\
-bool System\+::instanceof (\begin{DoxyParamCaption}\item[{const T $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+bool System\+::instance\+Of (\begin{DoxyParamCaption}\item[{const T $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Verifica se um ponteiro é uma instância de uma determinada classe ou de uma de suas subclasses.
 

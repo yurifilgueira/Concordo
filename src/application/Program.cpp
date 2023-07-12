@@ -102,9 +102,6 @@ string getDesc(string command){
 
 int main(int argc, char* argv[])
 {
-
-    
-
     string linha;
     string command, email, password, name;
     System sys;
@@ -140,6 +137,7 @@ int main(int argc, char* argv[])
             getline(cin, command);
         }
 
+        sys.save();
         split(command, ' ');
 
         if (commandLine[0] == "quit"){

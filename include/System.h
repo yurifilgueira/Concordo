@@ -23,6 +23,15 @@ private:
 
     vector<User> users; /**< Os usuários cadastrados no sistema. */
     vector<Server> servers; /**< Os servidores disponíveis no sistema. */
+    
+    /**
+    * @brief Salva os usuários.
+    */
+    void saveUsers();
+    /**
+    * @brief Salva os servidores.
+    */
+    void saveServers();
 
 public:
     /**
@@ -241,7 +250,12 @@ public:
      * @return true se o ponteiro é uma instância de `Base` ou de uma de suas subclasses, false caso contrário.
      */
     template<typename Base, typename T>
-    inline bool instanceof(const T *ptr);
+    inline bool instanceOf(const T *ptr);
+
+    /**
+    * @brief Salva o sistema.
+    */
+    void save();
 };
 
 #endif
