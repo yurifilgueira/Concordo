@@ -9,8 +9,6 @@ Este é um sistema chamado `Concordo` com recursos similares ao `Discord`, poré
 
 NOME: Yuri Filgueira Tavares de Medeiros
 
-MATRÍCULA: 20220034872
-
 TURMA: 02
 
 ## Como executar o Concordo
